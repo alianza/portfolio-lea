@@ -7,6 +7,18 @@ const Home = () => {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script>
+          if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          })
+        }
+        </script>
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
