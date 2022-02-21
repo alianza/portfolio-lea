@@ -1,8 +1,41 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect } from "react"
+import fs from "fs"
+import path from "path"
+import yaml from "js-yaml";
+import matter from "gray-matter"
+import marked from "marked"
 
-const Home = () => {
+export const getStaticProps = async () => {
+
+  const contentDirectory = path.join(process.cwd(), "content/");
+
+  const fileNames = fs.readdirSync(contentDirectory);
+
+  const homeData = fileNames
+    .filter((fileName) => fileName.endsWith("home.md"))
+    .map((fileName) => {
+      const filePath = path.join(contentDirectory, fileName);
+      const fileContents = fs.readFileSync(filePath, "utf8");
+      const postData = matter(fileContents, {
+        engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) }
+      });
+      postData.content = marked(postData.content);
+      console.log(postData)
+      return postData;
+    });
+
+  return {
+    props: {
+      homeData
+    },
+  }
+}
+
+const Home = (props) => {
+
+  console.log(props)
 
   useEffect(() => {
     if (window.netlifyIdentity) {
