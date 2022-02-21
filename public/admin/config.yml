@@ -9,6 +9,38 @@ publish_mode: editorial_workflow
 #logo_url: https://pensive-mclean-91ddb5.netlify.app/images/logo.webp
 
 collections:
+  - name: "config"
+      label: "Config"
+      delete: false
+      editor:
+        preview: false
+      files:
+        - name: "general"
+          label: "Site Config"
+          file: "config.json"
+          description: "General site settings"
+          fields:
+            - label: "Site title"
+              name: "site_title"
+              widget: "string"
+            - label: "Site description"
+              name: "site_description"
+              widget: "string"
+            - label: "Site keywords"
+              name: "site_keywords"
+              widget: "list"
+              summary: "{{fields.keyword.keyword}}"
+              field:
+                label: Keyword
+                name: keyword
+                widget: "string"
+            - label: "Twitter account"
+              name: "twitter_account"
+              widget: "string"
+            - label: "GitHub account"
+              name: "github_account"
+              widget: "string"
+
   - name: 'pages'
     label: 'Pages'
     files:
@@ -17,6 +49,7 @@ collections:
         file: 'content/home.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'SubTitle', name: 'subtitle', widget: 'string' }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'About'
@@ -26,6 +59,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+
   - label: 'Blog'
     name: 'blog'
     folder: 'content/blogPosts'
@@ -33,16 +67,6 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - {
-        label: 'Publish Date',
-        name: 'date',
-        widget: 'datetime',
-        required: true,
-      }
-      - {
-        label: 'Featured Image',
-        name: 'thumbnail',
-        widget: 'image',
-        required: true,
-      }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: true }
       - { label: 'Body', name: 'body', widget: 'markdown', required: true }
