@@ -1,0 +1,56 @@
+:root {
+
+    // Colors
+
+    --theme-pink: pink;
+    --theme-blue: #00bcd4;
+
+    --primary: #fff;
+    --secondary: #000;
+
+    --accent-0: #fff;
+    --accent-1: #fafafa;
+    --accent-2: #eaeaea;
+    --accent-3: #999999;
+    --accent-4: #888888;
+    --accent-5: #666666;
+    --accent-6: #444444;
+    --accent-7: #333333;
+    --accent-8: #111111;
+    --accent-9: #000;
+
+    --text-primary: var(--accent-8);
+    --text-secondary: var(--accent-1);
+
+    // Sizes
+    --desktop: 900px;
+    --tablet: 600px;
+    --mobile: 480px;
+    --xs: 320px;
+
+    --menu: 11em;
+    --header: 3em;
+    --footer: 7em;
+}
+
+[data-theme='dark'] {
+
+    // Dark mode color overrides
+
+    --primary: #000;
+    --secondary: #fff;
+
+    --accent-9: #fff;
+    --accent-8: #fafafa;
+    --accent-7: #eaeaea;
+    --accent-6: #999999;
+    --accent-5: #888888;
+    --accent-4: #666666;
+    --accent-3: #444444;
+    --accent-2: #333333;
+    --accent-1: #111111;
+    --accent-0: #000;
+
+    --text-primary: var(--accent-8);
+    --text-secondary: var(--accent-1);
+}
