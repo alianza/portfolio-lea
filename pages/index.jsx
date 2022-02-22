@@ -4,6 +4,7 @@ import path from "path"
 import yaml from "js-yaml";
 import matter from "gray-matter"
 import marked from "marked"
+import { useEffect } from "react"
 
 export const getStaticProps = async () => {
   const contentDirectory = path.join(process.cwd(), "content/");
@@ -22,6 +23,18 @@ export const getStaticProps = async () => {
 }
 
 const Home = ({homeData}) => {
+
+  useEffect(() => {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      })
+    }
+  }, []);
 
   return (
     <div className="flex min-h-screen bg-primary transition-colors flex-col items-center justify-center pt-header pb-footer">

@@ -3,6 +3,8 @@ backend:
   branch: main
   repo: alianza/portfolio-lea
 
+site_url: https://leashamaa.nl
+display_url: https://leashamaa.nl
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
