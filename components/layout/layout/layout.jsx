@@ -34,7 +34,6 @@ export default function Layout({ children }) {
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
             <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover' />
             <link rel="manifest" href="/manifest.json"/>
-            <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
         </Head>
 
         <Header />
