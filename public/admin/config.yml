@@ -23,12 +23,8 @@ collections:
         file: "config.json"
         description: "General site settings"
         fields:
-          - label: "Site title"
-            name: "site_title"
-            widget: "string"
-          - label: "Site description"
-            name: "site_description"
-            widget: "string"
+          - { label: "Site title", name: "site_title", widget: "string" }
+          - { label: "Site description", name: "site_description", widget: "string" }
           - label: "Site keywords"
             name: "site_keywords"
             widget: "list"
@@ -37,12 +33,8 @@ collections:
               label: Keyword
               name: keyword
               widget: "string"
-          - label: "Twitter account"
-            name: "twitter_account"
-            widget: "string"
-          - label: "GitHub account"
-            name: "github_account"
-            widget: "string"
+          - { label: "Twitter account", name: "twitter_account", widget: "string" }
+          - { label: "GitHub account", name: "github_account", widget: "string" }
 
   - name: 'pages'
     label: 'Pages'
@@ -63,9 +55,9 @@ collections:
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - label: 'Blog'
-    name: 'blog'
-    folder: 'content/blogPosts'
+  - label: 'Article'
+    name: 'article'
+    folder: 'content/articles'
     create: true
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:

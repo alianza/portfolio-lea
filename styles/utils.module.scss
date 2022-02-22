@@ -1,0 +1,7 @@
+.page {
+    @apply bg-primary min-h-screen transition-colors pt-header pb-footer;
+
+    .container {
+        @apply max-w-screen-xl mx-auto p-6;
+    }
+}

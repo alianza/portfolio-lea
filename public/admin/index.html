@@ -14,7 +14,7 @@
   CMS.registerPreviewStyle("../styles/content.module.css");
   CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
 
-  const blogPreview = createClass({
+  const articlePreview = createClass({
     render: function () {
       const entry = this.props.entry;
       return h(
@@ -27,7 +27,7 @@
     },
   });
 
-  CMS.registerPreviewTemplate("blog", blogPreview);
+  CMS.registerPreviewTemplate("article", articlePreview);
 </script>
 </body>
 </html>

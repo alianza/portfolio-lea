@@ -4,8 +4,8 @@ import path from "path"
 import yaml from "js-yaml";
 import matter from "gray-matter"
 import marked from "marked"
-import Script from "next/script"
 import { useEffect } from "react"
+import utils from "../styles/utils.module.scss"
 
 export const getStaticProps = async () => {
   const contentDirectory = path.join(process.cwd(), "content/");
@@ -38,7 +38,7 @@ const Home = ({homeData}) => {
   }, []);
 
   return (
-    <div className="flex min-h-screen bg-primary transition-colors flex-col items-center justify-center pt-header pb-footer">
+    <div className={`${utils.page} flex items-center justify-center flex-col`}>
       <Head>
         <title>Lea Shamaa - Portfolio</title>
       </Head>

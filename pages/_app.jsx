@@ -13,9 +13,9 @@ function MyApp({Component, pageProps}) {
   return (
     <Layout>
       <Head>
-        <meta name="theme-color" content={darkTheme ? '#ffe000' : '#232323'}/>
+        <meta name="theme-color" content={darkTheme ? '#fff' : '#000'}/>
       </Head>
-      <NextNProgress color={darkTheme ? '#232323' : '#ffe000'}/>
+      <NextNProgress color={darkTheme ? '#fff' : '#000'}/>
       <Component {...pageProps} />
     </Layout>)
 }
