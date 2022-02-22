@@ -23,23 +23,23 @@ export const getStaticProps = async () => {
 }
 
 const Home = ({homeData}) => {
-
-  useEffect(() => {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      })
-    }
-  }, []);
-
   return (
     <div className="flex min-h-screen bg-primary transition-colors flex-col items-center justify-center pt-header pb-footer">
       <Head>
         <title>Lea Shamaa - Portfolio</title>
+        <script>
+          {`
+            if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              })
+            }
+          `}
+        </script>
       </Head>
 
         <h1 className="text-6xl font-bold text-center">

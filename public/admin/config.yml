@@ -4,8 +4,8 @@ backend:
   repo: alianza/portfolio-lea
 
 local_backend: false
-site_url: https://leashamaa.nl
-display_url: https://leashamaa.nl
+site_url: https://portfolio-lea.netlify.app
+display_url: https://portfolio-lea.netlify.app
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow

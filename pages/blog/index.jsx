@@ -1,3 +1,8 @@
+// getstaticprops function
+
+
+
+
 const Blog = () => {
   return (
     <div>
