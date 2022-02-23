@@ -1,7 +1,19 @@
+.header {
+    @apply flex gap-4 bg-accent-1 transition-colors justify-end items-center px-4 h-header fixed w-full top-0 shadow-xl ml-0;
+
+    .active {
+        @apply font-bold;
+    }
+}
+
 .page {
     @apply bg-primary min-h-screen transition-colors pt-header pb-footer;
 
     .container {
         @apply max-w-screen-xl mx-auto p-6;
+
+        .title {
+            @apply text-4xl mb-4;
+        }
     }
 }
