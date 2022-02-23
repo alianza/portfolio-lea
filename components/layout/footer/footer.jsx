@@ -1,9 +1,10 @@
 import React from "react"
+import utils from '../../../styles/utils.module.scss'
 
 export default function Footer(props) {
     return (
-        <footer id="footer" className="flex bg-accent-1 transition-colors h-footer p-4 text-text-primary shadow-3xl absolute bottom-0 left-0 right-0">
-          <button onClick={() => props.onThemeButtonClick()}>{props.darkTheme ? '☀' : '🌒' }</button>
+        <footer id="footer" className={utils.footer}>
+          <button className="transition-transform hover:scale-110 active:scale-90" onClick={() => props.onThemeButtonClick()}>{props.darkTheme ? '☀' : '🌒' }</button>
         </footer>
     )
 }
