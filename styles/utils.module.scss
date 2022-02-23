@@ -17,3 +17,7 @@
         }
     }
 }
+
+.footer {
+    @apply flex bg-accent-1 transition-colors h-footer p-4 text-text-primary shadow-3xl fixed bottom-0 left-0 right-0;
+}
