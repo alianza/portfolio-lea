@@ -1,5 +1,6 @@
 import utils from "../../styles/utils.module.scss"
 import { getArticle, getArticleIds } from "../../lib/services/articleService"
+import Layout from "../../components/layout/layout/layout"
 
 export const getStaticPaths = async () => {
 
@@ -34,5 +35,7 @@ const Article = ({ article }) => {
     </div>
   )
 }
+
+Article.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
 
 export default Article

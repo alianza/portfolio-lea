@@ -1,6 +1,7 @@
 import utils from "../../styles/utils.module.scss"
 import Link from 'next/link'
 import { getArticles } from "../../lib/services/articleService"
+import Layout from "../../components/layout/layout/layout"
 
 export const getStaticProps = async () => {
   const articles = getArticles()
@@ -16,7 +17,7 @@ const Articles = ({ articles }) => {
   return (
     <div className={utils.page}>
       <div className={utils.container}>
-      <h1 className="text-3xl mb-2">Articles</h1>
+      <h1 className={utils.title}>Articles</h1>
         {articles.map(({ id, articleData }) =>
           <div key={id} className="mb-4">
             <Link href={`/articles/${id}`}><a className="text-2xl mb-2">{articleData.data.title}</a></Link>
@@ -27,5 +28,8 @@ const Articles = ({ articles }) => {
     </div>
   )
 }
+
+Articles.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+
 
 export default Articles;

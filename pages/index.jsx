@@ -6,6 +6,7 @@ import matter from "gray-matter"
 import marked from "marked"
 import { useEffect } from "react"
 import utils from "../styles/utils.module.scss"
+import Layout from "../components/layout/layout/layout"
 
 export const getStaticProps = async () => {
   const contentDirectory = path.join(process.cwd(), "content/");
@@ -16,9 +17,28 @@ export const getStaticProps = async () => {
   });
   homeData.content = marked(homeData.content);
 
+  const layoutData = {
+    title: "Portfolio title",
+    accounts: [
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/",
+      },
+      {
+        name: "Twitter",
+        url: "https://www.twitter.com/",
+      },
+      {
+        name: "Facebook",
+        url: "https://www.facebook.com/",
+      },
+    ]
+  }
+
   return {
     props: {
-      homeData
+      homeData,
+      layoutData
     },
   }
 }
@@ -53,5 +73,7 @@ const Home = ({homeData}) => {
     </div>
   )
 }
+
+Home.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
 
 export default Home

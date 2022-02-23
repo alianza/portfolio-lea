@@ -4,13 +4,18 @@ import Footer from "../footer/footer"
 import { useEffect, useState } from "react"
 import localStorageService from "../../../lib/services/localStorageService"
 import useTheme from "../../../lib/theme"
-import { useEventListeners } from "../../../lib/eventListeners"
-import Script from "next/script"
+import { useDarkThemeListener, useEventListeners } from "../../../lib/eventListeners"
+import NextNProgress from "nextjs-progressbar"
 
 const darkThemeKey = 'darkTheme'
 
-export default function Layout({ children }) {
+export default function Layout({ title, accounts, children}) {
     const [darkTheme, setDarkTheme] = useState(false)
+
+    useDarkThemeListener(setDarkTheme)
+
+    console.log(title)
+    console.log(accounts)
 
     useEffect(() => { setDarkTheme(localStorageService.getValue(darkThemeKey)) })
 
@@ -34,6 +39,7 @@ export default function Layout({ children }) {
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
             <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover' />
             <link rel="manifest" href="/manifest.json"/>
+            <meta name="theme-color" content={darkTheme ? '#fff' : '#000'}/>
         </Head>
 
         <Header />
@@ -41,6 +47,8 @@ export default function Layout({ children }) {
         <main id="content">{children}</main>
 
         <Footer darkTheme={darkTheme} onThemeButtonClick={toggleTheme}/>
+
+        <NextNProgress color={darkTheme ? '#fff' : '#000'}/>
 
     </div>)
 }
