@@ -33,7 +33,7 @@ const Contact = () => {
           </p>
           <p className="mb-4">
             <label>
-              Your Email: <textarea name="email" />
+              Your Message to me: <textarea name="email" />
             </label>
           </p>
           <p>
