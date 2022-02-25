@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -6,10 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'theme-pink': 'var(--theme-pink)',
-        'theme-blue': 'var(--theme-blue)',
+        'theme-primary': 'var(--theme-primary)',
         'text-primary': 'var(--text-primary)',
         'text-secondary': 'var(--text-secondary)',
+        'text-dark': 'var(--text-dark)',
+        'text-light': 'var(--text-light)',
         'primary': 'var(--primary)',
         'secondary': 'var(--secondary)',
         'accent-0': 'var(--accent-0)',
@@ -36,6 +39,10 @@ module.exports = {
         'header': 'var(--header)',
         'footer': 'var(--footer)',
       },
+    },
+    fontFamily: {
+      'title': ['"Special Elite"', ...defaultTheme.fontFamily.sans],
+      'text': ['"Poppins"', ...defaultTheme.fontFamily.sans],
     },
   },
   plugins: [],
