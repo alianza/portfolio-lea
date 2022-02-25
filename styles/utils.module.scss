@@ -1,15 +1,19 @@
 .header {
-    @apply flex gap-4 bg-accent-1 transition-colors justify-end items-center px-4 h-header fixed w-full top-0 shadow-xl ml-0;
+    @apply h-header flex flex-col gap-2 items-center justify-center bg-primary transition-colors;
+
+    .title {
+        @apply text-6xl tablet:text-8xl;
+    }
 
     .active {
-        @apply font-bold;
+        @apply relative before:content-[""] before:w-full before:border-b-2 before:border-text-primary before:z-10 before:absolute before:bottom-0 before:rounded before:skew-y-3 before:transition-colors before:duration-1000;
     }
 }
 
-.page {
-    @apply bg-primary min-h-screen transition-colors pt-header pb-footer;
+.content {
+    @apply min-h-[calc(100vh-var(--header)-var(--footer))] bg-primary transition-colors;
 
-    .container {
+    .page {
         @apply max-w-screen-xl mx-auto p-6;
 
         .title {
@@ -19,5 +23,5 @@
 }
 
 .footer {
-    @apply flex bg-accent-1 transition-colors h-footer p-4 text-text-primary shadow-3xl fixed bottom-0 left-0 right-0;
+    @apply h-footer text-text-light px-8 bg-theme-primary flex items-center justify-between gap-2 transition-colors;
 }

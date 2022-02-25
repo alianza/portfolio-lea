@@ -1,6 +1,5 @@
 .content {
-    font-family: "Ubuntu", sans-serif;
-    color: #222;
+    font-family: "Poppins", ui-sans-serif;
     font-weight: 200;
 }
 
@@ -18,16 +17,49 @@
     text-decoration: underline;
 }
 
-.content h1 {
-    margin: 2.5rem 0 0 0;
+.content b,
+.content strong {
+    font-weight: bold;
 }
 
+.content h1,
 .content h2,
 .content h3,
 .content h4,
-.content h5 {
-    margin: 2rem 0 0 0;
+.content h5,
+.content h6 {
+    font-family: "Special Elite", sans-serif;
     line-height: 1.25em;
+}
+
+.content h1 {
+    margin: 2.5rem 0 0 0;
+    font-size: 2em;
+}
+
+.content h2 {
+    margin: 2rem 0 0 0;
+    font-size: 1.5em;
+}
+
+.content h3 {
+    margin: 1.5rem 0 0 0;
+    font-size: 1.25em;
+}
+
+.content h4 {
+    margin: 1rem 0 0 0;
+    font-size: 1.125em;
+}
+
+.content h5 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1em;
+}
+
+.content h6 {
+    margin: .5rem 0 0 0;
+    font-size: 1em;
 }
 
 .content h2::before {
