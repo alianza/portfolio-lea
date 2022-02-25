@@ -1,0 +1,30 @@
+{
+  "site_title": "Léa Shamaa",
+  "site_description": "Léa Shamaa - Portfolio",
+  "accounts": [
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+      "icon": "/images/instagram_icon.png.webp"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+      "icon": "/images/124010.png"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Politics"
+    },
+    {
+      "name": "Food"
+    },
+    {
+      "name": "Skate"
+    },
+    {
+      "name": "Culture"
+    }
+  ]
+}
