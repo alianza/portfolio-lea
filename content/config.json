@@ -16,6 +16,11 @@
       "name": "Medium",
       "url": "https://Medium.com",
       "icon": "/images/medium-512.webp"
+    },
+    {
+      "name": "Test",
+      "url": "https://test.nl",
+      "icon": "/images/medium-512.webp"
     }
   ],
   "categories": [
@@ -30,6 +35,9 @@
     },
     {
       "name": "Culture"
+    },
+    {
+      "name": "Testcat"
     }
   ]
 }
