@@ -44,7 +44,7 @@ export default function Layout({ site_title, accounts, children}) {
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
             <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover' />
             <link rel="manifest" href="/manifest.json"/>
-            <meta name="theme-color" content={darkTheme ? '#fff' : '#000'}/>
+            <meta name="theme-color" content={darkTheme ? '#000' : '#fff'}/>
         </Head>
 
         <Header title={site_title} />
