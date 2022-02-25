@@ -9,8 +9,10 @@ const NavLink = ({ label, href, pathName }) => {
   !pathName && (pathName = href)
 
   return (
-    <Link href={href}><a className={router.pathname === pathName ? utils.active : ""}>{label}</a></Link>
+    <>
+      <Link href={href}><a className={`no-underline hover:font-bold ${ router.pathname === pathName ? utils.active : "" }`}>{label}</a></Link>
+    </>
   )
 }
 
-export default NavLink;
+export default NavLink

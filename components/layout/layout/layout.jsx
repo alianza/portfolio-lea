@@ -6,16 +6,19 @@ import localStorageService from "../../../lib/services/localStorageService"
 import useTheme from "../../../lib/theme"
 import { useDarkThemeListener, useEventListeners } from "../../../lib/eventListeners"
 import NextNProgress from "nextjs-progressbar"
+import utils from "../../../styles/utils.module.scss"
 
 const darkThemeKey = 'darkTheme'
 
-export default function Layout({ title, accounts, children}) {
+export default function Layout({ site_title, accounts, children}) {
     const [darkTheme, setDarkTheme] = useState(false)
 
     useDarkThemeListener(setDarkTheme)
 
-    console.log(title)
-    console.log(accounts)
+    useEffect(() => {
+        console.log(site_title)
+        console.log(accounts)
+    }, [])
 
     useEffect(() => { setDarkTheme(localStorageService.getValue(darkThemeKey)) })
 
@@ -24,6 +27,8 @@ export default function Layout({ title, accounts, children}) {
     useEventListeners()
 
     const toggleTheme = () => { localStorageService.setKeyValue(darkThemeKey, !darkTheme); setDarkTheme(!darkTheme) }
+
+    // Todo: CMS description
 
     return (
     <div id="app">
@@ -42,11 +47,11 @@ export default function Layout({ title, accounts, children}) {
             <meta name="theme-color" content={darkTheme ? '#fff' : '#000'}/>
         </Head>
 
-        <Header />
+        <Header title={site_title} />
 
-        <main id="content">{children}</main>
+        <main id="content" className={utils.content}>{children}</main>
 
-        <Footer darkTheme={darkTheme} onThemeButtonClick={toggleTheme}/>
+        <Footer darkTheme={darkTheme} onThemeButtonClick={toggleTheme} accounts={accounts}/>
 
         <NextNProgress color={darkTheme ? '#fff' : '#000'}/>
 
