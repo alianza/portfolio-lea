@@ -1,0 +1,23 @@
+.form {
+    @apply w-[36em];
+
+p {
+    @apply mb-4 w-full;
+
+label {
+    @apply block flex justify-between items-center;
+
+span {
+    @apply mr-2;
+}
+}
+
+input, textarea {
+    @apply border rounded w-[24em];
+}
+
+textarea {
+    @apply h-24;
+}
+}
+}
