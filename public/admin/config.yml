@@ -3,9 +3,9 @@ backend:
   branch: main
   repo: alianza/portfolio-lea
 
-local_backend: false
-site_url: https://leashamaa.app
-display_url: https://leashamaa.app
+local_backend: true
+site_url: https://leashamaa.nl
+display_url: https://leashamaa.nl
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
@@ -18,50 +18,54 @@ collections:
     editor:
       preview: false
     files:
-      - name: "general"
+      - name: "config"
         label: "Site Config"
-        file: "config.json"
+        file: "content/config.json"
         description: "General site settings"
         fields:
           - { label: "Site title", name: "site_title", widget: "string" }
           - { label: "Site description", name: "site_description", widget: "string" }
-          - label: "Site keywords"
-            name: "site_keywords"
+          - label: "Categories"
+            name: "categories"
+            label_singular: "Category"
             widget: "list"
-            summary: "{{fields.keyword.keyword}}"
-            field:
-              label: Keyword
-              name: keyword
-              widget: "string"
-          - { label: "Twitter account", name: "twitter_account", widget: "string" }
-          - { label: "GitHub account", name: "github_account", widget: "string" }
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Category name", name: "name", widget: "string" }
+          - label: "Online accounts"
+            name: "accounts"
+            label_singular: "Online account"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Social media name", name: "name", widget: "string" }
+              - { label: "Url", name: "url", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "image" }
 
   - name: 'pages'
     label: 'Pages'
     files:
-      - label: 'Home'
-        name: 'home'
-        file: 'content/home.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'SubTitle', name: 'subtitle', widget: 'string' }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'About'
         name: 'about'
-        file: 'content/about.md'
+        file: 'content/pages/about.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: true }
 
-  - label: 'Article'
-    name: 'article'
-    folder: 'content/articles'
+  - label: 'Posts'
+    name: 'post'
+    label_singular: 'Post'
+    folder: 'content/posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: true }
+      - { label: "Category", name: "category", widget: "relation", collection: "config", file: "config",
+          search_fields: [ "categories.*.name" ],
+          display_fields: [ "categories.*.name" ],
+          value_field: "categories.*.name"
+      }
       - { label: 'Body', name: 'body', widget: 'markdown', required: true }
