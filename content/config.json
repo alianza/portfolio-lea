@@ -11,6 +11,11 @@
       "name": "Facebook",
       "url": "https://facebook.com/",
       "icon": "/images/124010.png"
+    },
+    {
+      "name": "Medium",
+      "url": "https://Medium.com",
+      "icon": "/images/medium-512.webp"
     }
   ],
   "categories": [
