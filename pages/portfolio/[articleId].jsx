@@ -1,8 +1,8 @@
 import utils from "../../styles/utils.module.scss"
+import content from "../../public/styles/content.module.css";
 import { getPost, getPostIds } from "../../lib/services/postsService"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
-import MDContent from "../../components/mdContent/MDContent"
 
 export const getStaticPaths = async () => {
 
@@ -29,7 +29,12 @@ export const getStaticProps = async ({ params }) => {
 const Article = ({ article }) => {
   return (
     <div className={utils.page}>
-      <MDContent content={article} />
+      <div className={content.content}>
+        <h1 className="text-4xl">{article.data.title}</h1>
+        <p className="mb-4">{article.data.date}</p>
+        <img alt='thumbnail' src={article.data.thumbnail}/>
+        <article dangerouslySetInnerHTML={{ __html: article.content }}/>
+      </div>
     </div>
   )
 }

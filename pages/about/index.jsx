@@ -1,25 +1,24 @@
 import utils from "../../styles/utils.module.scss"
 import Layout from "../../components/layout/layout/layout"
+import layoutData from "../../content/config.json"
+import { getPage } from "../../lib/services/pageService"
+import MDContent from "../../components/mdContent/MDContent"
 
-// export const getStaticProps = async () => {
-//   const articles = getArticles()
-//
-//   return {
-//     props: {
-//       articles
-//     }
-//   }
-// }
+export const getStaticProps = async () => {
+  const aboutPage = getPage("about")
 
-const About = () => {
+  return {
+    props: {
+      aboutPage,
+      layoutData
+    }
+  }
+}
+
+const About = ({ aboutPage }) => {
   return (
     <div className={utils.page}>
-      <div className={utils.container}>
-      <h1 className={utils.title}>About</h1>
-      <p className="text-lg">
-        This is a simple blog built with Next.js and TailwindCSS for my beautiful girlfriend Lea Shamaa.
-      </p>
-      </div>
+      <MDContent content={aboutPage} noDate/>
     </div>
   )
 }
