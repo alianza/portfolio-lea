@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
 const About = ({ aboutPage }) => {
   return (
     <div className={utils.page}>
-      <MDContent content={aboutPage} noDate/>
+      <MDContent content={aboutPage} noDate mainTitle/>
     </div>
   )
 }
