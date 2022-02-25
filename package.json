@@ -24,8 +24,6 @@
     "marked": "^0.6.2",
     "js-yaml": "^4.1.0",
     "sass": "^1.49.8",
-    "serve": "^13.0.2",
-    "styled-jsx-plugin-postcss": "^4.0.1",
-    "@styled-jsx/plugin-sass": "^4.0.2"
+    "serve": "^13.0.2"
   }
 }
