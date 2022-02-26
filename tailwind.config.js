@@ -41,7 +41,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      'title': ['"Special Elite"', ...defaultTheme.fontFamily.sans],
+      'special': ['"Special Elite"', ...defaultTheme.fontFamily.sans],
       'text': ['"Poppins"', ...defaultTheme.fontFamily.sans],
     },
   },
