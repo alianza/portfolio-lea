@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: alianza/portfolio-lea
 
-local_backend: false
+local_backend: true
 site_url: https://leashamaa.nl
 display_url: https://leashamaa.nl
 media_folder: public/images
@@ -50,8 +50,25 @@ collections:
         file: 'content/pages/about.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
           - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+      - label: 'Portfolio'
+        name: 'portfolio'
+        file: 'content/pages/portfolio.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Articles'
+        name: 'articles'
+        file: 'content/pages/articles.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Contact'
+        name: 'contact'
+        file: 'content/pages/contact.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - label: 'Posts'
     name: 'post'

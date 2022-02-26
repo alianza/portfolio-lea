@@ -18,25 +18,28 @@
 <script>
   CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
   CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Special+Elite:wght@300;400&display=swap");
+  CMS.registerPreviewStyle("../styles/variables.css");
   CMS.registerPreviewStyle("../styles/content.module.css");
 
-  const articlePreview = createClass({
+  const postPreview = createClass({
     render: function () {
       const entry = this.props.entry;
       const image = entry.getIn(['data', 'thumbnail']);
       const bg = this.props.getAsset(image);
       return h("div", { className: "content" },
-        h("h1", {}, entry.getIn(["data", "title"])),
-        h("time", {}, entry.getIn(["data", "date"])),
-        h("img", {src: bg.toString()}),
+        h("h1", { className: "mainTitle" }, entry.getIn(["data", "title"])),
+        h("div", { className: "metaData" },
+            h("time", {}, entry.getIn(["data", "date"])),
+            h("span", { className: "categoryLabel" }, entry.getIn(["data", "category"])),),
+        h("img", { src: bg.toString() }),
         h("div", {}, this.props.widgetFor("body"))
       );
     },
   });
 
-  CMS.registerPreviewTemplate("post", articlePreview);
+  CMS.registerPreviewTemplate("post", postPreview);
 
-  const pagesPreview = createClass({
+  const pagePreview = createClass({
     render: function () {
       const entry = this.props.entry;
       return h("div", { className: "content" },
@@ -47,7 +50,10 @@
     },
   });
 
-  CMS.registerPreviewTemplate("about", pagesPreview);
+  CMS.registerPreviewTemplate("about", pagePreview);
+  CMS.registerPreviewTemplate("portfolio", pagePreview);
+  CMS.registerPreviewTemplate("articles", pagePreview);
+  CMS.registerPreviewTemplate("contact", pagePreview);
 </script>
 </body>
 </html>
