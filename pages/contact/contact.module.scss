@@ -1,23 +1,23 @@
 .form {
-    @apply w-[36em];
+    @apply w-[36em] max-w-full;
 
-p {
-    @apply mb-4 w-full;
+    p {
+        @apply mb-4 w-full;
 
-label {
-    @apply block flex justify-between items-center;
+        label {
+            @apply block flex justify-between  flex-col mobile:flex-row mobile:items-center;
 
-span {
-    @apply mr-2;
-}
-}
+            span {
+                @apply mr-2 w-48 inline-block shrink-0;
+            }
 
-input, textarea {
-    @apply border rounded w-[24em];
-}
+            input, textarea {
+                @apply border rounded w-full;
+            }
 
-textarea {
-    @apply h-24;
-}
-}
+            textarea {
+                @apply h-24;
+            }
+        }
+    }
 }

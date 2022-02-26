@@ -2,19 +2,25 @@ import utils from "../../styles/utils.module.scss"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import styles from "./contact.module.scss"
+import { getPage } from "../../lib/services/pageService"
+import MDContent from "../../components/mdContent/MDContent"
 
 export const getStaticProps = async () => {
+
+  const contactContent = getPage("contact")
+
   return {
     props: {
+      aboutContent: contactContent,
       layoutData
     }
   }
 }
 
-const Contact = () => {
+const Contact = ({ aboutContent }) => {
   return (
     <div className={utils.page}>
-        <h1 className={utils.title}>Contact</h1>
+        <MDContent content={aboutContent} withSpacing />
         <form
           name="contact"
           method="POST"
