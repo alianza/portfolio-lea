@@ -13,7 +13,6 @@ export const getStaticProps = async () => {
 }
 
 const Home = () => {
-
   useEffect(() => {
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
@@ -28,10 +27,6 @@ const Home = () => {
 
   return (
     <div className={`${utils.page} flex items-center justify-center flex-col min-h-full`}>
-      <Head>
-        <title>Lea Shamaa - Portfolio</title>
-      </Head>
-
         <h1 className="text-6xl font-bold text-center">
          Homepage{" "}
           <span className="text-blue-600">
