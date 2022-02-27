@@ -6,7 +6,7 @@
     "next:build": "next build",
     "next:start": "next start",
     "netlify-cms-proxy": "npx netlify-cms-proxy-server",
-    "build-styles:content": "sass ./components/mdContent/MDContent.module.scss ./public/styles/content.module.css --no-source-map --watch",
+    "build-styles:content": "sass components/mdContent/mdContent.module.scss ./public/styles/content.module.css --no-source-map --watch",
     "build-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map --watch",
     "build-cms-styles": "run-p build-styles:*"
   },
