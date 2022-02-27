@@ -1,31 +1,33 @@
 import utils from "../../styles/utils.module.scss"
-import Link from 'next/link'
-import { getPosts } from "../../lib/services/postsService"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
+import { getArticles } from "../../lib/services/mediumService"
+import { getPage } from "../../lib/services/pageService"
+import MdContent from "../../components/mdContent/mdContent"
+import ArticlePreview from "../../components/articlesPreview/articlePreview"
 
 export const getStaticProps = async () => {
 
-  const articles = getPosts()
+  const mediumArticles = await getArticles(layoutData.username_medium)
+
+  const articlesContent = getPage("articles")
 
   return {
     props: {
-      articles,
+      articles: mediumArticles.dataMedium,
+      articlesContent,
       layoutData
     }
   }
 }
 
-const Articles = ({ articles }) => {
+const Articles = ({ articles, articlesContent }) => {
   return (
     <div className={utils.page}>
-      <h1 className={utils.title}>Articles</h1>
-        {articles.map(({ id, articleData }) =>
-          <div key={id} className="mb-4">
-            <Link href={`/articles/${id}`}><a className="text-2xl mb-2">{articleData.data.title}</a></Link>
-            <p className="text-lg">{articleData.data.date}</p>
-          </div>
-        )}
+      <MdContent content={articlesContent} withSpacing/>
+      <div className="flex flex-col gap-8 mx-auto py-8 max-w-4xl">
+        {articles.map((article) => <ArticlePreview key={article.title} article={article}/> )}
+      </div>
     </div>
   )
 }
