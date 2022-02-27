@@ -1,5 +1,10 @@
 import '../styles/globals.scss'
 
+// Todo: mobile menu
+// Todo: online accounts icons
+// Todo: Homepage content
+// Todo: Manifest & favicons
+
 function MyApp({Component, pageProps}) {
   const withLayout = Component.withLayout ?? ((page) => page)
 
