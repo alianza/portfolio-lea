@@ -1,5 +1,5 @@
 .header {
-    @apply h-header flex flex-col gap-2 items-center justify-center bg-primary transition-colors font-special;
+    @apply h-header flex flex-col items-center justify-center bg-primary transition-colors font-special;
 
     .title {
         @apply text-6xl tablet:text-8xl;
