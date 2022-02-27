@@ -10,15 +10,10 @@ import utils from "../../../styles/utils.module.scss"
 
 const darkThemeKey = 'darkTheme'
 
-export default function Layout({ site_title, accounts, children}) {
+export default function Layout({ site_title, site_description, accounts, children}) {
     const [darkTheme, setDarkTheme] = useState(false)
 
     useDarkThemeListener(setDarkTheme)
-
-    useEffect(() => {
-        console.log(site_title)
-        console.log(accounts)
-    }, [])
 
     useEffect(() => { setDarkTheme(localStorageService.getValue(darkThemeKey)) })
 
@@ -28,12 +23,10 @@ export default function Layout({ site_title, accounts, children}) {
 
     const toggleTheme = () => { localStorageService.setKeyValue(darkThemeKey, !darkTheme); setDarkTheme(!darkTheme) }
 
-    // Todo: CMS description
-
     return (
     <div id="app">
         <Head>
-            <title>Team Rockstars IT - Tech Case</title>
+            <title>{site_description}</title>
             <link rel="icon" href="/favicon.ico"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <meta name="description" content="Team Rockstars IT Tech Case statically rendered with Next.js"/>
