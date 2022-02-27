@@ -3,7 +3,7 @@ import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import styles from "./contact.module.scss"
 import { getPage } from "../../lib/services/pageService"
-import MDContent from "../../components/mdContent/MDContent"
+import MdContent from "../../components/mdContent/mdContent"
 
 export const getStaticProps = async () => {
 
@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
 const Contact = ({ aboutContent }) => {
   return (
     <div className={utils.page}>
-        <MDContent content={aboutContent} withSpacing />
+        <MdContent content={aboutContent} withSpacing />
         <form
           name="contact"
           method="POST"
@@ -42,7 +42,7 @@ const Contact = ({ aboutContent }) => {
           <p>
             <label className="items-start">
               <span>Your Message to me:</span>
-              <textarea name="email" />
+              <textarea name="message" />
             </label>
           </p>
           <p>
