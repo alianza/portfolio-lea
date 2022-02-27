@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: alianza/portfolio-lea
 
-local_backend: true
+local_backend: false
 site_url: https://leashamaa.nl
 display_url: https://leashamaa.nl
 media_folder: public/images
@@ -25,6 +25,7 @@ collections:
         fields:
           - { label: "Site title", name: "site_title", widget: "string" }
           - { label: "Site description", name: "site_description", widget: "string" }
+          - { label: "Medium username", name: "username_medium", widget: "string" }
           - label: "Categories"
             name: "categories"
             label_singular: "Category"
@@ -80,9 +81,8 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: true }
-      - { label: "Category", name: "category", widget: "relation", collection: "config", file: "config",
-          search_fields: [ "categories.*.name" ],
-          display_fields: [ "categories.*.name" ],
-          value_field: "categories.*.name"
-      }
+      - { label: "Category", name: "category", widget: "relation",
+          collection: "config", file: "config",
+          search_fields: [ "categories.*.name" ], display_fields: [ "categories.*.name" ], value_field: "categories.*.name" }
+      - { label: 'Description', name: 'description', widget: 'text', required: true }
       - { label: 'Body', name: 'body', widget: 'markdown', required: true }
