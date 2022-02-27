@@ -1,8 +1,16 @@
 .header {
-    @apply h-header flex flex-col items-center justify-center bg-primary transition-colors font-special;
+    @apply h-header flex flex-col items-center justify-center bg-primary transition-colors font-special z-20;
 
-    .title {
-        @apply text-6xl tablet:text-8xl;
+    .controls {
+        @apply z-20 flex gap-2 justify-between w-full px-4 mobile:w-auto;
+
+        .title {
+            @apply text-[13vw] mobile:text-6xl tablet:text-8xl;
+        }
+
+        .menuButton {
+            @apply mobile:hidden;
+        }
     }
 
     .active {

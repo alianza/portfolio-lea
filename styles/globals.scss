@@ -8,6 +8,10 @@
 body {
     @apply p-0 m-0 text-text-primary min-h-screen font-text;
 
+    &.no-scroll {
+        @apply overflow-hidden;
+    }
+
     h1, h2, h3, h4, h5, h6 {
         @apply font-special;
     }
