@@ -1,7 +1,8 @@
 import React from "react"
-import contentStyles from "./MDContent.module.scss"
+import contentStyles from "./mdContent.module.scss"
+import Head from "next/head"
 
-const MDContent = ({ content: { title, date, thumbnail, category, content }, noDate, withSpacing } ) => {
+const MdContent = ({ content: { title, date, thumbnail, category, content }, noDate, withSpacing } ) => {
   return (
     <>
     <article className={contentStyles.content}>
@@ -18,4 +19,4 @@ const MDContent = ({ content: { title, date, thumbnail, category, content }, noD
   )
 }
 
-export default MDContent;
+export default MdContent;
