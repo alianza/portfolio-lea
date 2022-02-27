@@ -1,43 +1,37 @@
 import utils from "../../styles/utils.module.scss"
-import Link from 'next/link'
 import { getPosts } from "../../lib/services/postsService"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
-import MDContent from "../../components/mdContent/MDContent"
+import MdContent from "../../components/mdContent/mdContent"
+import PostPreview from "../../components/postPreview/postPreview"
 
 export const getStaticProps = async () => {
 
-  const articles = getPosts()
+  const posts = getPosts()
 
   const portfolioContent = getPage("portfolio")
 
-  console.log(portfolioContent)
-
   return {
     props: {
-      articles,
+      posts,
       portfolioContent,
       layoutData
     }
   }
 }
 
-const Articles = ({ articles, portfolioContent }) => {
+const Articles = ({ posts, portfolioContent }) => {
   return (
     <div className={utils.page}>
-      <MDContent content={portfolioContent} withSpacing />
-        {articles.map(({ id, articleData }) =>
-          <div key={id} className="mb-4">
-            <Link href={`/articles/${id}`}><a className="text-2xl mb-2">{articleData.data.title}</a></Link>
-            <p className="text-lg">{articleData.data.date}</p>
-          </div>
-        )}
+      <MdContent content={portfolioContent} withSpacing/>
+      <div className="flex flex-col gap-8 mx-auto py-8 max-w-4xl">
+        {posts.map(({ id, post }) => <PostPreview key={id} id={id} post={post}/>)}
       </div>
+    </div>
   )
 }
 
 Articles.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
 
-
-export default Articles;
+export default Articles

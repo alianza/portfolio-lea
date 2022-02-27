@@ -2,7 +2,8 @@ import utils from "../../styles/utils.module.scss"
 import { getPost, getPostIds } from "../../lib/services/postsService"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
-import MDContent from "../../components/mdContent/MDContent"
+import MdContent from "../../components/mdContent/mdContent"
+import Head from "next/head"
 
 export const getStaticPaths = async () => {
 
@@ -16,24 +17,30 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
 
-  const article = getPost(params.articleId)
+  const post = getPost(params.postId)
 
   return {
     props: {
-      article,
+      post,
       layoutData
     },
   }
 }
 
-const Article = ({ article }) => {
+const Post = ({ post }) => {
   return (
-    <div className={utils.page}>
-      <MDContent content={article} />
-    </div>
+    <>
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.description} />
+      </Head>
+      <div className={utils.page}>
+        <MdContent content={post}/>
+      </div>
+    </>
   )
 }
 
-Article.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Post.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
 
-export default Article
+export default Post
