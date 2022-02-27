@@ -1,0 +1,15 @@
+.navigation {
+    @apply opacity-0 invisible flex flex-col gap-8 fixed top-0 w-full h-screen items-center justify-center bg-primary z-10 transition-[visibility,opacity] duration-300 mobile:gap-2 mobile:flex-row mobile:relative mobile:h-auto mobile:visible mobile:opacity-100;
+
+    a {
+        @apply text-4xl mobile:text-base;
+    }
+
+    .darkModeButton {
+        @apply fixed bottom-8 right-8 mobile:hidden;
+    }
+}
+
+.active {
+    @apply visible opacity-100;
+}
