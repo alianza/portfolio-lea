@@ -40,11 +40,11 @@ export default function Layout({ site_title, site_description, accounts, childre
             <meta name="theme-color" content={darkTheme ? '#000' : '#fff'}/>
         </Head>
 
-        <Header title={site_title} />
+        <Header title={site_title} darkTheme={darkTheme} onThemeButtonClick={toggleTheme} />
 
         <main id="content" className={utils.content}>{children}</main>
 
-        <Footer darkTheme={darkTheme} onThemeButtonClick={toggleTheme} accounts={accounts}/>
+        <Footer accounts={accounts} darkTheme={darkTheme} onThemeButtonClick={toggleTheme} />
 
         <NextNProgress color={darkTheme ? '#fff' : '#000'}/>
 
