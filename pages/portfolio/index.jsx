@@ -4,7 +4,7 @@ import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
-import PostPreview from "../../components/postPreview/postPreview"
+import PostPreview from "../../components/previews/postPreview/postPreview"
 
 export const getStaticProps = async () => {
 

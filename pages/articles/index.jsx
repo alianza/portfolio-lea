@@ -4,7 +4,7 @@ import layoutData from "../../content/config.json"
 import { getArticles } from "../../lib/services/mediumService"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
-import ArticlePreview from "../../components/articlesPreview/articlePreview"
+import ArticlePreview from "../../components/previews/articlesPreview/articlePreview"
 
 export const getStaticProps = async () => {
 
@@ -22,12 +22,12 @@ export const getStaticProps = async () => {
   }
 }
 
-const Articles = ({ articles, articlesContent }) => {
+const Articles = ({ articles: { dataMedium }, articlesContent }) => {
   return (
     <div className={utils.page}>
       <MdContent content={articlesContent} withSpacing/>
       <div className="flex flex-col gap-8 mx-auto py-8 max-w-4xl">
-        {articles.map((article) => <ArticlePreview key={article.title} article={article}/> )}
+        {dataMedium.map((article) => <ArticlePreview key={article.title} article={article}/> )}
       </div>
     </div>
   )
