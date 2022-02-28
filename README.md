@@ -1,27 +1,26 @@
-# Next.js + Tailwind CSS Example
+#Portfolio Website for [Léa Shamaa](mailto:leacandle@gmail.com)
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This is a journalist/writer portfolio website for [Léa Shamaa](mailto:leacandle@gmail.com). 
+It is built using Next.js, Netlify CMS and is hosted on Netlify. 
+Check out the live site [here](https://leashamaa.nl/).
 
-## Preview
+##Notable features:
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+- Fully statically generated
+- Dark mode
+- Fully Git based CMS (Netlify CMS)
+- Preview mode
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+###Technologies used:
 
-## Deploy your own
+- Next.js (React)
+- Netlify CMS
+- Dark mode
+- Static site generation
+- Fully markdown & Json based
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+####Development
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- run `yarn install` to install dependencies
+- run `yarn run dev` to start Next.js dev server, Build and watch preview styles and run Netlify CMS local Proxy server for local development
+- run `next:build` to generate static production build
