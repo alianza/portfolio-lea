@@ -8,16 +8,17 @@ import ArticlePreview from "../../components/articlesPreview/articlePreview"
 
 export const getStaticProps = async () => {
 
-  const mediumArticles = await getArticles(layoutData.username_medium)
+  const articles = await getArticles(layoutData.username_medium)
 
   const articlesContent = getPage("articles")
 
   return {
     props: {
-      articles: mediumArticles.dataMedium,
+      articles,
       articlesContent,
       layoutData
-    }
+    },
+    revalidate: 10
   }
 }
 
