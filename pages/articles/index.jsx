@@ -17,8 +17,7 @@ export const getStaticProps = async () => {
       articles,
       articlesContent,
       layoutData
-    },
-    revalidate: 60
+    }
   }
 }
 
