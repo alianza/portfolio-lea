@@ -26,7 +26,7 @@ const Articles = ({ posts, portfolioContent }) => {
     <div className={utils.page}>
       <MdContent content={portfolioContent} withSpacing/>
       <div className="flex flex-col gap-8 mx-auto py-8 max-w-4xl">
-        {posts.map(({ id, post }) => <PostPreview key={id} id={id} post={post}/>)}
+        {posts.map((post) => <PostPreview key={post.id} post={post}/>)}
       </div>
     </div>
   )
