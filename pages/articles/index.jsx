@@ -26,7 +26,7 @@ const Articles = ({ articles: { dataMedium }, articlesContent }) => {
   return (
     <div className={utils.page}>
       <MdContent content={articlesContent} withSpacing/>
-      <div className="flex flex-col gap-8 mx-auto py-8 max-w-4xl">
+      <div className="flex flex-col gap-8 mx-auto py-4 tablet:py-8 max-w-4xl">
         {dataMedium.map((article) => <ArticlePreview key={article.title} article={article}/> )}
       </div>
     </div>
