@@ -3,11 +3,11 @@
   --theme-blue: #51A493;
   --text-dark: #111111;
   --text-light: #fafafa;
-  --theme-primary: var(--theme-blue);
   --primary: #fff;
   --secondary: #000;
-  --text-primary: var(--accent-8);
-  --text-secondary: var(--accent-1);
+  --theme-primary: var(--theme-blue);
+  --text-primary: var(--text-dark);
+  --text-secondary: var(--text-light);
   --accent-0: #fff;
   --accent-1: #fafafa;
   --accent-2: #eaeaea;
