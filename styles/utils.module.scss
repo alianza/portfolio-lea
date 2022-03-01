@@ -33,5 +33,5 @@
 }
 
 .footer {
-    @apply h-footer text-text-light px-8 bg-theme-primary flex items-center justify-between gap-2 transition-colors;
+    @apply h-footer text-text-light px-8 bg-theme-primary flex flex-col mobile:flex-row items-center justify-evenly mobile:justify-between gap-2 mobile:gap-8 transition-colors;
 }

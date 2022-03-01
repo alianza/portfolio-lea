@@ -6,11 +6,14 @@ import styles from "./footer.module.scss"
 export default function Footer({ accounts, onThemeButtonClick, darkTheme }) {
   return (
     <footer id="footer" className={utils.footer}>
-      <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton}/>
-      <div className="flex gap-2">
+      <div className="flex gap-8 items-center">
+        <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton}/>
+        <span className="text-text-light text-sm xs:text-base">Copyright Léa Shamaa © All rights reserved.</span>
+      </div>
+      <div className="flex gap-4">
         {accounts.map(account => (
-          <a key={account.name} href={account.url} rel="noreferrer" target="_blank">
-            {account.name}
+          <a className="w-8 transition-transform hover:scale-110 active:scale-95" key={account.name} title={account.name} href={account.url} rel="noreferrer" target="_blank">
+            <img alt={account.name} className="rounded" src={account.icon} />
           </a>
         ))}
       </div>
