@@ -24,7 +24,7 @@
     @apply min-h-[calc(100vh-var(--header)-var(--footer))] bg-primary transition-colors;
 
     .page {
-        @apply max-w-screen-xl mx-auto p-2 tablet:p-6;
+        @apply max-w-screen-xl mx-auto p-2 mobile:p-6;
 
         .title {
             @apply text-4xl mb-4;
