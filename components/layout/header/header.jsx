@@ -5,6 +5,7 @@ import styles from "./header.module.scss"
 import DarkModeButton from "../../darkModeButton/darkModeButton"
 import Hamburger from "../../svg/hamburger"
 import Close from "../../svg/close"
+import Link from "next/link"
 
 export default function Header({ title, onThemeButtonClick, darkTheme }) {
   const [isActive, setIsActive] = React.useState(false)
@@ -16,7 +17,7 @@ export default function Header({ title, onThemeButtonClick, darkTheme }) {
   return (
     <header id="header" className={utils.header}>
       <div className={utils.controls}>
-        <h1 className={utils.title}>{title}</h1>
+        <Link href="/"><a className="no-underline"><h1 className={utils.title}>{title}</h1></a></Link>
         <button onClick={() => setIsActive(!isActive)} className={`transition-transform hover:scale-110 active:scale-95 ${utils.menuButton}`}>{isActive ? <Close/> : <Hamburger/>}</button>
       </div>
       <nav className={`${styles.navigation} ${isActive ? styles.active : ''}`}>
