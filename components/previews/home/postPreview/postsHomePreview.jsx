@@ -6,7 +6,7 @@ PostHomePreview.propTypes = { post: PropTypes.object.isRequired }
 
 function PostHomePreview({ post }) {
   return(
-    <div className="flex tablet:w-1/3 flex-col gap-2 items-center items-stretch">
+    <div className="flex desktop:w-1/3  flex-col gap-2 items-center items-stretch">
       <Link href={`/portfolio/${post.id}`}><a className="w-full h-64">
         <img alt={post.data.title} src={post.data.thumbnail} className="w-full h-full object-cover aspect-video"/></a></Link>
       <div className="flex flex-col justify-center">
