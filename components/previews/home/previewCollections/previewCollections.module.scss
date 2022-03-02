@@ -16,7 +16,7 @@
             }
 
             .arrow {
-                @apply text-2xl ml-1 transition-transform group-hover:translate-x-2;
+                @apply text-2xl ml-1 transition-transform;
             }
         }
     }

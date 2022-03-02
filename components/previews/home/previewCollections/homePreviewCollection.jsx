@@ -11,7 +11,7 @@ function HomePreviewCollection({ title, label, link, content }) {
       <Link href={link}>
         <a className={`${styles.link} group hidden mobile:flex`}>
           <span className={styles.label}>{label}</span>
-          <span className={styles.arrow}>→</span>
+          <span className={`${styles.arrow} group-hover:translate-x-2`}>→</span>
         </a>
       </Link>
     </div>
@@ -19,7 +19,7 @@ function HomePreviewCollection({ title, label, link, content }) {
     <Link href={link}>
       <a className={`${styles.link} mt-4 self-end group inline-flex mobile:hidden`}>
         <span className={styles.label}>{label}</span>
-        <span className={styles.arrow}>→</span>
+        <span className={`${styles.arrow} group-hover:translate-x-2`}>→</span>
       </a>
     </Link>
   </div>
