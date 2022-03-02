@@ -11,16 +11,16 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      aboutContent: contactContent,
+      contactContent,
       layoutData
     }
   }
 }
 
-const Contact = ({ aboutContent }) => {
+const Contact = ({ contactContent }) => {
   return (
     <div className={utils.page}>
-      <MdContent content={aboutContent} withSpacing/>
+      <MdContent content={contactContent} withSpacing/>
       <ContactFormNetlify/>
     </div>
   )
