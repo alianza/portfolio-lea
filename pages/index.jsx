@@ -22,13 +22,13 @@ export const getStaticProps = async () => {
     props: {
       homeContent,
       posts,
-      articles,
+      articles: articles.dataMedium,
       layoutData
     },
   }
 }
 
-const Home = ({ homeContent, posts, articles: { dataMedium } }) => {
+const Home = ({ homeContent, posts, articles }) => {
   useNetlifyIdentityRedirectHook()
 
   return (
@@ -43,7 +43,7 @@ const Home = ({ homeContent, posts, articles: { dataMedium } }) => {
         title={homeContent.articlesTitle}
         label={homeContent.articlesLabel}
         link="/articles"
-        content={dataMedium.map((article) => <ArticleHomePreview key={article.title} article={article}/>)}
+        content={articles.map((article) => <ArticleHomePreview key={article.title} article={article}/>)}
       />
     </div>
   )

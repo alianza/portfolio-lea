@@ -15,9 +15,7 @@ function HomePreviewCollection({ title, label, link, content }) {
         </a>
       </Link>
     </div>
-    <div className={styles.contentWrapper}>
-      {content}
-    </div>
+    <div className={styles.contentWrapper}>{content}</div>
     <Link href={link}>
       <a className={`${styles.link} mt-4 self-end group inline-flex mobile:hidden`}>
         <span className={styles.label}>{label}</span>
