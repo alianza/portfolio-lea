@@ -1,0 +1,23 @@
+a {
+    @apply underline decoration-transparent transition-colors duration-300 ease-in-out text-inherit border-none bg-transparent;
+
+    span:first-child {
+        @apply underline decoration-transparent transition-colors duration-300 ease-in-out text-inherit border-none bg-transparent;
+
+        &:hover {
+            @apply duration-100 transition-colors decoration-inherit;
+        }
+    }
+
+    &:hover {
+        @apply duration-200 transition-colors decoration-inherit;
+    }
+
+    @media (hover: none) {
+        @apply decoration-inherit not-italic;
+
+        span:first-child {
+            @apply decoration-inherit not-italic;
+        }
+    }
+}

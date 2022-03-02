@@ -5,8 +5,9 @@
 @import './variables';
 @import './tailwind';
 
+
 body {
-    @apply p-0 m-0 text-text-primary min-h-screen font-text;
+    @apply p-0 m-0 text-text-primary min-h-screen font-text box-border;
 
     &.no-scroll {
         @apply overflow-hidden;
@@ -22,13 +23,8 @@ body {
         }
     }
 
-    a {
-        @apply underline decoration-transparent transition-colors duration-300 ease-in-out text-inherit border-none bg-transparent;
+    @import './links';
 
-        &:hover {
-            @apply duration-200 transition-colors decoration-inherit;
-        }
-    }
 }
 
 @import './scrollbar';
