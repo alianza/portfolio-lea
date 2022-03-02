@@ -34,16 +34,17 @@ const Home = ({ homeContent, posts, articles }) => {
   return (
     <div className={`${utils.page} flex flex-col gap-12`}>
       <HomePreviewCollection
-        title={homeContent.postsTitle}
-        label={homeContent.postsLabel}
-        link="/portfolio"
-        content={posts.map((post) => <PostHomePreview key={post.id} post={post}/>)}
-      />
-      <HomePreviewCollection
         title={homeContent.articlesTitle}
         label={homeContent.articlesLabel}
         link="/articles"
         content={articles.map((article) => <ArticleHomePreview key={article.title} article={article}/>)}
+      />
+      <hr className="-mb-4 -mt-10 myblock mobile:hidden"/>
+      <HomePreviewCollection
+        title={homeContent.postsTitle}
+        label={homeContent.postsLabel}
+        link="/portfolio"
+        content={posts.map((post) => <PostHomePreview key={post.id} post={post}/>)}
       />
     </div>
   )

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import * as PropTypes from "prop-types"
 import React from "react"
-import styles from "./previewCollections.module.scss"
+import styles from "./homePreviewCollection.module.scss"
 
 function HomePreviewCollection({ title, label, link, content }) {
   return(
@@ -17,7 +17,7 @@ function HomePreviewCollection({ title, label, link, content }) {
     </div>
     <div className={styles.contentWrapper}>{content}</div>
     <Link href={link}>
-      <a className={`${styles.link} mt-4 self-end group inline-flex mobile:hidden`}>
+      <a className={`${styles.link} mt-8 self-end group inline-flex mobile:hidden`}>
         <span className={styles.label}>{label}</span>
         <span className={`${styles.arrow} group-hover:translate-x-2`}>→</span>
       </a>
