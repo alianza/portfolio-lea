@@ -25,8 +25,8 @@ export default function Header({ title, onThemeButtonClick, darkTheme }) {
       <nav className={`${styles.navigation} ${menuOpen ? styles.active : ''}`}>
         <NavLink label="Home" href="/" onClick={() => setMenuOpen(false)} />
         <NavLink label="About" href="/about" onClick={() => setMenuOpen(false)} />
-        <NavLink label="Articles" href="/articles" onClick={() => setMenuOpen(false)} />
         <NavLink label="Portfolio" href="/portfolio" onClick={() => setMenuOpen(false)} />
+        <NavLink label="Articles" href="/articles" onClick={() => setMenuOpen(false)} />
         <NavLink label="Contact" href="/contact" onClick={() => setMenuOpen(false)} />
         <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton}/>
       </nav>
