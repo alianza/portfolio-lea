@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: alianza/portfolio-lea
 
-local_backend: false
+local_backend: true
 site_url: https://leashamaa.nl
 display_url: https://leashamaa.nl
 media_folder: public/images
@@ -46,6 +46,24 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
+      - label: 'Home'
+        name: 'home'
+        file: 'content/pages/home.md'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Posts title', name: 'postsTitle', widget: 'string' }
+          - { label: 'Posts link label', name: 'postsLabel', widget: 'string' }
+          - { label: 'Articles title', name: 'articlesTitle', widget: 'string' }
+          - { label: 'Articles link label', name: 'articlesLabel', widget: 'string' }
+          - label: "Quotes"
+            name: "quotes"
+            label_singular: "Quote"
+            widget: "list"
+            summary: "{{fields.quote}}-{{fields.author}}"
+            fields:
+              - { label: "Quote", name: "quote", widget: "string" }
+              - { label: "Author", name: "author", widget: "string" }
       - label: 'About'
         name: 'about'
         file: 'content/pages/about.md'
