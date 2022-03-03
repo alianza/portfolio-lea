@@ -14,8 +14,7 @@ a {
     }
 
     @media (hover: none) {
-        @apply decoration-inherit not-italic;
-
+        &,
         span:first-child {
             @apply decoration-inherit not-italic;
         }
