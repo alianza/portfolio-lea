@@ -12,7 +12,7 @@ import HomePreviewCollection from "../components/previews/home/previewCollection
 
 export const getStaticProps = async () => {
 
-  const posts = getPosts()
+  const posts = getPosts().slice(0, 3)
 
   const articles = await getArticles(layoutData.username_medium)
 
@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
     props: {
       homeContent,
       posts,
-      articles: articles.dataMedium,
+      articles: articles.dataMedium.slice(0, 3),
       layoutData
     },
     // revalidate: 60,
