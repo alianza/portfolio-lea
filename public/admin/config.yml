@@ -82,6 +82,13 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: "Read more link"
+            name: "readMoreLink"
+            widget: "object"
+            summary: '{{fields.label}}'
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
       - label: 'Contact'
         name: 'contact'
         file: 'content/pages/contact.md'
