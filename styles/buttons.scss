@@ -1,0 +1,3 @@
+.button {
+    @apply float-right border rounded py-1 px-4 transition-colors duration-300 hover:bg-accent-1 active:shadow-[inset_0px_0px_2px_var(--accent-3)];
+}
