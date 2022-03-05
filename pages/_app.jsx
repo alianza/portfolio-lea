@@ -1,6 +1,5 @@
 import '../styles/globals.scss'
 
-// Todo: Homepage content
 // Todo: Manifest & favicons
 // Todo: Categories colors
 // Todo: Contact form button
