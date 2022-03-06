@@ -7,7 +7,7 @@ export default function Footer({ accounts, onThemeButtonClick, darkTheme }) {
   return (
     <footer id="footer" className={utils.footer}>
       <div className="flex gap-8 items-center">
-        <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton}/>
+        <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton} whiteMoon/>
         <span className="text-text-light text-sm xs:text-base">Copyright Léa Shamaa © All rights reserved.</span>
       </div>
       <div className="flex gap-4">
