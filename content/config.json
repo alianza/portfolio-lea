@@ -31,7 +31,7 @@
     },
     {
       "name": "Food",
-      "color": "#c3c3c3",
+      "color": "",
       "textColor": "auto"
     },
     {
@@ -46,12 +46,6 @@
     {
       "name": "Testcat",
       "textColor": "auto"
-    },
-    {
-      "textColor": [
-        "auto"
-      ],
-      "name": "awdawd"
     }
   ],
   "username_medium": "leacandle"
