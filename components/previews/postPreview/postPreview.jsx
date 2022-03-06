@@ -7,7 +7,7 @@ const PostPreview = ({ post }) => {
       <div className="flex flex-col justify-center">
         <Link href={`/portfolio/${post.id}`}><a className="text-2xl">{post.data.title}</a></Link>
         <time className="text-lg">{post.data.date}</time>
-        <p className="max-h-24 overflow-ellipsis overflow-auto min-w-0">{post.data.description}</p>
+        <p className="max-h-24 overflow-ellipsis overflow-auto min-w-0 pr-1">{post.data.description}</p>
       </div>
     </div>
   )

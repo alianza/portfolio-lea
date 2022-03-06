@@ -7,7 +7,7 @@ const ArticlePreview = ({ article }) => {
       <div className="grow flex flex-col justify-center">
         <a href={article.link} className="text-2xl" target="_blank" rel="noreferrer" dangerouslySetInnerHTML={{ __html: article.title }}/>
         <p className="text-lg">{article.date}</p>
-        <p className="max-h-24 overflow-ellipsis overflow-auto min-w-0" dangerouslySetInnerHTML={{ __html: article.description }}/>
+        <p className="max-h-24 overflow-ellipsis overflow-auto min-w-0 pr-1" dangerouslySetInnerHTML={{ __html: article.description }}/>
       </div>
     </div>
   )
