@@ -1,9 +1,10 @@
 import utils from "../../styles/utils.module.scss"
-import { getPost, getPostIds } from "../../lib/services/postsService"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import MdContent from "../../components/mdContent/mdContent"
 import Head from "next/head"
+import { getPost, getPostIds } from "../../lib/services/postsService"
+import { getCategory } from "../../lib/services/configService"
 
 export const getStaticPaths = async () => {
 
@@ -18,6 +19,10 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
 
   const post = getPost(params.postId)
+
+  const category = getCategory(post.category);
+
+  post.category = category;
 
   return {
     props: {
