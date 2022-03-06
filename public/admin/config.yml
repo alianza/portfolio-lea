@@ -23,8 +23,9 @@ collections:
         file: "content/config.json"
         description: "General site settings"
         fields:
+          - { label: "Site heading", name: "site_heading", widget: "string" }
           - { label: "Site title", name: "site_title", widget: "string" }
-          - { label: "Site description", name: "site_description", widget: "string" }
+          - { label: "Site description", name: "site_description", widget: "text" }
           - { label: "Medium username", name: "username_medium", widget: "string" }
           - label: "Categories"
             name: "categories"
