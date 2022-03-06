@@ -1,7 +1,7 @@
 import React from "react"
 import utils from "../styles/utils.module.scss"
 import Layout from "../components/layout/layout/layout"
-import layoutData from "../content/config.json"
+import layoutData from "../public/content/config.json"
 import { getArticles } from "../lib/services/mediumService"
 import PostHomePreview from "../components/previews/home/postPreview/postsHomePreview"
 import ArticleHomePreview from "../components/previews/home/articlesPreview/articlesHomePreview"
