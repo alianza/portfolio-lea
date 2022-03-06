@@ -1,8 +1,7 @@
 import '../styles/globals.scss'
 
 // Todo: Manifest & favicons
-// Todo: Categories colors
-// Todo: Contact form button
+// Todo: Homepage quotes
 
 function MyApp({Component, pageProps}) {
   const withLayout = Component.withLayout ?? ((page) => page)
