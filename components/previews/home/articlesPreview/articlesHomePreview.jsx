@@ -9,7 +9,7 @@ function ArticleHomePreview({ article }) {
       <img src={article.image} alt={article.title} className="w-full h-full object-cover aspect-video"/>
     </a>
     <div className="flex flex-col justify-center">
-      <a href={article.link} target="_blank" rel="noreferrer" className="text-2xl block text-center">{article.title}</a>
+      <a href={article.link} target="_blank" rel="noreferrer" className="text-2xl block text-center" dangerouslySetInnerHTML={{ __html: article.title }}/>
       <time className="text-lg text-center">{article.date}</time>
     </div>
   </div>)
