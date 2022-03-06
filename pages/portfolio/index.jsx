@@ -1,8 +1,7 @@
 import utils from "../../styles/utils.module.scss"
 import { getPosts } from "../../lib/services/postsService"
 import Layout from "../../components/layout/layout/layout"
-import layoutData from "../../public/content/config.json"
-
+import layoutData from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import PostPreview from "../../components/previews/postPreview/postPreview"

@@ -1,7 +1,6 @@
 import utils from "../../styles/utils.module.scss"
 import Layout from "../../components/layout/layout/layout"
-import layoutData from "../../public/content/config.json"
-
+import layoutData from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 
