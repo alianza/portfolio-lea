@@ -33,6 +33,8 @@ collections:
             summary: "{{fields.name}}"
             fields:
               - { label: "Category name", name: "name", widget: "string" }
+              - { label: "Category color", name: "color", widget: "color", required: false }
+              - { label: "Text color", name: "textColor", widget: "select", options: [ "auto", "light", "dark" ], default: ["auto"], required: true }
           - label: "Online accounts"
             name: "accounts"
             label_singular: "Online account"
