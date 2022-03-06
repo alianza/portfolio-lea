@@ -8,7 +8,7 @@ import { getCategory } from "../../lib/services/configService"
 
 export const getStaticPaths = async () => {
 
-  const paths = getPostIds()
+  const paths = await getPostIds()
 
   return {
     paths,
@@ -18,11 +18,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
 
-  const post = getPost(params.postId)
+  const post = await getPost(params.postId)
 
-  const category = getCategory(post.category);
-
-  post.category = category;
+  post.category = await getCategory(post.category);
 
   return {
     props: {
