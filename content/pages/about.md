@@ -1,8 +1,10 @@
 ---
 title: About
 ---
-This is a simple blog built with Next.js and TailwindCSS for my beautiful girlfriend **Lea Shamaa**. This is *markdown* `content`!
+Writer. Reader. Skater. Student. Master of None. 
 
-Reach me at my email: [janwillemvanbremen@live.nl](mailto:janwillemvanbremen@live.nl)
+I fell in love with language through books and decided to use my love for writing and research to create new connections and ideas. After this decision, the world began showing itself to me via written poetry and love letters. 
 
-About this site...
+This website aims to showcase my (love for) writing, both personal and professional. 
+
+For anymore details, reach me here: thecndle@gmail.com
