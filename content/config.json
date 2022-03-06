@@ -25,19 +25,33 @@
   ],
   "categories": [
     {
-      "name": "Politics"
+      "name": "Politics",
+      "color": "#b32a2a",
+      "textColor": "light"
     },
     {
-      "name": "Food"
+      "name": "Food",
+      "color": "#c3c3c3",
+      "textColor": "auto"
     },
     {
-      "name": "Skate"
+      "name": "Skate",
+      "textColor": "auto"
     },
     {
-      "name": "Culture"
+      "name": "Culture",
+      "color": "#f2ff00",
+      "textColor": "dark"
     },
     {
-      "name": "Testcat"
+      "name": "Testcat",
+      "textColor": "auto"
+    },
+    {
+      "textColor": [
+        "auto"
+      ],
+      "name": "awdawd"
     }
   ],
   "username_medium": "leacandle"
