@@ -8,9 +8,9 @@ import PostPreview from "../../components/previews/postPreview/postPreview"
 
 export const getStaticProps = async () => {
 
-  const posts = getPosts()
+  const posts = await Promise.all(await getPosts())
 
-  const portfolioContent = getPage("portfolio")
+  const portfolioContent = await getPage("portfolio")
 
   return {
     props: {

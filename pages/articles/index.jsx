@@ -13,7 +13,7 @@ export const getStaticProps = async () => {
 
   const articles = await getArticles(layoutData.username_medium)
 
-  const articlesContent = getPage("articles")
+  const articlesContent = await getPage("articles")
 
   return {
     props: {

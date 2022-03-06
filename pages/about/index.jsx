@@ -5,7 +5,7 @@ import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 
 export const getStaticProps = async () => {
-  const aboutPage = getPage("about")
+  const aboutPage = await getPage("about")
 
   return {
     props: {

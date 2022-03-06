@@ -7,7 +7,7 @@ import ContactFormNetlify from "../../components/contactForm/contactFormNetlify"
 
 export const getStaticProps = async () => {
 
-  const contactContent = getPage("contact")
+  const contactContent = await getPage("contact")
 
   return {
     props: {
