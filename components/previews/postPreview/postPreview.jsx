@@ -4,7 +4,7 @@ import * as PropTypes from "prop-types"
 
 PostPreview.propTypes = { post: PropTypes.object.isRequired }
 
-const PostPreview = ({ post }) => {
+function PostPreview({ post }) {
   return (
     <div className={styles.previewContainer}>
       <Link href={`/portfolio/${post.id}`}>

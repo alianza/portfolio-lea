@@ -4,7 +4,7 @@ import * as PropTypes from "prop-types"
 
 ArticlePreview.propTypes = { article: PropTypes.object.isRequired }
 
-const ArticlePreview = ({ article }) => {
+function ArticlePreview({ article }) {
   return (
     <div className={styles.previewContainer}>
       <a className={styles.linkStyle} href={article.link} target="_blank" rel="noreferrer">
