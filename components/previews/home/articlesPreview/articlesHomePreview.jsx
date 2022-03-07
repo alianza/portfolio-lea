@@ -1,18 +1,21 @@
 import * as PropTypes from "prop-types"
 import React from "react"
+import styles from "../../preview.module.scss"
 
 ArticleHomePreview.propTypes = { article: PropTypes.object.isRequired }
 
 function ArticleHomePreview({ article }) {
-  return(<div className="flex desktop:w-1/3 flex-col gap-2 items-center items-stretch">
-    <a href={article.link} className="w-full h-64">
-      <img src={article.image} alt={article.title} className="w-full h-full object-cover aspect-video"/>
-    </a>
-    <div className="flex flex-col justify-center">
-      <a href={article.link} target="_blank" rel="noreferrer" className="text-2xl block text-center" dangerouslySetInnerHTML={{ __html: article.title }}/>
-      <time className="text-lg text-center">{article.date}</time>
+  return (
+    <div className={styles.previewHomeContainer}>
+      <a href={article.link} className={styles.imageLinkStyle}>
+        <img className={styles.imageStyle} src={article.image} alt={article.title}/>
+      </a>
+      <div className={styles.contentStyle}>
+        <a href={article.link} target="_blank" rel="noreferrer" className={styles.title} dangerouslySetInnerHTML={{ __html: article.title }}/>
+        <time className={styles.date}>{article.date}</time>
+      </div>
     </div>
-  </div>)
+  )
 }
 
 export default ArticleHomePreview

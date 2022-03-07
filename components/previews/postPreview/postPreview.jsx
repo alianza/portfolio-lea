@@ -1,13 +1,23 @@
 import Link from "next/link"
+import styles from '../preview.module.scss'
+import * as PropTypes from "prop-types"
+
+PostPreview.propTypes = { post: PropTypes.object.isRequired }
 
 const PostPreview = ({ post }) => {
   return (
-    <div className="flex flex-col gap-2 items-center items-stretch tablet:gap-4 tablet:flex-row">
-      <Link href={`/portfolio/${post.id}`}><a className="tablet:w-1/3 shrink-0"><img alt="post thumbnail" src={post.data.thumbnail} className="w-full h-full object-cover aspect-video"/></a></Link>
-      <div className="flex flex-col justify-center">
-        <Link href={`/portfolio/${post.id}`}><a className="text-2xl">{post.data.title}</a></Link>
+    <div className={styles.previewContainer}>
+      <Link href={`/portfolio/${post.id}`}>
+        <a className={styles.linkStyle}>
+          <img className={styles.imageStyle} alt="post thumbnail" src={post.data.thumbnail}/>
+        </a>
+      </Link>
+      <div className={styles.contentStyle}>
+        <Link href={`/portfolio/${post.id}`}>
+          <a className="text-2xl">{post.data.title}</a>
+        </Link>
         <time className="text-lg">{post.data.date}</time>
-        <p className="max-h-24 overflow-ellipsis overflow-auto min-w-0 pr-1">{post.data.description}</p>
+        <p className={styles.description}>{post.data.description}</p>
       </div>
     </div>
   )

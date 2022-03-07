@@ -31,12 +31,10 @@ const Articles = ({ articles, articlesContent }) => {
       <MdContent content={articlesContent} withSpacing/>
       <div className="flex flex-col gap-8 mx-auto py-4 tablet:py-8 max-w-4xl">
         {articles.map((article) => <ArticlePreview key={article.title} article={article}/> )}
-        <Link href={articlesContent.readMoreLink.link}>
-          <a className={`${styles.link} target="_blank" rel="noreferrer" mt-4 mobile:mt-8 self-end group inline-flex`}>
+          <a href={articlesContent.readMoreLink.link} className={`${styles.link} mt-4 mobile:mt-8 self-end group inline-flex`} target="_blank" rel="noreferrer">
             <span className={styles.label}>{articlesContent.readMoreLink.label}</span>
             <span className={`${styles.arrow} group-hover:translate-x-2`}>→</span>
           </a>
-        </Link>
       </div>
     </div>
   )
