@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
       articles: articles.dataMedium.slice(0, 3),
       layoutData
     },
-    // revalidate: 60,
+    revalidate: 60,
   }
 }
 
