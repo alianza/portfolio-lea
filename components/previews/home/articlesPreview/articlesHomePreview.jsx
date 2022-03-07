@@ -7,7 +7,7 @@ ArticleHomePreview.propTypes = { article: PropTypes.object.isRequired }
 function ArticleHomePreview({ article }) {
   return (
     <div className={styles.previewHomeContainer}>
-      <a href={article.link} className={styles.imageLinkStyle}>
+      <a href={article.link} target="_blank" rel="noreferrer" className={styles.imageLinkStyle}>
         <img className={styles.imageStyle} src={article.image} alt={article.title}/>
       </a>
       <div className={styles.contentStyle}>
