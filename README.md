@@ -12,13 +12,14 @@ Check out the live site [here](https://leashamaa.nl/).
 - Dark mode
 - Fully Git based CMS (Netlify CMS)
 - Preview mode
+- Incremental Static Regerenation (ISR) for pages with remote dynamic data (Medium articles)
 
 ### Technologies used:
 
 - Next.js (React)
 - Netlify CMS
 - Dark mode
-- Static site generation
+- Static site generation & Incremental Static Regerenation (ISR)
 - Fully markdown & Json based
 
 #### Development
