@@ -35,10 +35,6 @@ module.exports = {
         'mobile': '480px', // var(--mobile)
         'xs': '320px', // var(--xs)
       },
-      spacing: {
-        'header': 'var(--header)',
-        'footer': 'var(--footer)',
-      },
     },
     fontFamily: {
       'special': ['"Special Elite"', ...defaultTheme.fontFamily.sans],

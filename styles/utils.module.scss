@@ -1,5 +1,5 @@
 .header {
-    @apply h-header flex flex-col items-center justify-center bg-primary transition-colors font-special z-20;
+    @apply flex py-4 flex-col items-center justify-center transition-colors font-special z-20;
 
     .controls {
         @apply z-20 flex gap-2 justify-between w-full px-4 mobile:w-auto;
@@ -7,7 +7,7 @@
         .title {
             @apply text-[13vw] mt-2 mobile:m-0;
             @apply mobile:text-6xl;
-            @apply tablet:text-8xl;
+            @apply tablet:text-8xl tablet:leading-[8rem];
         }
 
         .menuButton {
@@ -21,7 +21,7 @@
 }
 
 .content {
-    @apply min-h-[calc(100vh-var(--header)-var(--footer))] bg-primary transition-colors;
+    @apply transition-colors;
 
     .page {
         @apply max-w-screen-xl mx-auto p-2 mobile:p-6;
@@ -33,7 +33,7 @@
 }
 
 .footer {
-    @apply h-footer text-text-light px-8 bg-theme-primary flex flex-col mobile:flex-row items-center justify-evenly mobile:justify-between gap-2 mobile:gap-8 transition-colors;
+    @apply text-text-light mt-auto px-8 py-4 mobile:py-8 bg-theme-primary flex flex-col mobile:flex-row items-center justify-evenly mobile:justify-between gap-2 mobile:gap-8 transition-colors;
 }
 
 .hoverEffectSlight {

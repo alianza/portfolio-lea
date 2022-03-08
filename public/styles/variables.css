@@ -22,8 +22,6 @@
   --tablet: 600px;
   --mobile: 480px;
   --xs: 320px;
-  --header: 148px;
-  --footer: 98px;
 }
 
 [data-theme=dark] {
