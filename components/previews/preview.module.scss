@@ -2,7 +2,7 @@
     @apply flex flex-col gap-2 items-center items-stretch tablet:gap-4 tablet:flex-row;
 
     .linkStyle {
-        @apply relative tablet:w-1/3 shrink-0 transition-transform hover:scale-[1.02] active:scale-[.98] aspect-video;
+        @apply relative tablet:w-1/3 shrink-0 aspect-video;
     }
 }
 
@@ -22,7 +22,7 @@
     @apply flex desktop:w-1/3 flex-col gap-2 items-center items-stretch;
 
     .imageLinkStyle {
-        @apply relative w-full h-auto aspect-video transition-transform hover:scale-[1.02] active:scale-[.98];
+        @apply relative w-full h-auto aspect-video;
     }
 
     .title {
