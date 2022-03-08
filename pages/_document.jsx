@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
