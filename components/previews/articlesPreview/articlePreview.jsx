@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../preview.module.scss'
 import * as PropTypes from "prop-types"
+import Image from "next/image"
 
 ArticlePreview.propTypes = { article: PropTypes.object.isRequired }
 
@@ -8,7 +9,12 @@ function ArticlePreview({ article }) {
   return (
     <div className={styles.previewContainer}>
       <a className={styles.linkStyle} href={article.link} target="_blank" rel="noreferrer">
-        <img className={styles.imageStyle} src={article.image} alt={article.title}/>
+        <Image
+          layout="fill"
+          alt={`${article.title} thumbnail`}
+          className={styles.imageStyle}
+          objectFit={"cover"}
+          src={`/api/imageProxy?imageUrl=${article.image}`}/>
       </a>
       <div className={styles.contentStyle}>
         <a href={article.link} className="text-2xl" target="_blank" rel="noreferrer" dangerouslySetInnerHTML={{ __html: article.title }}/>

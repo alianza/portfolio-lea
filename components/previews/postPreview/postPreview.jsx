@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import styles from '../preview.module.scss'
 import * as PropTypes from "prop-types"
 
@@ -9,7 +10,12 @@ function PostPreview({ post }) {
     <div className={styles.previewContainer}>
       <Link href={`/portfolio/${post.id}`}>
         <a className={styles.linkStyle}>
-          <img className={styles.imageStyle} alt="post thumbnail" src={post.data.thumbnail}/>
+          <Image
+            layout="fill"
+            alt={`${post.data.title} thumbnail`}
+            className={styles.imageStyle}
+            objectFit={"cover"}
+            src={post.data.thumbnail}/>
         </a>
       </Link>
       <div className={styles.contentStyle}>

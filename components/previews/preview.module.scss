@@ -2,12 +2,12 @@
     @apply flex flex-col gap-2 items-center items-stretch tablet:gap-4 tablet:flex-row;
 
     .linkStyle {
-        @apply tablet:w-1/3 shrink-0 transition-transform hover:scale-[1.02] active:scale-[.98];
+        @apply relative tablet:w-1/3 shrink-0 transition-transform hover:scale-[1.02] active:scale-[.98] aspect-video;
     }
 }
 
 .imageStyle {
-    @apply w-full h-full object-cover aspect-video;
+    @apply w-full h-full object-cover;
 }
 
 .contentStyle {
@@ -22,7 +22,7 @@
     @apply flex desktop:w-1/3 flex-col gap-2 items-center items-stretch;
 
     .imageLinkStyle {
-        @apply w-full h-auto transition-transform hover:scale-[1.02] active:scale-[.98];
+        @apply relative w-full h-auto aspect-video transition-transform hover:scale-[1.02] active:scale-[.98];
     }
 
     .title {

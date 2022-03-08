@@ -2,6 +2,7 @@ import Link from "next/link"
 import * as PropTypes from "prop-types"
 import React from "react"
 import styles from "../../preview.module.scss"
+import Image from "next/image"
 
 PostHomePreview.propTypes = { post: PropTypes.object.isRequired }
 
@@ -10,7 +11,12 @@ function PostHomePreview({ post }) {
     <div className={styles.previewHomeContainer}>
       <Link href={`/portfolio/${post.id}`}>
         <a className={styles.imageLinkStyle}>
-          <img className={styles.imageStyle} alt={post.data.title} src={post.data.thumbnail}/>
+          <Image
+            layout="fill"
+            alt={`${post.data.title} thumbnail`}
+            className={styles.imageStyle}
+            objectFit={"cover"}
+            src={post.data.thumbnail}/>
         </a>
       </Link>
       <div className={styles.contentStyle}>
