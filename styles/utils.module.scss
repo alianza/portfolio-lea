@@ -35,3 +35,11 @@
 .footer {
     @apply h-footer text-text-light px-8 bg-theme-primary flex flex-col mobile:flex-row items-center justify-evenly mobile:justify-between gap-2 mobile:gap-8 transition-colors;
 }
+
+.hoverEffectSlight {
+    @apply transition-transform hover:scale-[1.02] active:scale-[.98];
+}
+
+.hoverEffectStrong {
+    @apply transition-transform hover:scale-110 active:scale-95;
+}
