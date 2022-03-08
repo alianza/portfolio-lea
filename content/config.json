@@ -1,6 +1,8 @@
 {
+  "site_heading": "Léa Shamaa",
   "site_title": "Léa Shamaa - Portfolio",
   "site_description": "This is the portfolio site of Leá Shamaa. I'm a journalist, skater and girlfriend! Yayy check it out!",
+  "username_medium": "leacandle",
   "accounts": [
     {
       "name": "Instagram",
@@ -53,7 +55,5 @@
       ],
       "name": "awdawd"
     }
-  ],
-  "username_medium": "leacandle",
-  "site_heading": "Léa Shamaa"
+  ]
 }
