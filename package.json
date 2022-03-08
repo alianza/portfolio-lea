@@ -11,6 +11,7 @@
     "build-cms-styles": "run-p build-styles:*"
   },
   "dependencies": {
+    "@blazity/next-image-proxy": "^1.0.2",
     "next": "latest",
     "nextjs-progressbar": "^0.0.13",
     "react": "^17.0.2",
