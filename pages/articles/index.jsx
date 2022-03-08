@@ -28,7 +28,8 @@ export const getStaticProps = async () => {
 const Articles = ({ articles, articlesContent }) => {
   return (
     <div className={utils.page}>
-      <MdContent content={articlesContent} withSpacing/>
+      <MdContent content={articlesContent}/>
+      <hr className="my-4"/>
       <div className="flex flex-col gap-8 mx-auto py-4 tablet:py-8 max-w-4xl">
         {articles.map((article) => <ArticlePreview key={article.title} article={article}/> )}
           <a href={articlesContent.readMoreLink.link} className={`${styles.link} mt-4 mobile:mt-8 self-end group inline-flex`} target="_blank" rel="noreferrer">

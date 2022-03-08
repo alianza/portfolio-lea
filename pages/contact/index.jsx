@@ -4,6 +4,7 @@ import layoutData from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ContactFormNetlify from "../../components/contactForm/contactFormNetlify"
+import React from "react"
 
 export const getStaticProps = async () => {
 
@@ -20,7 +21,8 @@ export const getStaticProps = async () => {
 const Contact = ({ contactContent }) => {
   return (
     <div className={utils.page}>
-      <MdContent content={contactContent} withSpacing/>
+      <MdContent content={contactContent}/>
+      <hr className="my-4"/>
       <ContactFormNetlify/>
     </div>
   )
