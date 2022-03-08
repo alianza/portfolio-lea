@@ -2,7 +2,7 @@ a {
     @apply underline decoration-transparent transition-colors duration-300 ease-in-out text-inherit border-none bg-transparent;
 
     span:first-child {
-        @apply underline decoration-transparent transition-colors duration-300 ease-in-out text-inherit border-none bg-transparent;
+        @apply leading-8 underline decoration-transparent transition-colors duration-300 ease-in-out text-inherit border-none bg-transparent;
 
         &:hover {
             @apply duration-100 transition-colors decoration-inherit;
