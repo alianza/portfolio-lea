@@ -14,20 +14,22 @@ export default function Header({ title, onThemeButtonClick, darkTheme }) {
     menuOpen ? document.body.classList.add('no-scroll') : document.body.classList.remove('no-scroll')
   }, [menuOpen])
 
+  const closeMenu = () => { setMenuOpen(false) }
+
   return (
     <header id="header" className={utils.header}>
       <div className={utils.controls}>
         <Link href="/"><a className="no-underline"><h1 className={utils.title}>{title}</h1></a></Link>
-        <button aria-label={`${menuOpen ? 'close' : 'open'} Menu`} onClick={() => setMenuOpen(!menuOpen)} className={`transition-transform hover:scale-110 active:scale-95 ${utils.menuButton}`}>
+        <button aria-label={`${menuOpen ? 'close' : 'open'} Menu`} onClick={() => setMenuOpen(!menuOpen)} className={`${utils.menuButton} ${utils.hoverEffectStrong}`}>
           { menuOpen ? <Close/> : <Hamburger/> }
         </button>
       </div>
       <nav className={`${styles.navigation} ${menuOpen ? styles.active : ''}`}>
-        <NavLink label="Home" href="/" onClick={() => setMenuOpen(false)} />
-        <NavLink label="About" href="/about" onClick={() => setMenuOpen(false)} />
-        <NavLink label="Portfolio" href="/portfolio" onClick={() => setMenuOpen(false)} />
-        <NavLink label="Articles" href="/articles" onClick={() => setMenuOpen(false)} />
-        <NavLink label="Contact" href="/contact" onClick={() => setMenuOpen(false)} />
+        <NavLink label="Home" href="/" onClick={closeMenu} />
+        <NavLink label="About" href="/about" onClick={closeMenu} />
+        <NavLink label="Portfolio" href="/portfolio" onClick={closeMenu} />
+        <NavLink label="Articles" href="/articles" onClick={closeMenu} />
+        <NavLink label="Contact" href="/contact" onClick={closeMenu} />
         <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton}/>
       </nav>
     </header>
