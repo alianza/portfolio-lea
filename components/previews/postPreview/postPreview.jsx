@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import styles from '../preview.module.scss'
 import * as PropTypes from "prop-types"
+import utils from "../../../styles/utils.module.scss"
 
 PostPreview.propTypes = { post: PropTypes.object.isRequired }
 
@@ -9,7 +10,7 @@ function PostPreview({ post }) {
   return (
     <div className={styles.previewContainer}>
       <Link href={`/portfolio/${post.id}`}>
-        <a className={styles.linkStyle}>
+        <a className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
           <Image
             layout="fill"
             alt={`${post.data.title} thumbnail`}

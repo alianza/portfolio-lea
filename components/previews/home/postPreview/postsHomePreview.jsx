@@ -3,6 +3,7 @@ import * as PropTypes from "prop-types"
 import React from "react"
 import styles from "../../preview.module.scss"
 import Image from "next/image"
+import utils from "../../../../styles/utils.module.scss"
 
 PostHomePreview.propTypes = { post: PropTypes.object.isRequired }
 
@@ -10,7 +11,7 @@ function PostHomePreview({ post }) {
   return (
     <div className={styles.previewHomeContainer}>
       <Link href={`/portfolio/${post.id}`}>
-        <a className={styles.imageLinkStyle}>
+        <a className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
           <Image
             layout="fill"
             alt={`${post.data.title} thumbnail`}
