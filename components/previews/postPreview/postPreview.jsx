@@ -10,7 +10,7 @@ function PostPreview({ post }) {
   return (
     <div className={styles.previewContainer}>
       <Link href={`/portfolio/${post.id}`}>
-        <a className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
+        <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image
             layout="fill"
             alt={`${post.data.title} thumbnail`}

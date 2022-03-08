@@ -20,7 +20,7 @@ export default function Header({ title, onThemeButtonClick, darkTheme }) {
     <header id="header" className={utils.header}>
       <div className={utils.controls}>
         <Link href="/"><a className="no-underline"><h1 className={utils.title}>{title}</h1></a></Link>
-        <button aria-label={`${menuOpen ? 'close' : 'open'} Menu`} onClick={() => setMenuOpen(!menuOpen)} className={`${utils.menuButton} ${utils.hoverEffectStrong}`}>
+        <button aria-label={`${menuOpen ? 'close' : 'open'} Menu`} onClick={() => setMenuOpen(!menuOpen)} className={`${utils.menuButton} transition-transform hover:scale-110 active:scale-95`}>
           { menuOpen ? <Close/> : <Hamburger/> }
         </button>
       </div>

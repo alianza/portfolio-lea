@@ -11,7 +11,7 @@ function PostHomePreview({ post }) {
   return (
     <div className={styles.previewHomeContainer}>
       <Link href={`/portfolio/${post.id}`}>
-        <a className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
+        <a className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image
             layout="fill"
             alt={`${post.data.title} thumbnail`}
