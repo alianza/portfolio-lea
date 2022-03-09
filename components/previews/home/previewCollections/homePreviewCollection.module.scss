@@ -2,7 +2,7 @@
     @apply flex flex-col;
 
     .heading {
-        @apply flex justify-center mb-6 mobile:mb-0 mobile:justify-between items-center;
+        @apply flex justify-center mb-6 mobile:mb-0 mobile:justify-between items-end;
 
         .headingTitle {
             @apply text-4xl mobile:text-left inline;
