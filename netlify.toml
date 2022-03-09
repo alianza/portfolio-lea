@@ -1,2 +1,8 @@
+[build]
+publish = ".next" # Publish directory
+
+[[plugins]]
+package = "@netlify/plugin-nextjs" # Netlify Next.js plugin
+
 [functions]
 included_files = ["content/**"] # Include the content directory for Netlify functions (ISR)
