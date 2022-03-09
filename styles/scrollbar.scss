@@ -12,9 +12,9 @@
 
 #app {
     ::-webkit-scrollbar {
-        @apply w-2
+        @apply w-2;
     }
     ::-webkit-scrollbar-track {
-        @apply shadow;
+        @apply shadow rounded-2xl;
     };
 }
