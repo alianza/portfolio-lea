@@ -1,25 +1,3 @@
-.header {
-    @apply flex py-4 flex-col items-center justify-center transition-colors font-special z-20;
-
-    .controls {
-        @apply z-20 flex gap-2 justify-between w-full px-4 mobile:w-auto;
-
-        .title {
-            @apply text-[13vw] mt-2 mobile:m-0;
-            @apply mobile:text-6xl;
-            @apply tablet:text-8xl tablet:leading-[8rem];
-        }
-
-        .menuButton {
-            @apply mobile:hidden;
-        }
-    }
-
-    .active {
-        @apply relative before:content-[""] before:w-full before:border before:border-text-primary before:z-10 before:absolute before:bottom-0 before:rounded before:skew-y-3 before:transition-colors before:duration-1000;
-    }
-}
-
 .content {
     @apply transition-colors;
 
@@ -30,10 +8,6 @@
             @apply text-4xl mb-4;
         }
     }
-}
-
-.footer {
-    @apply text-text-light mt-auto px-8 py-4 mobile:py-8 bg-theme-primary flex flex-col mobile:flex-row items-center justify-evenly mobile:justify-between gap-2 mobile:gap-8 transition-colors;
 }
 
 .hoverEffectSlight {

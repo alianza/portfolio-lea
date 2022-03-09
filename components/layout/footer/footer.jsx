@@ -1,12 +1,11 @@
 import React from "react"
-import utils from '../../../styles/utils.module.scss'
+import styles from './footer.module.scss'
 import DarkModeButton from "../../darkModeButton/darkModeButton"
-import styles from "./footer.module.scss"
 import Image from 'next/image'
 
 export default function Footer({ accounts, onThemeButtonClick, darkTheme }) {
   return (
-    <footer id="footer" className={utils.footer}>
+    <footer id="footer" className={styles.footer}>
       <div className="flex gap-8 items-center">
         <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton}/>
         <span className="text-text-primary text-center mobile:text-left text-sm xs:text-base">Copyright Léa Shamaa © All rights reserved.</span>
