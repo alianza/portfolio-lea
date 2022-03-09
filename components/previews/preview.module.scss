@@ -33,3 +33,7 @@
         @apply text-lg text-center;
     }
 }
+
+.previewList {
+    @apply flex flex-col gap-12 tablet:gap-8 mx-auto py-2 tablet:py-8 max-w-4xl;
+}

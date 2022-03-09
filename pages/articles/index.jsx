@@ -1,13 +1,12 @@
 import utils from "../../styles/utils.module.scss"
+import styles from "../../components/previews/preview.module.scss"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import { getArticles } from "../../lib/services/mediumService"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ArticlePreview from "../../components/previews/articlesPreview/articlePreview"
-import styles from "../../components/previews/home/previewCollections/homePreviewCollection.module.scss"
 import React from "react"
-import Link from "next/link"
 
 export const getStaticProps = async () => {
 
@@ -30,11 +29,11 @@ const Articles = ({ articles, articlesContent }) => {
     <div className={utils.page}>
       <MdContent content={articlesContent}/>
       <hr className="my-4"/>
-      <div className="flex flex-col gap-8 mx-auto py-4 tablet:py-8 max-w-4xl">
+      <div className={styles.previewList}>
         {articles.map((article) => <ArticlePreview key={article.title} article={article}/> )}
-          <a href={articlesContent.readMoreLink.link} className={`${styles.link} mt-4 mobile:mt-8 self-end group inline-flex`} target="_blank" rel="noreferrer">
-            <span className={styles.label}>{articlesContent.readMoreLink.label}</span>
-            <span className={`${styles.arrow} group-hover:translate-x-2`}>→</span>
+          <a href={articlesContent.readMoreLink.link} className={`${utils.arrowLink} mt-4 mobile:mt-8 self-end group inline-flex`} target="_blank" rel="noreferrer">
+            <span className={utils.label}>{articlesContent.readMoreLink.label}</span>
+            <span className={`${utils.arrow} group-hover:translate-x-2`}>→</span>
           </a>
       </div>
     </div>

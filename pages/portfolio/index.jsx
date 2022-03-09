@@ -1,4 +1,5 @@
 import utils from "../../styles/utils.module.scss"
+import styles from "../../components/previews/preview.module.scss"
 import { getPosts } from "../../lib/services/postsService"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
@@ -27,7 +28,7 @@ const Articles = ({ posts, portfolioContent }) => {
     <div className={utils.page}>
       <MdContent content={portfolioContent}/>
       <hr className="my-4"/>
-      <div className="flex flex-col gap-8 mx-auto py-4 tablet:py-8 max-w-4xl">
+      <div className={styles.previewList}>
         {posts.map((post) => <PostPreview key={post.id} post={post}/>)}
       </div>
     </div>

@@ -2,6 +2,7 @@ import Link from "next/link"
 import * as PropTypes from "prop-types"
 import React from "react"
 import styles from "./homePreviewCollection.module.scss"
+import utils from "../../../../styles/utils.module.scss"
 
 function HomePreviewCollection({ title, label, link, content }) {
   return(
@@ -9,17 +10,17 @@ function HomePreviewCollection({ title, label, link, content }) {
     <div className={styles.heading}>
       <h1 className={styles.headingTitle}>{title}</h1>
       <Link href={link}>
-        <a className={`${styles.link} group hidden mobile:flex`}>
-          <span className={styles.label}>{label}</span>
-          <span className={`${styles.arrow} group-hover:translate-x-2`}>→</span>
+        <a className={`${utils.arrowLink} group hidden mobile:flex`}>
+          <span className={utils.label}>{label}</span>
+          <span className={`${utils.arrow} group-hover:translate-x-2`}>→</span>
         </a>
       </Link>
     </div>
     <div className={styles.contentWrapper}>{content}</div>
     <Link href={link}>
-      <a className={`${styles.link} mt-8 self-end group inline-flex mobile:hidden`}>
-        <span className={styles.label}>{label}</span>
-        <span className={`${styles.arrow} group-hover:translate-x-2`}>→</span>
+      <a className={`${utils.arrowLink} mt-8 self-end group inline-flex mobile:hidden`}>
+        <span className={utils.label}>{label}</span>
+        <span className={`${utils.arrow} group-hover:translate-x-2`}>→</span>
       </a>
     </Link>
   </div>

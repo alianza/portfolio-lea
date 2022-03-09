@@ -2,27 +2,14 @@
     @apply flex flex-col;
 
     .heading {
-        @apply flex justify-center mobile:justify-between items-center;
+        @apply flex justify-center mb-6 mobile:mb-0 mobile:justify-between items-center;
 
         .headingTitle {
-            @apply text-4xl mobile:text-left mb-2 inline;
+            @apply text-4xl mobile:text-left inline;
         }
     }
 
     .contentWrapper {
-        @apply flex flex-col gap-2 items-center items-stretch desktop:flex-row;
-    }
-}
-
-
-.link {
-    @apply no-underline inline items-center;
-
-    .label {
-        @apply hover:underline;
-    }
-
-    .arrow {
-        @apply text-2xl ml-1 transition-transform;
+        @apply flex flex-col gap-12 desktop:gap-2 items-center items-stretch desktop:flex-row;
     }
 }
