@@ -6,22 +6,12 @@
   "accounts": [
     {
       "name": "Instagram",
-      "url": "https://instagram.com/",
+      "url": "https://instagram.com/leacandle",
       "icon": "/images/instagram_icon.png.webp"
     },
     {
-      "name": "Facebook",
-      "url": "https://facebook.com/",
-      "icon": "/images/124010.png"
-    },
-    {
       "name": "Medium",
-      "url": "https://Medium.com",
-      "icon": "/images/medium-512.webp"
-    },
-    {
-      "name": "Test",
-      "url": "https://test.nl",
+      "url": "https://medium.com/@leacandle",
       "icon": "/images/medium-512.webp"
     }
   ],
