@@ -2,7 +2,6 @@ import Link from "next/link"
 import Image from "next/image"
 import styles from '../preview.module.scss'
 import * as PropTypes from "prop-types"
-import utils from "../../../styles/utils.module.scss"
 
 PostPreview.propTypes = { post: PropTypes.object.isRequired }
 
