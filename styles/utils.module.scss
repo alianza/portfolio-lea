@@ -17,3 +17,16 @@
 .hoverEffectStrong {
     @apply transition-transform hover:scale-110 active:scale-95;
 }
+
+
+.arrowLink {
+    @apply no-underline inline items-center;
+
+    .label {
+        @apply hover:underline;
+    }
+
+    .arrow {
+        @apply text-2xl ml-1 transition-transform;
+    }
+}
