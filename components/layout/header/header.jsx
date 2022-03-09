@@ -25,7 +25,7 @@ export default function Header({ title, onThemeButtonClick, darkTheme }) {
         </button>
       </div>
       <nav className={`${styles.navigation} ${menuOpen ? styles.active : ''}`}>
-        <NavLink label="Home" href="/" onClick={closeMenu} />
+        <NavLink label="Home" href="/" exact onClick={closeMenu} />
         <NavLink label="About" href="/about" onClick={closeMenu} />
         <NavLink label="Portfolio" href="/portfolio" onClick={closeMenu} />
         <NavLink label="Articles" href="/articles" onClick={closeMenu} />

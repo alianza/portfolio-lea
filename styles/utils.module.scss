@@ -16,7 +16,7 @@
     }
 
     .active {
-        @apply relative before:content-[""] before:w-full before:border-b-2 before:border-text-primary before:z-10 before:absolute before:bottom-0 before:rounded before:skew-y-3 before:transition-colors before:duration-1000;
+        @apply relative before:content-[""] before:w-full before:border before:border-text-primary before:z-10 before:absolute before:bottom-0 before:rounded before:skew-y-3 before:transition-colors before:duration-1000;
     }
 }
 
