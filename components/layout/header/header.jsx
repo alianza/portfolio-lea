@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import utils from '../../../styles/utils.module.scss'
 import NavLink from "../../navLink/navLink"
 import styles from "./header.module.scss"
 import DarkModeButton from "../../darkModeButton/darkModeButton"
@@ -17,14 +16,16 @@ export default function Header({ title, onThemeButtonClick, darkTheme }) {
   const closeMenu = () => { setMenuOpen(false) }
 
   return (
-    <header id="header" className={utils.header}>
-      <div className={utils.controls}>
-        <Link href="/"><a className="no-underline"><h1 className={utils.title}>{title}</h1></a></Link>
-        <button aria-label={`${menuOpen ? 'close' : 'open'} Menu`} onClick={() => setMenuOpen(!menuOpen)} className={`${utils.menuButton} transition-transform hover:scale-110 active:scale-95`}>
-          { menuOpen ? <Close/> : <Hamburger/> }
+    <header id="header" className={styles.header}>
+      <div className={styles.controls}>
+        <Link href="/"><a className="no-underline"><h1 className={styles.title}>{title}</h1></a></Link>
+        <button aria-label={`${menuOpen ? 'close' : 'open'} Menu`}
+                onClick={() => setMenuOpen(!menuOpen)}
+                className={`${styles.menuButton} transition-transform hover:scale-110 active:scale-95`}>
+          {menuOpen ? <Close/> : <Hamburger/>}
         </button>
       </div>
-      <nav className={`${styles.navigation} ${menuOpen ? styles.active : ''}`}>
+      <nav className={`${styles.navigation} ${menuOpen ? styles.navActive : ''}`}>
         <NavLink label="Home" href="/" exact onClick={closeMenu} />
         <NavLink label="About" href="/about" onClick={closeMenu} />
         <NavLink label="Portfolio" href="/portfolio" onClick={closeMenu} />
