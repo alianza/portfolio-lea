@@ -2,12 +2,12 @@
     @apply flex py-4 flex-col items-center justify-center transition-colors font-special z-20;
 
     .controls {
-        @apply z-20 flex gap-2 justify-between w-full px-4 mobile:w-auto;
+        @apply z-20 flex gap-2 justify-around w-full px-4 mobile:w-auto;
 
         .title {
-            @apply text-[13vw] mt-2 mobile:m-0;
-            @apply mobile:text-6xl;
-            @apply tablet:text-8xl tablet:leading-[8rem];
+            @apply text-[12vw] mt-2 mobile:m-0;
+            @apply mobile:text-6xl mobile:leading-[6rem];
+            @apply tablet:text-8xl tablet:leading-[8rem] tablet:-mb-4;
         }
 
         .menuButton {
@@ -16,17 +16,18 @@
     }
 
     .navigation {
-        @apply opacity-0 invisible flex flex-col gap-8 fixed top-0 w-full h-screen items-center justify-center bg-primary mobile:bg-transparent z-10 transition-[visibility,opacity] duration-300 mobile:gap-2 mobile:flex-row mobile:relative mobile:h-auto mobile:visible mobile:opacity-100 mobile:w-auto mobile:transition-colors;
+        @apply opacity-0 invisible flex flex-col gap-8 fixed top-0 w-full h-screen items-center justify-center bg-primary mobile:bg-transparent z-10 transition-[visibility,opacity] duration-300;
+        @apply mobile:gap-2 mobile:flex-row mobile:relative mobile:h-auto mobile:visible mobile:opacity-100 mobile:w-auto mobile:transition-colors;
 
         &.navActive {
             @apply visible opacity-100;
         }
 
         a {
-            @apply text-4xl mobile:text-base;
+            @apply text-4xl mobile:text-lg;
 
             &.activeMenuItem {
-                @apply relative before:content-[""] before:w-full before:border before:border-text-primary before:z-10 before:absolute before:bottom-[2px] before:rounded before:skew-y-3 before:transition-colors before:duration-1000;
+                @apply relative before:content-[""] before:w-full before:border-b-[2px] before:border-b-text-primary before:z-10 before:absolute before:bottom-[2px] before:rounded before:skew-y-3 before:transition-colors before:duration-1000;
             }
         }
 
