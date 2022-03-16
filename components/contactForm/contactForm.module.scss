@@ -5,19 +5,23 @@
         @apply mb-4 w-full;
 
         label {
-            @apply block flex justify-between  flex-col mobile:flex-row mobile:items-center;
+            @apply block flex justify-between flex-col mobile:flex-row mobile:items-center;
 
             span {
                 @apply mr-2 w-48 inline-block shrink-0;
             }
 
             input, textarea {
-                @apply border rounded w-full;
+                @apply border rounded w-full px-2 py-1 text-text-dark;
             }
 
             textarea {
                 @apply h-24;
             }
+        }
+
+        button {
+            @apply block ml-auto;
         }
     }
 }
