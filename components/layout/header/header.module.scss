@@ -2,7 +2,7 @@
     @apply flex py-4 flex-col items-center justify-center transition-colors font-special z-20;
 
     .controls {
-        @apply z-20 flex gap-2 justify-around w-full px-4 mobile:w-auto;
+        @apply z-20 mobile:z-[1] flex gap-2 justify-around w-full px-4 mobile:w-auto;
 
         .title {
             @apply text-[12vw] mt-2 mobile:m-0;
