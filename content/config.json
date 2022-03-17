@@ -13,6 +13,11 @@
       "name": "Medium",
       "url": "https://medium.com/@leacandle",
       "icon": "/images/medium-512.webp"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/lea-shamaa-014ab8195/",
+      "icon": "/images/linkedin_logo_initials.png"
     }
   ],
   "categories": [
@@ -22,28 +27,23 @@
       "textColor": "light"
     },
     {
-      "name": "Food",
-      "color": "#c3c3c3",
-      "textColor": "auto"
-    },
-    {
-      "name": "Skate",
-      "textColor": "auto"
-    },
-    {
       "name": "Culture",
-      "color": "#f2ff00",
+      "color": "#70ff9d",
       "textColor": "dark"
-    },
-    {
-      "name": "Testcat",
-      "textColor": "auto"
     },
     {
       "textColor": [
         "auto"
       ],
-      "name": "awdawd"
+      "name": "Experience",
+      "color": "#676dff"
+    },
+    {
+      "textColor": [
+        "auto"
+      ],
+      "name": "Media",
+      "color": "#f2ff88"
     }
   ]
 }
