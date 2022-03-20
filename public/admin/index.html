@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,22 +15,31 @@
 <!-- Include the script that builds the page and powers Netlify CMS -->
 <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
-<script>
+<script type="module">
   CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
   CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Special+Elite:wght@300;400&display=swap");
   CMS.registerPreviewStyle("../styles/variables.css");
   CMS.registerPreviewStyle("../styles/content.module.css");
 
+  import config from "../config.json" assert { type: "json" };
+
   const postPreview = createClass({
     render: function () {
       const entry = this.props.entry;
+      const categoryName = entry.getIn(["data", "category"]);
+      const category = config.categories.find(category => category.name === categoryName);
+      const textColor = category.textColor === "light" ? "var(--text-light)" : "var(--text-dark)"
+
       const image = entry.getIn(['data', 'thumbnail']);
       const bg = this.props.getAsset(image);
       return h("div", { className: "content" },
         h("h1", { className: "mainTitle" }, entry.getIn(["data", "title"])),
         h("div", { className: "metaData" },
             h("time", {}, entry.getIn(["data", "date"])),
-            h("span", { className: "categoryLabel" }, entry.getIn(["data", "category"])),),
+            h("span", {
+              className: "categoryLabel",
+              style: { color: textColor, backgroundColor: category.color } },
+              category.name),),
         h("img", { src: bg.toString() }),
         h("div", {}, this.props.widgetFor("body"))
       );
