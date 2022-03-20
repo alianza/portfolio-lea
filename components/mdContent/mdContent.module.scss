@@ -2,9 +2,65 @@
     margin: 2em 0;
 }
 
+
+@mixin video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: 1em 0;
+}
+
+@mixin video-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@mixin instagram-embed {
+    max-width: 540px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid var(--accent-8);
+    box-shadow: none;
+    display: block;
+    min-width: 326px;
+    padding: 0;
+    margin: 1em auto !important;
+}
+
+@mixin widgetStyles {
+    .video-container {
+        @include video-container;
+
+        .youtube-embed {
+            @include video-embed;
+        }
+    }
+
+    iframe.instagram-embed {
+        @include instagram-embed;
+    }
+
+    blockquote.instagram-embed {
+        @include instagram-embed;
+        text-align: center;
+        padding: 1em 0;
+
+        &::before {
+            content: none;
+        }
+    }
+}
+
 .content {
     font-family: "Poppins", ui-sans-serif;
     font-weight: 200;
+    margin: 0 auto 1em;
+    position: relative;
 
     .metaData {
         display: flex;
@@ -192,20 +248,26 @@
         width: 100%;
     }
 
-    .video-container {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%;
-        margin-bottom: 2em;
+    details {
+        margin: 1em 0;
+
+        summary {
+            cursor: pointer;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        div {
+            margin: .5em 0;
+        }
     }
 
-    .youtube-embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
+    // Netlify CMS widget styles
+    @include widgetStyles;
+
+    // App widget styles
+    :global {
+        @include widgetStyles;
     }
 }
 

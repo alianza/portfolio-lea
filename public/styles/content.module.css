@@ -6,6 +6,8 @@
 .content {
   font-family: "Poppins", ui-sans-serif;
   font-weight: 200;
+  margin: 0 auto 1em;
+  position: relative;
 }
 .content .metaData {
   display: flex;
@@ -161,19 +163,102 @@
 .content img {
   width: 100%;
 }
+.content details {
+  margin: 1em 0;
+}
+.content details summary {
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.content details div {
+  margin: 0.5em 0;
+}
 .content .video-container {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
-  margin-bottom: 2em;
+  margin: 1em 0;
 }
-.content .youtube-embed {
+.content .video-container .youtube-embed {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: 0;
+}
+.content iframe.instagram-embed {
+  max-width: 540px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid var(--accent-8);
+  box-shadow: none;
+  display: block;
+  min-width: 326px;
+  padding: 0;
+  margin: 1em auto !important;
+}
+.content blockquote.instagram-embed {
+  max-width: 540px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid var(--accent-8);
+  box-shadow: none;
+  display: block;
+  min-width: 326px;
+  padding: 0;
+  margin: 1em auto !important;
+  text-align: center;
+  padding: 1em 0;
+}
+.content blockquote.instagram-embed::before {
+  content: none;
+}
+.content :global .video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  margin: 1em 0;
+}
+.content :global .video-container .youtube-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.content :global iframe.instagram-embed {
+  max-width: 540px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid var(--accent-8);
+  box-shadow: none;
+  display: block;
+  min-width: 326px;
+  padding: 0;
+  margin: 1em auto !important;
+}
+.content :global blockquote.instagram-embed {
+  max-width: 540px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid var(--accent-8);
+  box-shadow: none;
+  display: block;
+  min-width: 326px;
+  padding: 0;
+  margin: 1em auto !important;
+  text-align: center;
+  padding: 1em 0;
+}
+.content :global blockquote.instagram-embed::before {
+  content: none;
 }
 
 @media (min-width: 769px) {
