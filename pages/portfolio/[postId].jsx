@@ -37,7 +37,7 @@ const Post = ({ post }) => {
         <title>{post.title}</title>
         <meta name="description" content={post.description} />
       </Head>
-      <div className={utils.page}>
+      <div className={`${utils.page} max-w-screen-desktop`}>
         <MdContent content={post}/>
       </div>
     </>
