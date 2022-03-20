@@ -1,16 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "dev": "run-p next:dev build-cms-styles netlify-cms-proxy",
+    "dev": "run-p next:dev build-cms-styles netlify-cms-proxy copy-config",
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",
     "netlify-cms-proxy": "npx netlify-cms-proxy-server",
     "build-styles:content": "sass components/mdContent/mdContent.module.scss ./public/styles/content.module.css --no-source-map --watch",
     "build-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map --watch",
-    "build-cms-styles": "run-p build-styles:*"
+    "build-cms-styles": "run-p build-styles:*",
+    "copy-config": "copy-and-watch content/config.json public/ --watch"
   },
   "dependencies": {
+    "copy-and-watch": "^0.1.6",
     "next": "latest",
     "nextjs-progressbar": "^0.0.13",
     "react": "^17.0.2",
