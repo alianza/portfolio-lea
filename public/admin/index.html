@@ -63,6 +63,90 @@
   CMS.registerPreviewTemplate("portfolio", pagePreview);
   CMS.registerPreviewTemplate("articles", pagePreview);
   CMS.registerPreviewTemplate("contact", pagePreview);
+
+  const getYoutubeFragment = (videoId) => {
+    return `<div class="video-container"><iframe class="youtube-embed" src="https://www.youtube.com/embed/${videoId}" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen> </iframe></div>`;
+  };
+
+  CMS.registerEditorComponent({
+    id: "youtube",
+    label: "Youtube video",
+    fields: [{name: 'id', label: 'Youtube Video ID'}],
+    pattern: /^<div class="video-container"><iframe class="youtube-embed".*embed\/(.*?)".*<\/iframe><\/div>$/ms,
+    fromBlock: function(match) { return { id: match[1] }; },
+    toBlock: function(obj) { return getYoutubeFragment(obj.id); },
+    toPreview: function(obj) { return getYoutubeFragment(obj.id); }
+  });
+
+  CMS.registerEditorComponent({
+    id: "horizontal-rule",
+    label: "Horizontal Rule",
+    pattern: /^<hr \/>$/ms,
+    collapsed: true,
+    toBlock: function() {
+      return `<hr />`;
+    },
+    toPreview: function() {
+      return `<hr />`;
+    }
+  });
+
+  CMS.registerEditorComponent({
+    id: "collapsable-note",
+    label: "Collapsable Note",
+    fields: [
+      { name: 'summary', label: 'Summary', widget: 'string' },
+      { name: 'details', label: 'Details', widget: 'markdown' }
+    ],
+    pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n<div>\n(.*?)\n<\/div>\n<\/details>$/ms,
+    fromBlock: function (match) {
+      return {
+        summary: match[1],
+        details: match[2]
+      }
+    },
+    toBlock: function(data) {
+      return `
+<details>
+  <summary>${data.summary}</summary>
+<div>${data.details}</div>
+</details>`;
+    },
+    toPreview: function(data) {
+      return `
+<details>
+  <summary>${data.summary}</summary>
+<div>${data.details}</div>
+</details>`;
+    }
+  });
+
+  const getInstagramFragment = (postId, includeCaption) => {
+    return `<blockquote class='instagram-media instagram-embed' ${includeCaption ? 'data-instgrm-captioned' : ''}
+                data-instgrm-permalink='https://www.instagram.com/p/${postId}'
+                data-instgrm-version='14'>
+                <a href='https://www.instagram.com/p/${postId}' target='_blank'>Go to instagram post!</a>
+                </blockquote><script async src='https://www.instagram.com/embed.js'><\/script>`
+  }
+
+  CMS.registerEditorComponent({
+    id: "instagram",
+    label: "Instagram post",
+    fields: [
+      { name: 'id', label: 'Instagram Post ID', widget: 'string' },
+      { name: 'caption', label: 'Include caption', widget: 'boolean' }
+    ],
+    pattern: /^<blockquote class='instagram-media instagram-embed'.(.*?)\n.*data-instgrm-permalink='https:\/\/www.instagram.com\/p\/(.*?)'.*<\/script>$/ms,
+    fromBlock: function (match) {
+      return { id: match[2], caption: match[1] }
+    },
+    toBlock: function (obj) {
+      return getInstagramFragment(obj.id, obj.caption)
+    },
+    toPreview: function (obj) {
+      return getInstagramFragment(obj.id, obj.caption)
+    }
+  })
 </script>
 </body>
 </html>
