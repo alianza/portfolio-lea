@@ -51,7 +51,7 @@ collections:
     files:
       - label: 'Home'
         name: 'home'
-        file: 'content/pages/home.md'
+        file: 'content/pages/home.mdx'
         editor:
           preview: false
         fields:
@@ -69,19 +69,25 @@ collections:
               - { label: "Author", name: "author", widget: "string" }
       - label: 'About'
         name: 'about'
-        file: 'content/pages/about.md'
+        file: 'content/pages/about.mdx'
+        extension: "mdx"
+        format: "frontmatter"
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - { label: 'Body', name: 'body', widget: 'markdown', required: true }
       - label: 'Portfolio'
         name: 'portfolio'
-        file: 'content/pages/portfolio.md'
+        file: 'content/pages/portfolio.mdx'
+        extension: "mdx"
+        format: "frontmatter"
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Articles'
         name: 'articles'
-        file: 'content/pages/articles.md'
+        file: 'content/pages/articles.mdx'
+        extension: "mdx"
+        format: "frontmatter"
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -94,7 +100,7 @@ collections:
               - { label: "Link", name: "link", widget: "string" }
       - label: 'Contact'
         name: 'contact'
-        file: 'content/pages/contact.md'
+        file: 'content/pages/contact.mdx'
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -103,6 +109,8 @@ collections:
     name: 'post'
     label_singular: 'Post'
     folder: 'content/posts'
+    extension: "mdx"
+    format: "frontmatter"
     create: true
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
