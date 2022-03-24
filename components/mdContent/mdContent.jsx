@@ -2,6 +2,10 @@ import React from "react"
 import contentStyles from "./mdContent.module.scss"
 import CategoryLabel from "../categoryLabel/categoryLabel"
 import { useDetailTagsAnimation, useInstagramEmbedScript } from "../../lib/markdownEnrichment"
+import TestComponent from "../testComponent/TestComponent"
+import { MDXRemote } from 'next-mdx-remote'
+
+const components = { TestComponent }
 
 const MdContent = ({ content: { title, date, thumbnail, category, content }, noDate }) => {
 
@@ -17,7 +21,8 @@ const MdContent = ({ content: { title, date, thumbnail, category, content }, noD
         {category && <CategoryLabel category={category}/>}
       </div>
       {thumbnail && <img className="w-full" alt="thumbnail" src={thumbnail}/>}
-      <div className="relative z-[1]" dangerouslySetInnerHTML={{ __html: content }}/>
+      {/*<div className="relative z-[1]" dangerouslySetInnerHTML={{ __html: content }}/>*/}
+      <MDXRemote {...content} components={components} />
     </article>
   )
 }

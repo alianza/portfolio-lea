@@ -12,16 +12,17 @@
     "copy-config": "copy-and-watch content/config.json public/ --watch"
   },
   "dependencies": {
-    "copy-and-watch": "^0.1.6",
     "next": "latest",
     "nextjs-progressbar": "^0.0.13",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "next-mdx-remote": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
+    "copy-and-watch": "^0.1.6",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "marked": "^0.6.2",

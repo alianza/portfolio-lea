@@ -92,6 +92,24 @@
   });
 
   CMS.registerEditorComponent({
+    id: "testComponent",
+    label: "TestComponent",
+    pattern: /^<TestComponent text="(.*?)" \/>$/ms,
+    fields: [
+      { name: 'text', label: 'Text', widget: 'string' },
+    ],
+    fromBlock: function(match) {
+      return { text: match[1] };
+  },
+    toBlock: function(data) {
+      return `<TestComponent text="${data.text}" />`;
+    },
+    toPreview: function(data) {
+      return `<TestComponent text="${data.text}" />`;
+    }
+  });
+
+  CMS.registerEditorComponent({
     id: "collapsable-note",
     label: "Collapsable Note",
     fields: [

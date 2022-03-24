@@ -5,6 +5,11 @@ import MdContent from "../../components/mdContent/mdContent"
 import Head from "next/head"
 import { getPost, getPostIds } from "../../lib/services/postsService"
 import { getCategory } from "../../lib/services/configService"
+import { MDXRemote } from "next-mdx-remote"
+import React from "react"
+import TestComponent from "../../components/testComponent/TestComponent"
+
+const components = { TestComponent }
 
 export const getStaticPaths = async () => {
 
