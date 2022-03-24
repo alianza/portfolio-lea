@@ -175,13 +175,13 @@
 .content details div {
   margin: 0.5em 0;
 }
-.content .video-container {
+.content .youtube-container {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
   margin: 1em 0;
 }
-.content .video-container .youtube-embed {
+.content .youtube-container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -218,13 +218,13 @@
 .content blockquote.instagram-embed::before {
   content: none;
 }
-.content :global .video-container {
+.content :global .youtube-container {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
   margin: 1em 0;
 }
-.content :global .video-container .youtube-embed {
+.content :global .youtube-container iframe {
   position: absolute;
   top: 0;
   left: 0;

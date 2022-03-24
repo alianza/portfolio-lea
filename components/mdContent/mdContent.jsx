@@ -4,8 +4,9 @@ import CategoryLabel from "../categoryLabel/categoryLabel"
 import { useDetailTagsAnimation, useInstagramEmbedScript } from "../../lib/markdownEnrichment"
 import TestComponent from "../testComponent/TestComponent"
 import { MDXRemote } from 'next-mdx-remote'
+import YouTube from "react-youtube";
 
-const components = { TestComponent }
+const components = { TestComponent, YouTube }
 
 const MdContent = ({ content: { title, date, thumbnail, category, content }, noDate }) => {
 

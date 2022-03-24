@@ -33,10 +33,10 @@
 }
 
 @mixin widgetStyles {
-    .video-container {
+    .youtube-container {
         @include video-container;
 
-        .youtube-embed {
+        iframe {
             @include video-embed;
         }
     }
