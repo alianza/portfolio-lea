@@ -35,7 +35,7 @@ collections:
             fields:
               - { label: "Category name", name: "name", widget: "string" }
               - { label: "Category color", name: "color", widget: "color", required: false }
-              - { label: "Text color", name: "textColor", widget: "select", options: [ "auto", "light", "dark" ], default: ["auto"], required: true }
+              - { label: "Text color", name: "textColor", widget: "select", options: [ "auto", "light", "dark" ], default: ["auto"] }
           - label: "Online accounts"
             name: "accounts"
             label_singular: "Online account"
@@ -63,7 +63,7 @@ collections:
             name: "quotes"
             label_singular: "Quote"
             widget: "list"
-            summary: "{{fields.quote}}-{{fields.author}}"
+            summary: "{{fields.quote}} - {{fields.author}}"
             fields:
               - { label: "Quote", name: "quote", widget: "string" }
               - { label: "Author", name: "author", widget: "string" }
@@ -71,19 +71,19 @@ collections:
         name: 'about'
         file: 'content/pages/about.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Portfolio'
         name: 'portfolio'
         file: 'content/pages/portfolio.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Articles'
         name: 'articles'
         file: 'content/pages/articles.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - label: "Read more link"
             name: "readMoreLink"
@@ -96,7 +96,7 @@ collections:
         name: 'contact'
         file: 'content/pages/contact.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - label: 'Posts'
@@ -106,11 +106,11 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: true }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       - { label: "Category", name: "category", widget: "relation",
           collection: "config", file: "config",
           search_fields: [ "categories.*.name" ], display_fields: [ "categories.*.name" ], value_field: "categories.*.name" }
-      - { label: 'Description', name: 'description', widget: 'text', required: true }
-      - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
