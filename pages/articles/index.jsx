@@ -42,5 +42,4 @@ const Articles = ({ articles, articlesContent }) => {
 
 Articles.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
 
-
 export default Articles;

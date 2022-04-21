@@ -7,7 +7,7 @@ ArticlePreview.propTypes = { article: PropTypes.object.isRequired }
 function ArticlePreview({ article }) {
   return (
     <div className={styles.previewContainer}>
-      <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`} href={article.link} target="_blank" rel="noreferrer">
+      <a href={article.link} className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`} target="_blank" rel="noreferrer">
         <img alt={`${article.title} thumbnail`} className={styles.imageStyle} src={article.image}/>
       </a>
       <div className={styles.contentStyle}>
