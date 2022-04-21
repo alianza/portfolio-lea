@@ -15,7 +15,9 @@ function PostPreview({ post }) {
             alt={`${post.data.title} thumbnail`}
             className={styles.imageStyle}
             objectFit={"cover"}
-            src={post.data.thumbnail}/>
+            src={post.data.thumbnail}
+            placeholder="blur"
+            blurDataURL={`/_next/image?url=${post.data.thumbnail}&w=16&q=1`}/>/>
         </a>
       </Link>
       <div className={styles.contentStyle}>
