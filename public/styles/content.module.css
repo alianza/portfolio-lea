@@ -16,7 +16,7 @@
   align-items: center;
   margin-bottom: 0.5rem;
 }
-.content .metaData .categoryLabel {
+.content .metaData .categoryLabel, .content .metaData a {
   margin: 0;
   border-radius: 0.25rem;
   background-color: var(--accent-2);

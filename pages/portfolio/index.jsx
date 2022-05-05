@@ -23,10 +23,10 @@ export const getStaticProps = async () => {
   }
 }
 
-const Articles = ({ posts, portfolioContent }) => {
+const Portfolio = ({ posts, portfolioContent }) => {
   return (
     <div className={utils.page}>
-      <MdContent content={portfolioContent}/>
+      <MdContent content={portfolioContent} categoriesLink/>
       <hr className="my-4"/>
       <div className={styles.previewList}>
         {posts.map((post) => <PostPreview key={post.id} post={post}/>)}
@@ -35,6 +35,6 @@ const Articles = ({ posts, portfolioContent }) => {
   )
 }
 
-Articles.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Portfolio.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
 
-export default Articles
+export default Portfolio
