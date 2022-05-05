@@ -1,5 +1,5 @@
 {
-    "name": "Lea Shamaa",
+    "name": "Portfolio - Lea Shamaa",
     "short_name": "Lea Shamaa",
     "icons": [
         {
@@ -11,9 +11,16 @@
             "src": "/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#51A493",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/",
+    "orientation": "portrait"
 }
