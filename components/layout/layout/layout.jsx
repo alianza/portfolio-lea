@@ -37,6 +37,8 @@ export default function Layout({ site_heading, site_title, site_description, acc
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#51a493"/>
             <meta name="msapplication-TileColor" content="#da532c"/>
             <meta name="theme-color" content={darkTheme ? '#000' : '#fff'}/>
+            <meta name='application-name' content={site_title} />
+            <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
         </Head>
 
         <Header title={site_heading} darkTheme={darkTheme} onThemeButtonClick={toggleTheme} />
