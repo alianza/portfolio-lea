@@ -23,7 +23,7 @@ export const getStaticProps = async () => {
   }
 }
 
-const Articles = ({ posts, portfolioContent }) => {
+const Portfolio = ({ posts, portfolioContent }) => {
   return (
     <div className={utils.page}>
       <MdContent content={portfolioContent}/>
