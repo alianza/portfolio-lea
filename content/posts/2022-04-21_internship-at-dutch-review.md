@@ -2,7 +2,7 @@
 title: Internship at Dutch Review
 date: 21-04-2022
 thumbnail: /images/screen-shot-2022-04-21-at-4.45.40-pm.png
-category: Experience
+category: Politics
 description: |-
   (01-04-2022- present)
   Leiden, Netherlands.

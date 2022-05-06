@@ -1,8 +1,8 @@
 ---
 portfolioTitle: Portfolio
 portfolioLabel: Read more experiences
-postsTitle: Posts
-postsLabel: Read more posts
+blogTitle: Posts
+blogLabel: Read more posts
 articlesTitle: Articles
 articlesLabel: Read more articles
 quotes:
