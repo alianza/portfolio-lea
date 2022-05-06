@@ -3,12 +3,11 @@ import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import MdContent from "../../components/mdContent/mdContent"
 import Head from "next/head"
-import { getPost, getPostIds } from "../../lib/services/postsService"
-import { getCategory } from "../../lib/services/configService"
+import { getExperience, getExperiencesIds } from "../../lib/services/experiencesService"
 
 export const getStaticPaths = async () => {
 
-  const paths = await getPostIds()
+  const paths = await getExperiencesIds()
 
   return {
     paths,
@@ -18,32 +17,30 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
 
-  const post = await getPost(params.postId)
-
-  post.category = await getCategory(post.category) || null;
+  const experience = await getExperience(params.experienceId)
 
   return {
     props: {
-      post,
+      experience,
       layoutData
     },
   }
 }
 
-const Post = ({ post }) => {
+const Experience = ({ experience }) => {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
-        <meta name="description" content={post.description} />
+        <title>{experience.title}</title>
+        <meta name="description" content={experience.description} />
       </Head>
       <div className={`${utils.page} max-w-screen-desktop`}>
-        <MdContent content={post}/>
+        <MdContent content={experience}/>
       </div>
     </>
   )
 }
 
-Post.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Experience.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
 
-export default Post
+export default Experience

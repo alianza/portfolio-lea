@@ -3,16 +3,16 @@ import utils from "../styles/utils.module.scss"
 import Layout from "../components/layout/layout/layout"
 import layoutData from "../content/config.json"
 import { getArticles } from "../lib/services/mediumService"
-import PostHomePreview from "../components/previews/home/postPreview/postsHomePreview"
+import ExperienceHomePreview from "../components/previews/home/experiencePreview/experienceHomePreview"
 import ArticleHomePreview from "../components/previews/home/articlesPreview/articlesHomePreview"
 import { useNetlifyIdentityRedirectHook } from "../lib/eventListeners"
 import { getPage } from "../lib/services/pageService"
 import HomePreviewCollection from "../components/previews/home/previewCollections/homePreviewCollection"
-import { getPosts } from "../lib/services/postsService"
+import { getExperiences } from "../lib/services/experiencesService"
 
 export const getStaticProps = async () => {
 
-  const posts = await Promise.all(await getPosts())
+  const experiences = await Promise.all(await getExperiences())
 
   const articles = await getArticles(layoutData.username_medium)
 
@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       homeContent,
-      posts,
+      experiences,
       articles: articles.dataMedium.slice(0, 3),
       layoutData
     },
@@ -29,7 +29,7 @@ export const getStaticProps = async () => {
   }
 }
 
-const Home = ({ homeContent, posts, articles }) => {
+const Home = ({ homeContent, experiences, articles }) => {
   useNetlifyIdentityRedirectHook()
 
   return (
@@ -42,10 +42,10 @@ const Home = ({ homeContent, posts, articles }) => {
       />
       <hr className="-mb-4 -mt-10 myblock mobile:hidden"/>
       <HomePreviewCollection
-        title={homeContent.postsTitle}
-        label={homeContent.postsLabel}
+        title={homeContent.portfolioTitle}
+        label={homeContent.portfolioLabel}
         link="/portfolio"
-        content={posts.map((post) => <PostHomePreview key={post.id} post={post}/>)}
+        content={experiences.map((experience) => <ExperienceHomePreview key={experience.id} experience={experience}/>)}
       />
     </div>
   )
