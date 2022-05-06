@@ -92,6 +92,12 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
+      - label: 'Blog'
+        name: 'blog'
+        file: 'content/pages/blog.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Contact'
         name: 'contact'
         file: 'content/pages/contact.md'
