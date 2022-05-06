@@ -1,4 +1,6 @@
 ---
+portfolioTitle: Portfolio
+portfolioLabel: Read more experiences
 postsTitle: Posts
 postsLabel: Read more posts
 articlesTitle: Articles
