@@ -27,19 +27,23 @@
     render: function () {
       const entry = this.props.entry;
       const categoryName = entry.getIn(["data", "category"]);
-      const category = config.categories.find(category => category.name === categoryName);
-      const textColor = category.textColor === "light" ? "var(--text-light)" : "var(--text-dark)"
-
+      const category = config.categories.find(category => category?.name === categoryName)
+      const textColor = category?.textColor === "light" ? "var(--text-light)" : "var(--text-dark)"
       const image = entry.getIn(['data', 'thumbnail']);
       const bg = this.props.getAsset(image);
       return h("div", { className: "content" },
         h("h1", { className: "mainTitle" }, entry.getIn(["data", "title"])),
         h("div", { className: "metaData" },
-            h("time", {}, entry.getIn(["data", "date"])),
+          entry.getIn(["data", "date"]) ?
+            h("time", {}, entry.getIn(["data", "date"])) :
+            h("div", {},
+              h("time", {}, entry.getIn(["data", "startDate"])),
+              h("span", {}, " - "),
+              h("time", {}, entry.getIn(["data", "endDate"]) || "Present")),
             h("span", {
-              className: "categoryLabel",
-              style: { color: textColor, backgroundColor: category.color } },
-              category.name),),
+              className: (categoryName ? 'categoryLabel' : ''),
+              style: (categoryName ? { color: textColor, backgroundColor: category.color } : {}) },
+              category?.name),),
         h("img", { src: bg.toString() }),
         h("div", {}, this.props.widgetFor("body"))
       );
@@ -47,6 +51,7 @@
   });
 
   CMS.registerPreviewTemplate("post", postPreview);
+  CMS.registerPreviewTemplate("experience", postPreview);
 
   const pagePreview = createClass({
     render: function () {
