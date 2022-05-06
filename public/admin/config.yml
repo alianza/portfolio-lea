@@ -75,6 +75,12 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Categories'
+        name: 'categories'
+        file: 'content/pages/categories.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Portfolio'
         name: 'portfolio'
         file: 'content/pages/portfolio.md'
