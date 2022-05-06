@@ -9,12 +9,16 @@ import { useNetlifyIdentityRedirectHook } from "../lib/eventListeners"
 import { getPage } from "../lib/services/pageService"
 import HomePreviewCollection from "../components/previews/home/previewCollections/homePreviewCollection"
 import { getExperiences } from "../lib/services/experiencesService"
+import PostHomePreview from "../components/previews/home/postPreview/postsHomePreview"
+import { getPosts } from "../lib/services/postsService"
 
 export const getStaticProps = async () => {
 
-  const experiences = await Promise.all(await getExperiences())
+  const experiences = (await Promise.all(await getExperiences())).slice(0, 3)
 
-  const articles = await getArticles(layoutData.username_medium)
+  const posts = (await Promise.all(await getPosts())).slice(0, 3)
+
+  const { dataMedium } = await getArticles(layoutData.username_medium)
 
   const homeContent = await getPage("home")
 
@@ -22,14 +26,15 @@ export const getStaticProps = async () => {
     props: {
       homeContent,
       experiences,
-      articles: articles.dataMedium.slice(0, 3),
+      posts,
+      articles: dataMedium.slice(0, 3),
       layoutData
     },
     revalidate: 60,
   }
 }
 
-const Home = ({ homeContent, experiences, articles }) => {
+const Home = ({ homeContent, experiences, posts, articles }) => {
   useNetlifyIdentityRedirectHook()
 
   return (
@@ -46,6 +51,13 @@ const Home = ({ homeContent, experiences, articles }) => {
         label={homeContent.portfolioLabel}
         link="/portfolio"
         content={experiences.map((experience) => <ExperienceHomePreview key={experience.id} experience={experience}/>)}
+      />
+      <hr className="-mb-4 -mt-10 myblock mobile:hidden"/>
+      <HomePreviewCollection
+        title={homeContent.blogTitle}
+        label={homeContent.blogLabel}
+        link="/blog"
+        content={posts.map((post) => <PostHomePreview key={post.id} post={post}/>)}
       />
     </div>
   )
