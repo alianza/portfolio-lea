@@ -21,7 +21,7 @@ function PostPreview({ post }) {
         </a>
       </Link>
       <div className={styles.contentStyle}>
-        <Link href={`/portfolio/${post.id}`}>
+        <Link href={`/blog/${post.id}`}>
           <a className="text-2xl">{post.data.title}</a>
         </Link>
         <time className="text-lg">{post.data.date}</time>
