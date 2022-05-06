@@ -2,7 +2,6 @@
     margin: 2em 0;
 }
 
-
 @mixin video-container {
     position: relative;
     width: 100%;
@@ -53,6 +52,18 @@
         &::before {
             content: none;
         }
+    }
+}
+
+.startEndDateLabel {
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    flex-wrap: wrap;
+
+    time {
+        margin: 0;
+        white-space: nowrap;
     }
 }
 
