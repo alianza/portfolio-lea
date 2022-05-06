@@ -55,6 +55,8 @@ collections:
         editor:
           preview: false
         fields:
+          - { label: 'Portfolio title', name: 'portfolioTitle', widget: 'string' }
+          - { label: 'Portfolio label', name: 'portfolioLabel', widget: 'string' }
           - { label: 'Posts title', name: 'postsTitle', widget: 'string' }
           - { label: 'Posts link label', name: 'postsLabel', widget: 'string' }
           - { label: 'Articles title', name: 'articlesTitle', widget: 'string' }
