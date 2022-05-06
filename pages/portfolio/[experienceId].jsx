@@ -7,10 +7,10 @@ import { getExperience, getExperiencesIds } from "../../lib/services/experiences
 
 export const getStaticPaths = async () => {
 
-  const paths = await getExperiencesIds()
+  const experienceIds = await getExperiencesIds()
 
   return {
-    paths,
+    paths: experienceIds.map(({ experienceId }) => ({ params: { experienceId } })),
     fallback: false,
   }
 }

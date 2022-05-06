@@ -8,10 +8,10 @@ import { getCategory } from "../../lib/services/configService"
 
 export const getStaticPaths = async () => {
 
-  const paths = await getPostIds()
+  const postIds = await getPostIds()
 
   return {
-    paths,
+    paths: postIds.map(({ postId }) => ({ params: { postId } })),
     fallback: false,
   }
 }
