@@ -56,9 +56,9 @@ collections:
           preview: false
         fields:
           - { label: 'Portfolio title', name: 'portfolioTitle', widget: 'string' }
-          - { label: 'Portfolio label', name: 'portfolioLabel', widget: 'string' }
-          - { label: 'Posts title', name: 'postsTitle', widget: 'string' }
-          - { label: 'Posts link label', name: 'postsLabel', widget: 'string' }
+          - { label: 'Portfolio link label', name: 'portfolioLabel', widget: 'string' }
+          - { label: 'Blog title', name: 'blogTitle', widget: 'string' }
+          - { label: 'Blog link label', name: 'blogLabel', widget: 'string' }
           - { label: 'Articles title', name: 'articlesTitle', widget: 'string' }
           - { label: 'Articles link label', name: 'articlesLabel', widget: 'string' }
           - label: "Quotes"
