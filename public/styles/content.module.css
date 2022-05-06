@@ -3,6 +3,17 @@
   margin: 2em 0;
 }
 
+.startEndDateLabel {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  flex-wrap: wrap;
+}
+.startEndDateLabel time {
+  margin: 0;
+  white-space: nowrap;
+}
+
 .content {
   font-family: "Poppins", ui-sans-serif;
   font-weight: 200;
