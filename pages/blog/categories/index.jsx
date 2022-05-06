@@ -11,8 +11,6 @@ export const getStaticProps = async () => {
 
   const categories = await Promise.all(await getCategories())
 
-  console.log(categories)
-
   return {
     props: {
       categories,
