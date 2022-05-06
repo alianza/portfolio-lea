@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: alianza/portfolio-lea
 
-local_backend: false
+local_backend: true
 site_url: https://leashamaa.nl
 display_url: https://leashamaa.nl
 media_folder: public/images
@@ -107,10 +107,24 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime', format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', format: "DD-MM-YYYY", date_format: "DD-MM-YYYY", time_format: false }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       - { label: "Category", name: "category", widget: "relation",
           collection: "config", file: "config",
           search_fields: [ "categories.*.name" ], display_fields: [ "categories.*.name" ], value_field: "categories.*.name" }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - label: 'Experiences'
+    name: 'experience'
+    label_singular: 'Post'
+    folder: 'content/experiences'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Start Date', name: 'startDate', widget: 'datetime', format: "DD-MM-YYYY", date_format: "DD-MM-YYYY", time_format: false }
+      - { label: 'End Date', name: 'endDate', widget: 'datetime', format: "DD-MM-YYYY", date_format: "DD-MM-YYYY", time_format: false, required: false, hint: "Leave empty if still working (present)" }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
