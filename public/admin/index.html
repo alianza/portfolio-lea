@@ -36,9 +36,9 @@
         h("div", { className: "metaData" },
           entry.getIn(["data", "date"]) ?
             h("time", {}, entry.getIn(["data", "date"])) :
-            h("div", {},
+            h("div", {  className: 'startEndDateLabel'},
               h("time", {}, entry.getIn(["data", "startDate"])),
-              h("span", {}, " - "),
+              h("span", {}, "-"),
               h("time", {}, entry.getIn(["data", "endDate"]) || "Present")),
             h("span", {
               className: (categoryName ? 'categoryLabel' : ''),
