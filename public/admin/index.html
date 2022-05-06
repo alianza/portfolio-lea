@@ -58,15 +58,16 @@
       const entry = this.props.entry;
       return h("div", { className: "content" },
           h("h1", {}, entry.getIn(["data", "title"])),
-          h("time", {}, entry.getIn(["data", "date"])),
           h("div", {}, this.props.widgetFor("body"))
         );
     },
   });
 
   CMS.registerPreviewTemplate("about", pagePreview);
+  CMS.registerPreviewTemplate("categories", pagePreview);
   CMS.registerPreviewTemplate("portfolio", pagePreview);
   CMS.registerPreviewTemplate("articles", pagePreview);
+  CMS.registerPreviewTemplate("blog", pagePreview);
   CMS.registerPreviewTemplate("contact", pagePreview);
 
   const getYoutubeFragment = (videoId) => {
