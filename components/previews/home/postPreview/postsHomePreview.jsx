@@ -9,7 +9,7 @@ PostHomePreview.propTypes = { post: PropTypes.object.isRequired }
 function PostHomePreview({ post }) {
   return (
     <div className={styles.previewHomeContainer}>
-      <Link href={`/portfolio/${post.id}`}>
+      <Link href={`/blog/${post.id}`}>
         <a className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image
             layout="fill"
@@ -22,7 +22,7 @@ function PostHomePreview({ post }) {
         </a>
       </Link>
       <div className={styles.contentStyle}>
-        <Link href={`/portfolio/${post.id}`}>
+        <Link href={`/blog/${post.id}`}>
           <a className={styles.title}>{post.data.title}</a>
         </Link>
         <time className={styles.date}>{post.data.date}</time>
