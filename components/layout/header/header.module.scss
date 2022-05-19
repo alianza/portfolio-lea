@@ -5,7 +5,7 @@
         @apply z-20 mobile:z-[1] flex gap-2 justify-around w-full px-4 mobile:w-auto;
 
         .title {
-            @apply text-[12vw] mt-2 mobile:m-0;
+            @apply text-[12vw] mt-2 mobile:m-0 whitespace-nowrap;
             @apply mobile:text-6xl mobile:leading-[6rem];
             @apply tablet:text-8xl tablet:leading-[8rem] tablet:-mb-4;
         }
