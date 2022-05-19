@@ -11,6 +11,7 @@ import HomePreviewCollection from "../components/previews/home/previewCollection
 import { getExperiences } from "../lib/services/experiencesService"
 import PostHomePreview from "../components/previews/home/postPreview/postsHomePreview"
 import { getPosts } from "../lib/services/postsService"
+import TypeWriter from "../components/typeWriter/typeWriter"
 
 export const getStaticProps = async () => {
 
@@ -38,28 +39,33 @@ const Home = ({ homeContent, experiences, posts, articles }) => {
   useNetlifyIdentityRedirectHook()
 
   return (
-    <div className={`${utils.page} flex flex-col gap-12`}>
-      <HomePreviewCollection
-        title={homeContent.articlesTitle}
-        label={homeContent.articlesLabel}
-        link="/articles"
-        content={articles.map((article) => <ArticleHomePreview key={article.title} article={article}/>)}
-      />
-      <hr className="-mb-4 -mt-10 myblock mobile:hidden"/>
-      <HomePreviewCollection
-        title={homeContent.portfolioTitle}
-        label={homeContent.portfolioLabel}
-        link="/portfolio"
-        content={experiences.map((experience) => <ExperienceHomePreview key={experience.id} experience={experience}/>)}
-      />
-      <hr className="-mb-4 -mt-10 myblock mobile:hidden"/>
-      <HomePreviewCollection
-        title={homeContent.blogTitle}
-        label={homeContent.blogLabel}
-        link="/blog"
-        content={posts.map((post) => <PostHomePreview key={post.id} post={post}/>)}
-      />
-    </div>
+    <>
+      <TypeWriter quotes={homeContent.quotes}/>
+
+      <div className={`${utils.page} flex flex-col gap-12`}>
+        <HomePreviewCollection
+          title={homeContent.articlesTitle}
+          label={homeContent.articlesLabel}
+          link="/articles"
+          content={articles.map((article) => <ArticleHomePreview key={article.title} article={article}/>)}
+        />
+        <hr className="-mb-4 -mt-10 mobile:hidden"/>
+        <HomePreviewCollection
+          title={homeContent.portfolioTitle}
+          label={homeContent.portfolioLabel}
+          link="/portfolio"
+          content={experiences.map((experience) => <ExperienceHomePreview key={experience.id}
+                                                                          experience={experience}/>)}
+        />
+        <hr className="-mb-4 -mt-10 mobile:hidden"/>
+        <HomePreviewCollection
+          title={homeContent.blogTitle}
+          label={homeContent.blogLabel}
+          link="/blog"
+          content={posts.map((post) => <PostHomePreview key={post.id} post={post}/>)}
+        />
+      </div>
+    </>
   )
 }
 
