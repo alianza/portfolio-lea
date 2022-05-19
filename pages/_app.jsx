@@ -1,8 +1,5 @@
 import '../styles/globals.scss'
 
-// Todo: Manifest & favicons
-// Todo: Homepage quotes
-
 function MyApp({Component, pageProps}) {
   const withLayout = Component.withLayout ?? ((page) => page)
 
