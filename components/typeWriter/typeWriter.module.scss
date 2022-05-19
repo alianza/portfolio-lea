@@ -1,0 +1,7 @@
+.TypeWriter {
+    @apply text-center text-lg p-2 pb-4 tablet:p-2;
+
+    :global(.Typewriter__wrapper), :global(.Typewriter__cursor) {
+        @apply text-4xl
+    }
+}
