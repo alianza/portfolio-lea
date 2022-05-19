@@ -65,10 +65,10 @@ collections:
             name: "quotes"
             label_singular: "Quote"
             widget: "list"
-            summary: "{{fields.quote}} - {{fields.author}}"
+            summary: "{{fields.text}} - {{fields.author}}"
             fields:
-              - { label: "Quote", name: "quote", widget: "string" }
-              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Author", name: "author", widget: "string", required: false }
       - label: 'About'
         name: 'about'
         file: 'content/pages/about.md'
