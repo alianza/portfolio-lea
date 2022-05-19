@@ -19,8 +19,6 @@ const getTypeWriterOptions = (typewriter, quotes) => {
 }
 
 const TypeWriter = ({quotes}) => {
-  console.log(quotes)
-
   return (
     <div className={styles.TypeWriter}>
       <Typewriter
