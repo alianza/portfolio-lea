@@ -14,7 +14,7 @@ function CategoryPreview({ category }) {
          style={{ backgroundColor: category.color }}>
         <h1 style={{ ...textStyle }} className="text-2xl">{category.name}</h1>
         <span style={{ ...textStyle }}>{category.count} Post<SOrNot arrayLength={category.count}/></span>
-        <span className="absolute block tablet:hidden right-1 bottom-0 text-sm">Read more...</span>
+        <span className="absolute block tablet:hidden right-1 bottom-0 text-sm" style={{ ...textStyle }}>Read more...</span>
       </a>
     </Link>
   )
