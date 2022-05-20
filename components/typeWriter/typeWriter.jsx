@@ -32,7 +32,7 @@ const TypeWriter = ({ quotes }) => {
   useEffect(() => {
     const interval = setInterval(() => updateHeight(), 500)
     return () => clearInterval(interval)
-  })
+  }, [])
 
   return (
     <div className={styles.TypeWriter} style={{ height }}>
