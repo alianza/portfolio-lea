@@ -10,7 +10,7 @@ import React from "react"
 
 export const getStaticProps = async () => {
 
-  const articles = await getArticles(layoutData.username_medium)
+  const articles = await getArticles(layoutData.usernameMedium)
 
   const articlesContent = await getPage("articles")
 

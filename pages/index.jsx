@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
 
   const posts = (await Promise.all(await getPosts())).slice(0, 3)
 
-  const { dataMedium } = await getArticles(layoutData.username_medium)
+  const { dataMedium } = await getArticles(layoutData.usernameMedium)
 
   const homeContent = await getPage("home")
 
