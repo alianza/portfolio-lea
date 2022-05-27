@@ -8,8 +8,9 @@ const TypeWriter = ({ quotes }) => {
 
   const getTypeWriterOptions = (typewriter, quotes) => {
     const authorElem = document.getElementById("author")
+    const randomQuotes = quotes.sort(() => 0.5 - Math.random())
 
-    quotes.forEach((quote) => {
+    randomQuotes.forEach((quote) => {
       typewriter.typeString(quote.text)
         .callFunction(() => {
           authorElem.textContent = quote.author
