@@ -9,7 +9,7 @@ display_url: https://leashamaa.nl
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
-#logo_url: https://pensive-mclean-91ddb5.netlify.app/images/logo.webp
+logo_url: https://leashamaa.nl/admin/cms_img.jpg
 
 collections:
   - name: "config"
@@ -23,10 +23,10 @@ collections:
         file: "content/config.json"
         description: "General site settings"
         fields:
-          - { label: "Site heading", name: "site_heading", widget: "string" }
-          - { label: "Site title", name: "site_title", widget: "string" }
-          - { label: "Site description", name: "site_description", widget: "text" }
-          - { label: "Medium username", name: "username_medium", widget: "string" }
+          - { label: "Site heading", name: "siteHeading", widget: "string" }
+          - { label: "Site title", name: "siteTitle", widget: "string", hint: "The title of the site (Also tab bar)" }
+          - { label: "Site description", name: "siteDescription", widget: "text", hint: "Used for meta description" }
+          - { label: "Medium username", name: "usernameMedium", widget: "string", hint: "To retrieve medium articles" }
           - label: "Categories"
             name: "categories"
             label_singular: "Category"
@@ -55,12 +55,12 @@ collections:
         editor:
           preview: false
         fields:
-          - { label: 'Portfolio title', name: 'portfolioTitle', widget: 'string' }
-          - { label: 'Portfolio link label', name: 'portfolioLabel', widget: 'string' }
-          - { label: 'Blog title', name: 'blogTitle', widget: 'string' }
-          - { label: 'Blog link label', name: 'blogLabel', widget: 'string' }
-          - { label: 'Articles title', name: 'articlesTitle', widget: 'string' }
-          - { label: 'Articles link label', name: 'articlesLabel', widget: 'string' }
+          - { label: 'Portfolio title', name: 'portfolioTitle', widget: 'string', hint: 'The title of the portfolio section' }
+          - { label: 'Portfolio link label', name: 'portfolioLabel', widget: 'string', hint: 'Used for the link to the portfolio' }
+          - { label: 'Blog title', name: 'blogTitle', widget: 'string', hint: 'The title of the blog section' }
+          - { label: 'Blog link label', name: 'blogLabel', widget: 'string', hint: 'Used for the link to the blog' }
+          - { label: 'Articles title', name: 'articlesTitle', widget: 'string', hint: 'Used for the title of the articles section' }
+          - { label: 'Articles link label', name: 'articlesLabel', widget: 'string', hint: 'Used for the link to the articles' }
           - label: "Quotes"
             name: "quotes"
             label_singular: "Quote"
