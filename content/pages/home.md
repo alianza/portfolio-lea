@@ -6,10 +6,8 @@ blogLabel: Read more posts
 articlesTitle: Articles
 articlesLabel: Read more articles
 quotes:
-  - text: This is a quote!
-    author: J.w. van Bremen
-  - text: This is also a nice quote!
-    author: lea Shamaa
-  - text: This is a quote without author!
-    author:
+  - text: “Yesterday's deconstructions are often tomorrow's orthodox clichés.”
+    author: Stuart Hall
+  - text: “I am what I am. To look for reasons is beside the point.”
+    author: Joan Didion
 ---
