@@ -17,7 +17,7 @@ const TypeWriter = ({ quotes }) => {
           authorElem.style.opacity = '1'
           updateHeight()
         })
-        .pauseFor(quote.text.length * 150)
+        .pauseFor(quote.text.length * 80)
         .deleteAll()
         .callFunction(() => {
           authorElem.style.opacity = '0'
@@ -41,6 +41,7 @@ const TypeWriter = ({ quotes }) => {
         <Typewriter
           onInit={(typewriter) => getTypeWriterOptions(typewriter, quotes)}
           options={{
+            delay: 100,
             autoStart: true,
             loop: true,
           }}
