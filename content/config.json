@@ -1,6 +1,8 @@
 {
-  "site_title": "Lea Shamaa",
-  "site_description": "This is Lea's life and work.",
+  "siteHeading": "Léa Shamaa",
+  "siteTitle": "Léa Shamaa - Portfolio",
+  "siteDescription": "Welcome to my portfolio site! Consider me a writer, a skater, a reader and an avid cinephile! ",
+  "usernameMedium": "leacandle",
   "accounts": [
     {
       "name": "Instagram",
@@ -18,11 +20,6 @@
       "icon": "/images/new-linkedin-logo-white-black-png.png"
     }
   ],
-  "site_heading": "Lea Shamaa",
-  "usernameMedium": "leacandle",
-  "siteTitle": "Léa Shamaa - Portfolio",
-  "siteDescription": "Welcome to my portfolio site. Consider me a writer, a skater, a reader and an avid cinephile! ",
-  "siteHeading": "Léa Shamaa",
   "categories": [
     {
       "name": "Politics",
@@ -44,6 +41,5 @@
       "name": "Media",
       "color": "#f2ff88"
     }
-  ],
-  "username_medium": "Lea Shamaa"
+  ]
 }
