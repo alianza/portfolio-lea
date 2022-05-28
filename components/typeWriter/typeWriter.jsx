@@ -17,7 +17,7 @@ const TypeWriter = ({ quotes }) => {
           authorElem.style.opacity = '1'
           updateHeight()
         })
-        .pauseFor(quote.text.length * 80)
+        .pauseFor(quote.text.length * 60)
         .deleteAll()
         .callFunction(() => {
           authorElem.style.opacity = '0'
