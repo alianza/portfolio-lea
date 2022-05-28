@@ -41,7 +41,7 @@ const TypeWriter = ({ quotes }) => {
         <Typewriter
           onInit={(typewriter) => getTypeWriterOptions(typewriter, quotes)}
           options={{
-            delay: 100,
+            delay: 80,
             autoStart: true,
             loop: true,
           }}
