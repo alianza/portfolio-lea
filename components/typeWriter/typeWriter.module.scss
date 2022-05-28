@@ -1,7 +1,7 @@
 .TypeWriter {
-    @apply text-center text-lg p-2 pb-4 tablet:p-2 overflow-hidden transition-[height] duration-[1000ms];
+    @apply text-center p-2 pb-4 tablet:p-2 overflow-hidden transition-[height] duration-[1000ms];
 
     :global(.Typewriter__wrapper), :global(.Typewriter__cursor) {
-        @apply text-4xl
+        @apply text-2xl mobile:text-4xl;
     }
 }
