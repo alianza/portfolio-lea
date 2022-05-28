@@ -67,7 +67,7 @@ collections:
             widget: "list"
             summary: "{{fields.text}} - {{fields.author}}"
             fields:
-              - { label: "Text", name: "text", widget: "markdown" }
+              - { label: "Text", name: "text", widget: "markdown", buttons: [ "bold", "italic", "link", "code" ], editor_components: [] }
               - { label: "Author", name: "author", widget: "string", required: false }
       - label: 'About'
         name: 'about'
