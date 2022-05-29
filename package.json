@@ -10,9 +10,7 @@
     "build-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map --watch",
     "build-cms-styles": "run-p build-styles:*",
     "copy-config": "copy-and-watch content/config.json public/ --watch",
-    "analyze": "cross-env ANALYZE=true next build",
-    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
