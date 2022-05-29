@@ -1,4 +1,5 @@
 const withPWA = require('next-pwa')
+const withPreact = require('next-plugin-preact');
 const withPlugins = require('next-compose-plugins')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -15,5 +16,6 @@ module.exports = withPlugins([
       buildExcludes: [/middleware-manifest\.json$/]
     }
   }],
+  [withPreact],
   [withBundleAnalyzer],
 ])
