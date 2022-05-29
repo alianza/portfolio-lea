@@ -12,11 +12,13 @@
     "copy-config": "copy-and-watch content/config.json public/ --watch"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "copy-and-watch": "^0.1.6",
     "next": "^12.1.0",
     "next-pwa": "^5.5.2",
     "nextjs-progressbar": "^0.0.14",
     "react": "^17.0.2",
+    "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^17.0.2",
     "sharp": "^0.30.4",
     "typewriter-effect": "^2.18.2"
