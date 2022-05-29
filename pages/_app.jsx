@@ -1,4 +1,5 @@
-import '../styles/globals.scss'
+import "../styles/globals.scss"
+import "animate.css/animate.min.css"
 
 function MyApp({Component, pageProps}) {
   const withLayout = Component.withLayout ?? ((page) => page)
