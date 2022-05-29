@@ -2,6 +2,8 @@
     @apply text-center p-2 pb-4 tablet:p-2 overflow-hidden transition-[height] duration-[1000ms];
 
     :global(.Typewriter__wrapper), :global(.Typewriter__cursor) {
-        @apply text-2xl mobile:text-4xl;
+        @apply text-2xl;
+        @apply mobile:text-3xl;
+        @apply tablet:text-4xl;
     }
 }
