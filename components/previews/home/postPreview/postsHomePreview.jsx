@@ -3,12 +3,13 @@ import * as PropTypes from "prop-types"
 import React from "react"
 import styles from "../../preview.module.scss"
 import Image from "next/image"
+import { AnimationOnScroll } from "react-animation-on-scroll"
 
 PostHomePreview.propTypes = { post: PropTypes.object.isRequired }
 
 function PostHomePreview({ post }) {
   return (
-    <div className={styles.previewHomeContainer}>
+    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
       <Link href={`/blog/${post.id}`}>
         <a className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image
@@ -27,7 +28,7 @@ function PostHomePreview({ post }) {
         </Link>
         <time className={styles.date}>{post.data.date}</time>
       </div>
-    </div>
+    </AnimationOnScroll>
   )
 }
 

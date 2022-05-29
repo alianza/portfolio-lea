@@ -8,7 +8,7 @@ PostPreview.propTypes = { post: PropTypes.object.isRequired }
 
 function PostPreview({ post }) {
   return (
-    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" animateOnce>
+    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce>
       <div className={styles.previewContainer}>
         <Link href={`/portfolio/${post.id}`}>
           <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>

@@ -4,12 +4,13 @@ import React from "react"
 import styles from "../../preview.module.scss"
 import Image from "next/image"
 import StartEndDateLabel from "../../../startEndDateLabel/startEndDateLabel"
+import { AnimationOnScroll } from "react-animation-on-scroll"
 
 ExperienceHomePreview.propTypes = { experience: PropTypes.object.isRequired }
 
 function ExperienceHomePreview({ experience }) {
   return (
-    <div className={styles.previewHomeContainer}>
+    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
       <Link href={`/portfolio/${experience.id}`}>
         <a className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image
@@ -28,7 +29,7 @@ function ExperienceHomePreview({ experience }) {
         </Link>
         <StartEndDateLabel startDate={experience.data.startDate} endDate={experience.data.endDate} centered/>
       </div>
-    </div>
+    </AnimationOnScroll>
   )
 }
 

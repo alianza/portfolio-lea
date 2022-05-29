@@ -9,7 +9,7 @@ ExperiencePreview.propTypes = { experience: PropTypes.object.isRequired }
 
 function ExperiencePreview({ experience }) {
   return (
-    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" animateOnce>
+    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce>
       <div className={styles.previewContainer}>
         <Link href={`/portfolio/${experience.id}`}>
           <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
