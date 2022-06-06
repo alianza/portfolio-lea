@@ -40,12 +40,19 @@ yarn-error.log*
 /.idea
 
 # Auto Generated PWA files
-**/public/precache.*.*.js
-**/public/sw.js
-**/public/workbox-*.js
-**/public/worker-*.js
-**/public/fallback-*.js
-**/public/precache.*.*.js.map
-**/public/sw.js.map
-**/public/workbox-*.js.map
-**/public/worker-*.js.map
+/public/precache.*.*.js
+/public/sw.js
+/public/workbox-*.js
+/public/worker-*.js
+/public/fallback-*.js
+/public/precache.*.*.js.map
+/public/sw.js.map
+/public/workbox-*.js.map
+/public/worker-*.js.map
+
+# Generated CSS
+/public/styles/content.module.css
+/public/styles/variables.css
+
+# Copied config
+/public/config.json
