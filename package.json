@@ -1,15 +1,20 @@
 {
   "private": true,
   "scripts": {
-    "dev": "run-p next:dev build-cms-styles netlify-cms-proxy copy-config",
+    "dev": "run-p next:dev watch-cms-styles netlify-cms-proxy watch-config",
+    "build": "run-p next:build build-cms-styles copy-config",
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",
     "netlify-cms-proxy": "npx netlify-cms-proxy-server",
-    "build-styles:content": "sass components/mdContent/mdContent.module.scss ./public/styles/content.module.css --no-source-map --watch",
-    "build-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map --watch",
     "build-cms-styles": "run-p build-styles:*",
-    "copy-config": "copy-and-watch content/config.json public/ --watch",
+    "watch-cms-styles": "run-p watch-styles:*",
+    "watch-config": "copy-and-watch content/config.json public/ --watch",
+    "copy-config": "copy-and-watch content/config.json public/",
+    "watch-styles:content": "sass components/mdContent/mdContent.module.scss ./public/styles/content.module.css --no-source-map --watch",
+    "build-styles:content": "sass components/mdContent/mdContent.module.scss ./public/styles/content.module.css --no-source-map",
+    "watch-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map --watch",
+    "build-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map",
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
