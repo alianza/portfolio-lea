@@ -26,4 +26,5 @@ Check out the live site [here](https://leashamaa.nl/).
 
 - run `yarn install` to install dependencies
 - run `yarn run dev` to start Next.js dev server, Build and watch preview styles and run Netlify CMS local Proxy server for local development
-- run `next:build` to generate static production build
+- run `yarn run build` to generate static production build
+- run `yarn run analyze` to analyze the generated bundle
