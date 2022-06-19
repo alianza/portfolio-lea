@@ -211,18 +211,15 @@
         max-width: 100%;
         border-spacing: 0;
         margin-top: 1.5rem;
+        display: block;
+        overflow: auto;
 
         thead {
             background: var(--theme-primary);
+            font-weight: bold;
         }
 
-        th {
-            font-weight: 500;
-            padding: 0.5em 1em;
-            border: 1px double #eee;
-        }
-
-        td {
+        th, td {
             padding: 0.5em 1em;
             border: 1px double #eee;
         }
@@ -238,11 +235,7 @@
     }
 
     li {
-        ol {
-            margin: 0;
-        }
-
-        ul {
+        ul, ol {
             margin: 0;
         }
     }
