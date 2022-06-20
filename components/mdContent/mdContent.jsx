@@ -13,7 +13,7 @@ const MdContent = ({ content: { title, date, startDate, endDate, thumbnail, cate
 
   return (
     <article className={contentStyles.content}>
-      <div className="flex justify-between items-center flex-wrap">
+      <div className="flex justify-between items-center flex-wrap gap-2">
         <h1 className={contentStyles.mainTitle}>{title}</h1>
         {categoriesLink && <Link href="/blog/categories"><a className="text-text-primary h-100">All Categories</a></Link>}
       </div>
