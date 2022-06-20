@@ -15,7 +15,7 @@
     "watch-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map --watch",
     "build-styles:content": "sass components/mdContent/mdContent.module.scss ./public/styles/content.module.css --no-source-map",
     "build-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true yarn build"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
