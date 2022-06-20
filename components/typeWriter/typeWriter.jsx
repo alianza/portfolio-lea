@@ -10,14 +10,14 @@ const TypeWriter = ({ quotes }) => {
     const authorElem = document.getElementById("author")
     const randomQuotes = quotes.sort(() => 0.5 - Math.random())
 
-    randomQuotes.forEach((quote) => {
-      typewriter.typeString(quote.text)
+    randomQuotes.forEach(({ author, text }) => {
+      typewriter.typeString(text)
         .callFunction(() => {
-          authorElem.textContent = quote.author
+          authorElem.textContent = author
           authorElem.style.opacity = '1'
           updateHeight()
         })
-        .pauseFor(quote.text.length * 60)
+        .pauseFor(text.length * 60)
         .deleteAll()
         .callFunction(() => {
           authorElem.style.opacity = '0'
