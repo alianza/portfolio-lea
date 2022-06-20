@@ -41,6 +41,7 @@ const Category = ({ posts, category }) => {
       <hr className="my-4"/>
       <div className={styles.previewList}>
         {posts.map((post) => <PostPreview key={post.id} post={post}/>)}
+        {posts.length === 0 && <div className="text-center">{'No posts yet... <3'}</div>}
       </div>
     </div>
   )
