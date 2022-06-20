@@ -30,9 +30,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# vercel
-.vercel
-
 # typescript
 *.tsbuildinfo
 
@@ -51,8 +48,7 @@ yarn-error.log*
 /public/worker-*.js.map
 
 # Generated CSS
-/public/styles/content.module.css
-/public/styles/variables.css
+/public/styles/
 
 # Copied config
 /public/config.json
