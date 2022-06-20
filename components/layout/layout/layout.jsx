@@ -1,25 +1,18 @@
 import Head from "next/head"
 import Header from "../header/header"
 import Footer from "../footer/footer"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import localStorageService from "../../../lib/services/localStorageService"
-import useTheme from "../../../lib/theme"
-import { useDarkThemeListener, useEventListeners } from "../../../lib/eventListeners"
 import NextNProgress from "nextjs-progressbar"
 import utils from "../../../styles/utils.module.scss"
+import { useDarkTheme } from "../../../lib/eventListeners"
 
-const darkThemeKey = 'darkTheme'
+export const darkThemeKey = 'darkTheme'
 
 export default function Layout({ siteHeading, siteTitle, siteDescription, accounts, children}) {
     const [darkTheme, setDarkTheme] = useState(false)
 
-    useDarkThemeListener(setDarkTheme)
-
-    useEffect(() => { setDarkTheme(localStorageService.getValue(darkThemeKey)) })
-
-    useTheme(darkTheme)
-
-    useEventListeners()
+    useDarkTheme(setDarkTheme, darkTheme)
 
     const toggleTheme = () => { localStorageService.setKeyValue(darkThemeKey, !darkTheme); setDarkTheme(!darkTheme) }
 
