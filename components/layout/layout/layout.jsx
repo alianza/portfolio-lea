@@ -5,8 +5,8 @@ import { useState } from "react"
 import localStorageService, { darkThemeKey } from "../../../lib/services/localStorageService"
 import utils from "../../../styles/utils.module.scss"
 import { useDarkTheme } from "../../../lib/eventListeners"
-
-export const darkThemeKey = 'darkTheme'
+import dynamic from "next/dynamic"
+const NextNProgress = dynamic(() => import('nextjs-progressbar'), { loading: () => <div /> })
 
 export default function Layout({ siteHeading, siteTitle, siteDescription, accounts, children}) {
     const [darkTheme, setDarkTheme] = useState(false)
