@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "run-p next:dev watch-cms-styles watch-config netlify-cms-proxy",
     "build": "run-p build-cms-styles copy-config next:build",
+    "analyze": "cross-env ANALYZE=true yarn build",
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",
@@ -14,8 +15,7 @@
     "watch-styles:content": "sass components/mdContent/mdContent.module.scss ./public/styles/content.module.css --no-source-map --watch",
     "watch-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map --watch",
     "build-styles:content": "sass components/mdContent/mdContent.module.scss ./public/styles/content.module.css --no-source-map",
-    "build-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map",
-    "analyze": "cross-env ANALYZE=true yarn build"
+    "build-styles:variables": "sass ./styles/_variables.scss ./public/styles/variables.css --no-source-map"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -27,7 +27,7 @@
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.30.6",
-    "typewriter-effect": "^2.18.2"
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.6",
