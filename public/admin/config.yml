@@ -74,7 +74,7 @@ collections:
         file: 'content/pages/about.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Categories'
         name: 'categories'
         file: 'content/pages/categories.md'
@@ -86,13 +86,13 @@ collections:
         file: 'content/pages/portfolio.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Articles'
         name: 'articles'
         file: 'content/pages/articles.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
           - label: "Read more link"
             name: "readMoreLink"
             widget: "object"
@@ -113,10 +113,10 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - label: 'Posts'
-    name: 'post'
-    label_singular: 'Post'
-    folder: 'content/posts'
+  - label: 'Blog posts'
+    name: 'blog'
+    label_singular: 'Blog post'
+    folder: 'content/blog'
     create: true
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
