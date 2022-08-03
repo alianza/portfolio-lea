@@ -22,24 +22,24 @@
   ],
   "categories": [
     {
-      "name": "Politics",
-      "color": "#b32a2a",
-      "textColor": "light"
+      "name": "Poetry",
+      "color": "#e4b7e5",
+      "textColor": "dark"
     },
     {
-      "name": "Culture",
-      "color": "#70ff9d",
+      "name": "Fiction",
+      "color": "#ffc857",
       "textColor": "dark"
     },
     {
       "textColor": "light",
-      "name": "Experience",
-      "color": "#676dff"
+      "name": "Photography",
+      "color": "#585191"
     },
     {
-      "textColor": "dark",
-      "name": "Media",
-      "color": "#f2ff88"
+      "textColor": "light",
+      "name": "Reflections",
+      "color": "#00a6a6"
     }
   ]
 }
