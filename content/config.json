@@ -42,9 +42,7 @@
       "color": "#00a6a6"
     },
     {
-      "textColor": [
-        "auto"
-      ],
+      "textColor": "auto",
       "name": "YOUvATODAY",
       "color": "#f43135"
     }
