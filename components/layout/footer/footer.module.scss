@@ -1,5 +1,5 @@
 .footer {
-    @apply z-10 text-text-light mt-auto px-8 py-4 mobile:py-8 bg-theme-primary flex flex-col mobile:flex-row items-center justify-evenly mobile:justify-between gap-2 mobile:gap-8 transition-colors;
+    @apply z-10 text-text-light mt-auto py-4 bg-theme-primary flex flex-col mobile:px-8 mobile:flex-row items-center justify-evenly mobile:justify-between gap-2 mobile:gap-8 transition-colors;
 
     .darkModeButton {
         @apply hidden mobile:block;
