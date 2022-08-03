@@ -7,7 +7,7 @@
 
 
 body {
-    @apply p-0 m-0 text-text-primary min-h-screen font-text box-border bg-primary;
+    @apply p-0 m-0 text-text-primary min-h-screen font-text box-border bg-primary antialiased;
 
     #app {
         @apply min-h-screen flex flex-col;
