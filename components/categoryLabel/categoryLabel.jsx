@@ -9,15 +9,18 @@ CategoryLabel.propTypes = {
 }
 
 function CategoryLabel({ category }) {
-  const textColor = category.textColor === "light" ? "var(--text-light)" : "var(--text-dark)"
+  let textColor = 'var(--text-primary)'
+
+  if (category.textColor !== 'auto') {
+    textColor = `var(--text-${category.textColor})`
+  }
 
   return (
-    <Link href={`/blog/categories/${category.name}`}><a style={{
-      ...category.color ? { backgroundColor: `${category.color}`,
-      ...category.textColor !== "auto" ? { color: textColor } : {} } : {} }}
-      className={`${contentStyles.categoryLabel} ${utils.hoverEffectSlight} no-underline`}>
-      {category.name}
-    </a>
+    <Link href={`/blog/categories/${category.name}`}>
+      <a style={{ backgroundColor: `${category.color}`, color: textColor }}
+         className={`${contentStyles.categoryLabel} ${utils.hoverEffectSlight} no-underline`}>
+        {category.name}
+      </a>
     </Link>
   )
 }
