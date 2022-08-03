@@ -1,7 +1,7 @@
 ---
 portfolioTitle: Portfolio
 portfolioLabel: Read more experiences
-blogTitle: Posts
+blogTitle: Blog
 blogLabel: Read more posts
 articlesTitle: Articles
 articlesLabel: Read more articles
