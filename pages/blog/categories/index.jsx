@@ -9,8 +9,8 @@ import { getPage } from "../../../lib/services/pageService"
 
 export const getStaticProps = async () => {
 
-  const categories = await Promise.all(await getCategories())
-
+  const categories = await getCategories()
+  
   const categoriesContent = await getPage("categories")
 
   return {
@@ -28,7 +28,7 @@ const Categories = ({ categories, categoriesContent }) => {
     <div className={utils.page}>
       <MdContent content={categoriesContent}/>
       <hr className="my-4"/>
-      <div className="flex gap-2 flex-col tablet:flex-row">
+      <div className="flex flex-wrap gap-2 flex-col tablet:flex-row">
         {categories.map((category) => <CategoryPreview key={category.name} category={category}/>)}
       </div>
     </div>
