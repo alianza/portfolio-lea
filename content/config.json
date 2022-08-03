@@ -40,6 +40,11 @@
       "textColor": "light",
       "name": "Reflections",
       "color": "#00a6a6"
+    },
+    {
+      "textColor": "auto",
+      "name": "YOUvATODAY",
+      "color": "#f43135"
     }
   ]
 }
