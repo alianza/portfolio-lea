@@ -8,7 +8,7 @@ CategoryLabel.propTypes = {
   category: PropTypes.object.isRequired,
 }
 
-function CategoryLabel({ category }) {
+function CategoryLabel({ category, className = '', style = {} }) {
   let textColor = 'var(--text-primary)'
 
   if (category.textColor !== 'auto') {
@@ -17,8 +17,8 @@ function CategoryLabel({ category }) {
 
   return (
     <Link href={`/blog/categories/${category.name}`}>
-      <a style={{ backgroundColor: `${category.color}`, color: textColor }}
-         className={`${contentStyles.categoryLabel} ${utils.hoverEffectSlight} no-underline`}>
+      <a style={{ backgroundColor: `${category.color}`, color: textColor, ...style }}
+         className={`${contentStyles.categoryLabel} ${utils.hoverEffectSlight} no-underline ${className}`}>
         {category.name}
       </a>
     </Link>
