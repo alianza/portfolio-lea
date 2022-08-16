@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import Image from "next/future/image"
 import styles from '../preview.module.scss'
 import * as PropTypes from "prop-types"
 import { AnimationOnScroll } from "react-animation-on-scroll"
@@ -12,10 +12,10 @@ function PostPreview({ post }) {
       <Link href={`/portfolio/${post.id}`}>
         <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image
-            layout="fill"
+            fill
+            sizes="100vw"
             alt={`${post.data.title} thumbnail`}
             className={styles.imageStyle}
-            objectFit={"cover"}
             src={post.data.thumbnail}
             placeholder="blur"
             blurDataURL={`/_next/image?url=${post.data.thumbnail}&w=16&q=1`}/>/>

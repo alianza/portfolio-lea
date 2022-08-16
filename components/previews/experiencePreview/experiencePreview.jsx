@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import Image from "next/future/image"
 import styles from '../preview.module.scss'
 import * as PropTypes from "prop-types"
 import StartEndDateLabel from "../../startEndDateLabel/startEndDateLabel"
@@ -13,10 +13,10 @@ function ExperiencePreview({ experience }) {
       <Link href={`/portfolio/${experience.id}`}>
         <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image
-            layout="fill"
+            fill
+            sizes="100vw"
             alt={`${experience.data.title} thumbnail`}
             className={styles.imageStyle}
-            objectFit={"cover"}
             src={experience.data.thumbnail}
             placeholder="blur"
             blurDataURL={`/_next/image?url=${experience.data.thumbnail}&w=16&q=1`}/>/>
