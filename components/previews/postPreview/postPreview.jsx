@@ -1,14 +1,27 @@
 import Link from "next/link"
 import Image from "next/future/image"
 import styles from '../preview.module.scss'
+import utils from '../../../styles/utils.module.scss'
 import * as PropTypes from "prop-types"
 import { AnimationOnScroll } from "react-animation-on-scroll"
+import CategoryLabel from "../../categoryLabel/categoryLabel"
+import React, { useState } from "react"
 
 PostPreview.propTypes = { post: PropTypes.object.isRequired }
 
-function PostPreview({ post }) {
+function PostPreview({ post, hideCategoryLabel }) {
+  const [displayCategoryLabel, setDisplayCategoryLabel] = useState(false)
+  const categoryLabelCondition = !hideCategoryLabel && displayCategoryLabel
+  const categoryLabelStyle = {opacity: categoryLabelCondition ? 100 : 0, transform: `translateY(${categoryLabelCondition ? '0' : '12px'})`}
   return (
-    <AnimationOnScroll initiallyVisible animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewContainer}>
+    <AnimationOnScroll
+      afterAnimatedIn={() => {setDisplayCategoryLabel(true)}}
+      initiallyVisible
+      animateIn="animate__fadeInUp"
+      duration=".5"
+      offset="0"
+      animateOnce
+      className={styles.previewContainer}>
       <Link href={`/portfolio/${post.id}`}>
         <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image
@@ -28,6 +41,7 @@ function PostPreview({ post }) {
         <time className="text-lg">{post.data.date}</time>
         <p className={styles.description}>{post.data.description}</p>
       </div>
+      <CategoryLabel category={post.data.category} style={categoryLabelStyle} className={utils.categoryLabel}/>
     </AnimationOnScroll>
   )
 }
