@@ -21,7 +21,7 @@
     "animate.css": "^4.1.1",
     "copy-and-watch": "^0.1.6",
     "next": "^12.2.5",
-    "next-pwa": "^5.5.5",
+    "next-pwa": "5.5.4",
     "nextjs-progressbar": "^0.0.14",
     "react": "^18.2.0",
     "react-animation-on-scroll": "^5.1.0",
