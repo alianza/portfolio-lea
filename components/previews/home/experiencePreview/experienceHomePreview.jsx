@@ -10,7 +10,7 @@ ExperienceHomePreview.propTypes = { experience: PropTypes.object.isRequired }
 
 function ExperienceHomePreview({ experience }) {
   return (
-    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
+    <AnimationOnScroll initiallyVisible animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
       <Link href={`/portfolio/${experience.id}`}>
         <a className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <Image

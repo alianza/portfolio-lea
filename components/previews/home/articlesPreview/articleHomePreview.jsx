@@ -7,7 +7,7 @@ ArticleHomePreview.propTypes = { article: PropTypes.object.isRequired }
 
 function ArticleHomePreview({ article }) {
   return (
-    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
+    <AnimationOnScroll initiallyVisible animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
       <a href={article.link} target="_blank" rel="noreferrer" className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
         <img alt={`${article.title} thumbnail`} className={styles.imageStyle} src={article.image}/>
       </a>

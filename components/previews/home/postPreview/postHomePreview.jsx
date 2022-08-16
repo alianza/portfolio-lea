@@ -9,7 +9,7 @@ PostHomePreview.propTypes = { post: PropTypes.object.isRequired }
 
 function PostHomePreview({ post }) {
   return (
-    <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
+    <AnimationOnScroll initiallyVisible animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
       <Link href={`/blog/${post.id}`}>
         <a className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
           <span className="absolute left-2 top-2"></span>
