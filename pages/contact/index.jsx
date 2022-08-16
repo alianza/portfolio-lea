@@ -5,6 +5,7 @@ import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ContactFormNetlify from "../../components/contactForm/contactFormNetlify"
 import React from "react"
+import Hr from "../../components/hr/hr"
 
 export const getStaticProps = async () => {
 
@@ -22,7 +23,7 @@ const Contact = ({ contactContent }) => {
   return (
     <div className={utils.page}>
       <MdContent content={contactContent}/>
-      <hr className="my-4"/>
+      <Hr/>
       <ContactFormNetlify/>
     </div>
   )

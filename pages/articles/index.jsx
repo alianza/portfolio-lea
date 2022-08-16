@@ -7,6 +7,7 @@ import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ArticlePreview from "../../components/previews/articlesPreview/articlePreview"
 import React from "react"
+import Hr from "../../components/hr/hr"
 
 export const getStaticProps = async () => {
 
@@ -28,7 +29,7 @@ const Articles = ({ articles, articlesContent }) => {
   return (
     <div className={utils.page}>
       <MdContent content={articlesContent}/>
-      <hr className="my-4"/>
+      <Hr/>
       <div className={styles.previewList}>
         {articles.map((article) => <ArticlePreview key={article.title} article={article}/> )}
           <a href={articlesContent.readMoreLink.link} className={`${utils.arrowLink} mt-4 mobile:mt-8 self-end group inline-flex`} target="_blank" rel="noreferrer">

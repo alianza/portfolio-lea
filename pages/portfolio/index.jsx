@@ -7,6 +7,7 @@ import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ExperiencePreview from "../../components/previews/experiencePreview/experiencePreview"
 import React from "react"
+import Hr from "../../components/hr/hr"
 
 export const getStaticProps = async () => {
 
@@ -27,7 +28,7 @@ const Portfolio = ({ experiences, portfolioContent }) => {
   return (
     <div className={utils.page}>
       <MdContent content={portfolioContent}/>
-      <hr className="my-4"/>
+      <Hr/>
       <div className={styles.previewList}>
         {experiences.map((experience) => <ExperiencePreview key={experience.id} experience={experience}/>)}
       </div>

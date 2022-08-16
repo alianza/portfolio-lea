@@ -7,6 +7,7 @@ import MdContent from "../../components/mdContent/mdContent"
 import React from "react"
 import PostPreview from "../../components/previews/postPreview/postPreview"
 import { getPosts } from "../../lib/services/postsService"
+import Hr from "../../components/hr/hr"
 
 export const getStaticProps = async () => {
 
@@ -27,7 +28,7 @@ const Blog = ({ posts, portfolioContent }) => {
   return (
     <div className={utils.page}>
       <MdContent content={portfolioContent} categoriesLink/>
-      <hr className="my-4"/>
+      <Hr/>
       <div className={styles.previewList}>
         {posts.map((post) => <PostPreview key={post.id} post={post}/>)}
       </div>

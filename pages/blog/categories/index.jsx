@@ -6,6 +6,7 @@ import React from "react"
 import MdContent from "../../../components/mdContent/mdContent"
 import CategoryPreview from "../../../components/previews/categoryPreview/categoryPreview"
 import { getPage } from "../../../lib/services/pageService"
+import Hr from "../../../components/hr/hr"
 
 export const getStaticProps = async () => {
 
@@ -27,7 +28,7 @@ const Categories = ({ categories, categoriesContent }) => {
   return (
     <div className={utils.page}>
       <MdContent content={categoriesContent}/>
-      <hr className="my-4"/>
+      <Hr/>
       <div className="flex flex-wrap gap-2 flex-col tablet:flex-row">
         {categories.map((category) => <CategoryPreview key={category.name} category={category}/>)}
       </div>
