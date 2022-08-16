@@ -16,9 +16,9 @@ const TypeWriter = dynamic(() => import('../components/typeWriter/typeWriter'), 
 
 export const getStaticProps = async () => {
 
-  const experiences = (await Promise.all(await getExperiences())).slice(0, 3)
+  const experiences = (await getExperiences({ preview: true })).slice(0, 3)
 
-  const posts = (await Promise.all(await getPosts())).slice(0, 3)
+  const posts = (await getPosts({ preview: true })).slice(0, 3)
 
   const { dataMedium } = await getArticles(layoutData.usernameMedium)
 

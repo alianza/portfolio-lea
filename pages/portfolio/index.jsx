@@ -10,7 +10,7 @@ import React from "react"
 
 export const getStaticProps = async () => {
 
-  const experiences = await Promise.all(await getExperiences())
+  const experiences = await getExperiences({ preview: true })
 
   const portfolioContent = await getPage("portfolio")
 

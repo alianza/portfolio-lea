@@ -24,7 +24,7 @@ export const getStaticProps = async ({ params }) => {
 
   const posts = await getPostsByCategory(params.name)
 
-  posts.map(async (post) => post.data.category = await getCategory(post.category))
+  posts.map(async (post) => post.data.category.name = await getCategory(post.category))
 
   const category = await getCategory(params.name)
 

@@ -10,7 +10,7 @@ import { getPosts } from "../../lib/services/postsService"
 
 export const getStaticProps = async () => {
 
-  const posts = await Promise.all(await getPosts())
+  const posts = await getPosts({ preview: true })
 
   const portfolioContent = await getPage("blog")
 
