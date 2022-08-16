@@ -2,6 +2,7 @@ import Link from "next/link"
 import * as PropTypes from "prop-types"
 import React from "react"
 import styles from "../../preview.module.scss"
+import utils from "../../../../styles/utils.module.scss"
 import Image from "next/future/image"
 import StartEndDateLabel from "../../../startEndDateLabel/startEndDateLabel"
 import { AnimationOnScroll } from "react-animation-on-scroll"
@@ -12,7 +13,7 @@ function ExperienceHomePreview({ experience }) {
   return (
     <AnimationOnScroll initiallyVisible animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewHomeContainer}>
       <Link href={`/portfolio/${experience.id}`}>
-        <a className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
+        <a className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
           <Image
             fill
             sizes="100vw"

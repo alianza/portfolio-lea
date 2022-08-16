@@ -11,8 +11,8 @@ PostPreview.propTypes = { post: PropTypes.object.isRequired }
 
 function PostPreview({ post, hideCategoryLabel }) {
   const [displayCategoryLabel, setDisplayCategoryLabel] = useState(false)
-  const categoryLabelCondition = !hideCategoryLabel && displayCategoryLabel
-  const categoryLabelStyle = {opacity: categoryLabelCondition ? 100 : 0, transform: `translateY(${categoryLabelCondition ? '0' : '12px'})`}
+  const categoryLabelStyle = !displayCategoryLabel ? { opacity: 0, transform: 'translateY(12px)' } : { }
+
   return (
     <AnimationOnScroll
       afterAnimatedIn={() => {setDisplayCategoryLabel(true)}}
@@ -22,8 +22,8 @@ function PostPreview({ post, hideCategoryLabel }) {
       offset="0"
       animateOnce
       className={styles.previewContainer}>
-      <Link href={`/portfolio/${post.id}`}>
-        <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
+      <Link href={`/blog/${post.id}`}>
+        <a className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
           <Image
             fill
             sizes="100vw"
@@ -41,7 +41,7 @@ function PostPreview({ post, hideCategoryLabel }) {
         <time className="text-lg">{post.data.date}</time>
         <p className={styles.description}>{post.data.description}</p>
       </div>
-      <CategoryLabel category={post.data.category} style={categoryLabelStyle} className={utils.categoryLabel}/>
+      {!hideCategoryLabel && <CategoryLabel category={post.data.category} style={categoryLabelStyle} className={utils.categoryLabel}/>}
     </AnimationOnScroll>
   )
 }

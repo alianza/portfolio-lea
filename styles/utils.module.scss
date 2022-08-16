@@ -11,7 +11,7 @@
 }
 
 .hoverEffectSlight {
-    @apply transition-transform hover:scale-[1.02] active:scale-[.98];
+    @apply transition-transform hover:scale-[1.02] active:scale-[.98] #{!important};
 }
 
 .hoverEffectStrong {

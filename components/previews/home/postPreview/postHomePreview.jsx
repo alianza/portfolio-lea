@@ -11,7 +11,7 @@ PostHomePreview.propTypes = { post: PropTypes.object.isRequired }
 
 function PostHomePreview({ post }) {
   const [displayCategoryLabel, setDisplayCategoryLabel] = useState(false)
-  const categoryLabelStyle = {opacity: displayCategoryLabel ? 100 : 0, transform: `translateY(${displayCategoryLabel ? '0' : '12px'})`}
+  const categoryLabelStyle = !displayCategoryLabel ? { opacity: 0, transform: 'translateY(12px)' } : { }
   return (
     <AnimationOnScroll
       afterAnimatedIn={() => {setDisplayCategoryLabel(true)}}
@@ -23,7 +23,7 @@ function PostHomePreview({ post }) {
       className={styles.previewHomeContainer}
     >
       <Link href={`/blog/${post.id}`}>
-        <a className={`${styles.imageLinkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
+        <a className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
           <Image
             fill
             sizes="100vw"

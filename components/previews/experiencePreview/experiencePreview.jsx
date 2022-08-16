@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/future/image"
 import styles from '../preview.module.scss'
+import utils from '../../../styles/utils.module.scss'
 import * as PropTypes from "prop-types"
 import StartEndDateLabel from "../../startEndDateLabel/startEndDateLabel"
 import { AnimationOnScroll } from "react-animation-on-scroll"
@@ -11,7 +12,7 @@ function ExperiencePreview({ experience }) {
   return (
     <AnimationOnScroll animateIn="animate__fadeInUp" duration=".5" offset="0" animateOnce className={styles.previewContainer}>
       <Link href={`/portfolio/${experience.id}`}>
-        <a className={`${styles.linkStyle} transition-transform hover:scale-[1.02] active:scale-[.98]`}>
+        <a className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
           <Image
             fill
             sizes="100vw"
