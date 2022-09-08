@@ -3,7 +3,8 @@ title: INTERNATIONALISING THE LUNCH TABLE AT THE UNIVERSITY OF AMSTERDAM
 date: 19-04-2022
 thumbnail: /images/articl1.png
 category: YOUvATODAY
-description: .
+description: I had never spent much time at the Roeterseiland campus until my
+  classes started taking place there during my last academic year.
 ---
 I had never spent much time at the Roeterseiland campus until my classes started taking place there during my last academic year. 
 
