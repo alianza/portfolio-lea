@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
-import NavLink from "../../navLink/navLink"
 import styles from "./header.module.scss"
-import DarkModeButton from "../../darkModeButton/darkModeButton"
-import Hamburger from "../../svg/hamburger"
-import Close from "../../svg/close"
 import Link from "next/link"
+import Close from "../util/svg/close";
+import Hamburger from "../util/svg/hamburger";
+import NavLink from "../util/navLink/navLink";
+import DarkModeButton from "../util/darkModeButton/darkModeButton";
 
 export default function Header({ title, onThemeButtonClick, darkTheme }) {
   const [menuOpen, setMenuOpen] = React.useState(false)

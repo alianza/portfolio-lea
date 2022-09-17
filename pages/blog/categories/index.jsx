@@ -6,7 +6,7 @@ import React from "react"
 import MdContent from "../../../components/mdContent/mdContent"
 import CategoryPreview from "../../../components/previews/categoryPreview/categoryPreview"
 import { getPage } from "../../../lib/services/pageService"
-import Hr from "../../../components/hr/hr"
+import Hr from "../../../components/layout/util/hr/hr";
 
 export const getStaticProps = async () => {
 

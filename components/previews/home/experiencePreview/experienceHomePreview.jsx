@@ -4,8 +4,8 @@ import React from "react"
 import styles from "../../preview.module.scss"
 import utils from "../../../../styles/utils.module.scss"
 import Image from "next/future/image"
-import StartEndDateLabel from "../../../startEndDateLabel/startEndDateLabel"
 import AnimateOnScroll from "../../../animateOnScroll/animateOnScroll";
+import StartEndDateLabel from "../../../layout/util/startEndDateLabel/startEndDateLabel";
 
 ExperienceHomePreview.propTypes = { experience: PropTypes.object.isRequired }
 

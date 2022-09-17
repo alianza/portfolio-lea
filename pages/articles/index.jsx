@@ -7,7 +7,7 @@ import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ArticlePreview from "../../components/previews/articlesPreview/articlePreview"
 import React from "react"
-import Hr from "../../components/hr/hr"
+import Hr from "../../components/layout/util/hr/hr";
 
 export const getStaticProps = async () => {
 

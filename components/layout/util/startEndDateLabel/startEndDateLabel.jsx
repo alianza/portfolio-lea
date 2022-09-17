@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import contentStyles from "../mdContent/mdContent.module.scss"
+import contentStyles from "../../../mdContent/mdContent.module.scss"
 
 export default function StartEndDateLabel({ startDate, endDate, centered }) {
   return(

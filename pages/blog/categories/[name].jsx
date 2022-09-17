@@ -8,7 +8,7 @@ import React from "react"
 import PostPreview from "../../../components/previews/postPreview/postPreview"
 import contentStyles from "../../../components/mdContent/mdContent.module.scss"
 import Link from "next/link"
-import Hr from "../../../components/hr/hr"
+import Hr from "../../../components/layout/util/hr/hr";
 
 export const getStaticPaths = async () => {
 

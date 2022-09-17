@@ -1,7 +1,7 @@
 import React from "react"
 import styles from './footer.module.scss'
-import DarkModeButton from "../../darkModeButton/darkModeButton"
 import Image from 'next/future/image'
+import DarkModeButton from "../util/darkModeButton/darkModeButton";
 
 export default function Footer({ accounts, onThemeButtonClick, darkTheme }) {
   return (

@@ -5,7 +5,7 @@ import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ContactFormNetlify from "../../components/contactForm/contactFormNetlify"
 import React from "react"
-import Hr from "../../components/hr/hr"
+import Hr from "../../components/layout/util/hr/hr";
 
 export const getStaticProps = async () => {
 

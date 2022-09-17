@@ -3,8 +3,8 @@ import Image from "next/future/image";
 import styles from "../preview.module.scss";
 import utils from "../../../styles/utils.module.scss";
 import * as PropTypes from "prop-types";
-import StartEndDateLabel from "../../startEndDateLabel/startEndDateLabel";
 import AnimateOnScroll from "../../animateOnScroll/animateOnScroll";
+import StartEndDateLabel from "../../layout/util/startEndDateLabel/startEndDateLabel";
 
 ExperiencePreview.propTypes = { experience: PropTypes.object.isRequired };
 

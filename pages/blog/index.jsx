@@ -7,7 +7,7 @@ import MdContent from "../../components/mdContent/mdContent"
 import React from "react"
 import PostPreview from "../../components/previews/postPreview/postPreview"
 import { getPosts } from "../../lib/services/postsService"
-import Hr from "../../components/hr/hr"
+import Hr from "../../components/layout/util/hr/hr";
 
 export const getStaticProps = async () => {
 
