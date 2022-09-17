@@ -1,0 +1,7 @@
+.hidden {
+    @apply motion-safe:opacity-0 motion-safe:blur-sm translate-y-12 transition-all duration-500 ease-out;
+}
+
+.show {
+    @apply opacity-100 blur-none translate-y-0;
+}
