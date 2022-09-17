@@ -4,24 +4,17 @@ import React, { useState } from "react"
 import styles from "../../preview.module.scss"
 import utils from '../../../../styles/utils.module.scss'
 import Image from "next/future/image"
-import { AnimationOnScroll } from "react-animation-on-scroll"
 import CategoryLabel from "../../../categoryLabel/categoryLabel"
+import AnimateOnScroll from "../../../animateOnScroll/animateOnScroll";
 
 PostHomePreview.propTypes = { post: PropTypes.object.isRequired }
 
 function PostHomePreview({ post }) {
   const [displayCategoryLabel, setDisplayCategoryLabel] = useState(false)
   const categoryLabelStyle = !displayCategoryLabel ? { opacity: 0, transform: 'translateY(12px)' } : { }
+
   return (
-    <AnimationOnScroll
-      afterAnimatedIn={() => {setDisplayCategoryLabel(true)}}
-      initiallyVisible
-      animateIn="animate__fadeInUp"
-      duration=".5"
-      offset="0"
-      animateOnce
-      className={styles.previewHomeContainer}
-    >
+    <AnimateOnScroll className={styles.previewHomeContainer} callBack={() => setTimeout(() => setDisplayCategoryLabel(true), 500)}>
       <Link href={`/blog/${post.id}`}>
         <a className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
           <Image
@@ -42,7 +35,7 @@ function PostHomePreview({ post }) {
         </Link>
         <time className={styles.date}>{post.data.date}</time>
       </div>
-    </AnimationOnScroll>
+    </AnimateOnScroll>
   )
 }
 
