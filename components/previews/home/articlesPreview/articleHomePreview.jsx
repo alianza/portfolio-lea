@@ -8,7 +8,7 @@ ArticleHomePreview.propTypes = { article: PropTypes.object.isRequired }
 
 function ArticleHomePreview({ article }) {
   return (
-    <AnimateOnScroll reAnimate className={styles.previewHomeContainer}>
+    <AnimateOnScroll className={styles.previewHomeContainer}>
       <a href={article.link} target="_blank" rel="noreferrer" className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
         <img alt={`${article.title} thumbnail`} className={styles.imageStyle} src={article.image}/>
       </a>
