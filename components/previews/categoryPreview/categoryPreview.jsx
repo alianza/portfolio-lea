@@ -2,7 +2,7 @@ import utils from "../../../styles/utils.module.scss"
 import * as PropTypes from "prop-types"
 import React from "react"
 import Link from 'next/link'
-import SOrNot from "../../sorNot/sOrNot"
+import SOrNot from "../../layout/util/sorNot/sOrNot";
 
 function CategoryPreview({ category }) {
   const textColor = category.textColor === "light" ? "var(--text-light)" : "var(--text-dark)"
