@@ -20,10 +20,10 @@ function AnimateOnScroll(
         if (entry.isIntersecting) {
           (entry.target.classList.add(styles.show))
           if (!reAnimate) { observer.unobserve(entry.target) }
+          callBack(entry)
         } else {
           entry.target.classList.remove(styles.show)
         }
-        callBack(entry)
       }), options)
 
     observer.observe(articleRef.current)
