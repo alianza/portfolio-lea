@@ -4,14 +4,16 @@ import React from "react"
 import styles from "../../preview.module.scss"
 import utils from "../../../../styles/utils.module.scss"
 import Image from "next/future/image"
-import AnimateOnScroll from "../../../animateOnScroll/animateOnScroll";
 import StartEndDateLabel from "../../../layout/util/startEndDateLabel/startEndDateLabel";
+import { TransitionScroll } from "react-transition-scroll";
+import { hiddenStyle, transitionBaseStyle } from "../../../../lib/utils";
+
 
 ExperienceHomePreview.propTypes = { experience: PropTypes.object.isRequired }
 
 function ExperienceHomePreview({ experience }) {
   return (
-    <AnimateOnScroll className={styles.previewHomeContainer}>
+    <TransitionScroll className={styles.previewHomeContainer} baseStyle={transitionBaseStyle} hiddenStyle={hiddenStyle}>
       <Link href={`/portfolio/${experience.id}`}>
         <a className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
           <Image
@@ -30,7 +32,7 @@ function ExperienceHomePreview({ experience }) {
         </Link>
         <StartEndDateLabel startDate={experience.data.startDate} endDate={experience.data.endDate} centered/>
       </div>
-    </AnimateOnScroll>
+    </TransitionScroll>
   )
 }
 

@@ -5,7 +5,8 @@ import utils from '../../../styles/utils.module.scss'
 import * as PropTypes from "prop-types"
 import CategoryLabel from "../../categoryLabel/categoryLabel"
 import React, { useState } from "react"
-import AnimateOnScroll from "../../animateOnScroll/animateOnScroll";
+import { TransitionScroll } from "react-transition-scroll";
+import { hiddenStyle, transitionBaseStyle } from "../../../lib/utils";
 
 PostPreview.propTypes = { post: PropTypes.object.isRequired }
 
@@ -14,7 +15,12 @@ function PostPreview({ post, hideCategoryLabel }) {
   const categoryLabelStyle = !displayCategoryLabel ? { opacity: 0, transform: 'translateY(12px)' } : {}
 
   return (
-    <AnimateOnScroll className={styles.previewContainer} callBack={() => setTimeout(() => setDisplayCategoryLabel(true), 500)}>
+    <TransitionScroll
+      className={styles.previewContainer}
+      baseStyle={transitionBaseStyle}
+      hiddenStyle={hiddenStyle}
+      callBack={() => setTimeout(() => setDisplayCategoryLabel(true), 500)}
+    >
       <Link href={`/blog/${post.id}`}>
         <a className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
           <Image
@@ -35,7 +41,7 @@ function PostPreview({ post, hideCategoryLabel }) {
         <p className={styles.description}>{post.data.description}</p>
       </div>
       {!hideCategoryLabel && <CategoryLabel category={post.data.category} style={categoryLabelStyle} className={utils.categoryLabel}/>}
-    </AnimateOnScroll>
+    </TransitionScroll>
   )
 }
 
