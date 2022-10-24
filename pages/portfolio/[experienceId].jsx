@@ -2,9 +2,8 @@ import utils from "../../styles/utils.module.scss"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import MdContent from "../../components/mdContent/mdContent"
-import Head from "next/head"
 import { getExperience, getExperiencesIds } from "../../lib/services/experienceService"
-import { getThumbnailUrl } from "../../lib/utils";
+import Head from "../../components/layout/head/head";
 
 export const getStaticPaths = async () => {
 
@@ -29,18 +28,9 @@ export const getStaticProps = async ({ params }) => {
 }
 
 const Experience = ({ experience }) => {
-  const thumbnailUrl = getThumbnailUrl(experience);
-
   return (
     <>
-      <Head>
-        <title>{experience.title}</title>
-        <meta name="description" content={experience.description} />
-        <meta property="og:image" content={thumbnailUrl} />
-        <meta property="og:description" content={experience.description} />
-        <meta property="og:title" content={experience.title} />
-        <meta name="twitter:image" content={thumbnailUrl} />
-      </Head>
+      <Head item={experience}/>
       <div className={`${utils.page} max-w-screen-desktop`}>
         <MdContent content={experience}/>
       </div>
