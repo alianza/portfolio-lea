@@ -9,6 +9,8 @@ CategoryLabel.propTypes = {
 }
 
 function CategoryLabel({ category, className = '', style = {} }) {
+  if (!category) return null
+
   let textColor = 'var(--text-primary)'
 
   if (category.textColor !== 'auto') {
