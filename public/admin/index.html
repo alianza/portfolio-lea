@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
     <style>
         .notif__container { pointer-events: none; }
+
+         [data-slate-editor] { /* https://github.com/netlify/netlify-cms/issues/5092#issuecomment-1256321540 */
+             -webkit-user-modify: read-write !important;
+         }
     </style>
 </head>
 <body>
