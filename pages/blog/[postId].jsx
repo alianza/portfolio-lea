@@ -38,8 +38,10 @@ const Post = ({ post }) => {
       <Head>
         <title>{post.title}</title>
         <meta name="description" content={post.description} />
-        <meta property="og:image" content={`https://leashamaa.nl` + post.thumbnail} />
-          <meta name="twitter:image" content={`https://leashamaa.nl` + post.thumbnail} />
+        <meta property="og:image" content={post.thumbnail} />
+        <meta property="og:description" content={post.description} />
+        <meta property="og:title" content={post.title} />
+        <meta name="twitter:image" content={post.thumbnail} />
       </Head>
       <div className={`${utils.page} max-w-screen-desktop`}>
         <MdContent content={post}/>

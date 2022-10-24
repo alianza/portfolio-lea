@@ -33,6 +33,10 @@ const Experience = ({ experience }) => {
       <Head>
         <title>{experience.title}</title>
         <meta name="description" content={experience.description} />
+        <meta property="og:image" content={experience.thumbnail} />
+        <meta property="og:description" content={experience.description} />
+        <meta property="og:title" content={experience.title} />
+        <meta name="twitter:image" content={experience.thumbnail} />
       </Head>
       <div className={`${utils.page} max-w-screen-desktop`}>
         <MdContent content={experience}/>
