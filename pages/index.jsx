@@ -2,16 +2,16 @@ import React from "react"
 import utils from "../styles/utils.module.scss"
 import Layout from "../components/layout/layout/layout"
 import layoutData from "../content/config.json"
-import { getArticles } from "../lib/services/mediumService"
 import ExperienceHomePreview from "../components/previews/home/experiencePreview/experienceHomePreview"
 import ArticleHomePreview from "../components/previews/home/articlesPreview/articleHomePreview"
 import { useNetlifyIdentityRedirectHook } from "../lib/eventListeners"
 import { getPage } from "../lib/services/pageService"
 import HomePreviewCollection from "../components/previews/home/previewCollections/homePreviewCollection"
-import { getExperiences } from "../lib/services/experiencesService"
+import { getExperiences } from "../lib/services/experienceService"
 import PostHomePreview from "../components/previews/home/postPreview/postHomePreview"
-import { getPosts } from "../lib/services/postsService"
+import { getPosts } from "../lib/services/postService"
 import dynamic from "next/dynamic"
+import { getAllArticles } from "../lib/services/articleService";
 const TypeWriter = dynamic(() => import('../components/typeWriter/typeWriter'), { loading: () => <div /> })
 
 export const getStaticProps = async () => {
@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
 
   const posts = (await getPosts({ preview: true })).slice(0, 3)
 
-  const { dataMedium } = await getArticles(layoutData.usernameMedium)
+  const articles = (await getAllArticles(layoutData.usernameMedium)).slice(0, 3)
 
   const homeContent = await getPage("home")
 
@@ -29,7 +29,7 @@ export const getStaticProps = async () => {
       homeContent,
       experiences,
       posts,
-      articles: dataMedium.slice(0, 3),
+      articles,
       layoutData
     },
     revalidate: 60,

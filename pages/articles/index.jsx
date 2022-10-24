@@ -2,22 +2,22 @@ import utils from "../../styles/utils.module.scss"
 import styles from "../../components/previews/preview.module.scss"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
-import { getArticles } from "../../lib/services/mediumService"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ArticlePreview from "../../components/previews/articlesPreview/articlePreview"
 import React from "react"
 import Hr from "../../components/layout/util/hr/hr";
+import { getAllArticles } from "../../lib/services/articleService";
 
 export const getStaticProps = async () => {
 
-  const articles = await getArticles(layoutData.usernameMedium)
+  const allArticles = await getAllArticles(layoutData.usernameMedium)
 
   const articlesContent = await getPage("articles")
 
   return {
     props: {
-      articles: articles.dataMedium,
+      articles: allArticles,
       articlesContent,
       layoutData
     },
@@ -26,6 +26,9 @@ export const getStaticProps = async () => {
 }
 
 const Articles = ({ articles, articlesContent }) => {
+
+  console.log(`articles`, articles.map(a => { return { title: a.title, date: a.date } }))
+
   return (
     <div className={utils.page}>
       <MdContent content={articlesContent}/>
