@@ -1,7 +1,7 @@
 import utils from "../../../styles/utils.module.scss"
 import Layout from "../../../components/layout/layout/layout"
 import layoutData from "../../../content/config.json"
-import { getCategories, getPostsByCategory } from "../../../lib/services/postsService"
+import { getCategories, getPostsByCategory } from "../../../lib/services/postService"
 import { getCategory } from "../../../lib/services/configService"
 import styles from "../../../components/previews/preview.module.scss"
 import React from "react"

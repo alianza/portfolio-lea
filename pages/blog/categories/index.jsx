@@ -1,5 +1,5 @@
 import utils from "../../../styles/utils.module.scss"
-import { getCategories } from "../../../lib/services/postsService"
+import { getCategories } from "../../../lib/services/postService"
 import Layout from "../../../components/layout/layout/layout"
 import layoutData from "../../../content/config.json"
 import React from "react"

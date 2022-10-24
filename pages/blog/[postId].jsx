@@ -3,7 +3,7 @@ import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import MdContent from "../../components/mdContent/mdContent"
 import Head from "next/head"
-import { getPost, getPostIds } from "../../lib/services/postsService"
+import { getPost, getPostIds } from "../../lib/services/postService"
 import { getCategory } from "../../lib/services/configService"
 
 export const getStaticPaths = async () => {

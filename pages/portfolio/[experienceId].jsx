@@ -3,7 +3,7 @@ import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import MdContent from "../../components/mdContent/mdContent"
 import Head from "next/head"
-import { getExperience, getExperiencesIds } from "../../lib/services/experiencesService"
+import { getExperience, getExperiencesIds } from "../../lib/services/experienceService"
 
 export const getStaticPaths = async () => {
 

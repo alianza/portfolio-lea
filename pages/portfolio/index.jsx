@@ -1,6 +1,6 @@
 import utils from "../../styles/utils.module.scss"
 import styles from "../../components/previews/preview.module.scss"
-import { getExperiences } from "../../lib/services/experiencesService"
+import { getExperiences } from "../../lib/services/experienceService"
 import Layout from "../../components/layout/layout/layout"
 import layoutData from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
