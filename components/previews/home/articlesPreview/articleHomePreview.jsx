@@ -4,6 +4,7 @@ import styles from "../../preview.module.scss"
 import utils from '../../../../styles/utils.module.scss'
 import { TransitionScroll } from "react-transition-scroll";
 import { hiddenStyle, transitionBaseStyle } from "../../../../lib/utils";
+import Image from "next/future/image";
 
 ArticleHomePreview.propTypes = { article: PropTypes.object.isRequired }
 
@@ -11,7 +12,17 @@ function ArticleHomePreview({ article }) {
   return (
     <TransitionScroll className={styles.previewHomeContainer} baseStyle={transitionBaseStyle} hiddenStyle={hiddenStyle}>
       <a href={article.link} target="_blank" rel="noreferrer" className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
-        <img alt={`${article.title} thumbnail`} className={styles.imageStyle} src={article.image}/>
+        {article.type !== 'md' ?
+          <img alt={`${article.title} thumbnail`} className={styles.imageStyle} src={article.image} /> :
+          <Image
+            fill
+            sizes="100vw"
+            alt={`${article.title} thumbnail`}
+            className={styles.imageStyle}
+            src={article.image}
+            placeholder="blur"
+            blurDataURL={`/_next/image?url=${article.image}&w=16&q=1`}/>
+        }
       </a>
       <div className={styles.contentStyle}>
         <a href={article.link} target="_blank" rel="noreferrer" className={styles.title} dangerouslySetInnerHTML={{ __html: article.title }}/>
