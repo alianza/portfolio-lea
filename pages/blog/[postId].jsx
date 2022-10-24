@@ -6,7 +6,7 @@ import Head from "next/head"
 import { getPost, getPostIds } from "../../lib/services/postService"
 import { getCategory } from "../../lib/services/configService"
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router'
+import { getThumbnailUrl } from "../../lib/utils";
 
 export const getStaticPaths = async () => {
 
@@ -33,15 +33,17 @@ export const getStaticProps = async ({ params }) => {
 }
 
 const Post = ({ post }) => {
+  const thumbnailUrl = getThumbnailUrl(post);
+
   return (
     <>
       <Head>
         <title>{post.title}</title>
         <meta name="description" content={post.description} />
-        <meta property="og:image" content={post.thumbnail} />
+        <meta property="og:image" content={thumbnailUrl} />
         <meta property="og:description" content={post.description} />
         <meta property="og:title" content={post.title} />
-        <meta name="twitter:image" content={post.thumbnail} />
+        <meta name="twitter:image" content={thumbnailUrl} />
       </Head>
       <div className={`${utils.page} max-w-screen-desktop`}>
         <MdContent content={post}/>
