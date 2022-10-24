@@ -44,10 +44,9 @@
               h("time", {}, entry.getIn(["data", "startDate"])),
               h("span", {}, "-"),
               h("time", {}, entry.getIn(["data", "endDate"]) || "Present")),
-            h("span", {
-              className: (categoryName ? 'categoryLabel' : ''),
-              style: (categoryName ? { color: textColor, backgroundColor: category.color } : {}) },
-              category?.name),),
+          category
+            ? h("span", { className: "categoryLabel", style: { color: textColor, backgroundColor: category?.color } }, category?.name)
+            : h("span", {}, "")),
         h("img", { src: bg.toString() }),
         h("div", {}, this.props.widgetFor("body"))
       );
