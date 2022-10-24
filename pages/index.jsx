@@ -52,17 +52,17 @@ const Home = ({ homeContent, experiences, posts, articles }) => {
         />
         <hr className="-mb-4 -mt-10 mobile:hidden"/>
         <HomePreviewCollection
-          title={homeContent.portfolioTitle}
-          label={homeContent.portfolioLabel}
-          link="/portfolio"
-          content={experiences.map((experience) => <ExperienceHomePreview key={experience.id} experience={experience}/>)}
-        />
-        <hr className="-mb-4 -mt-10 mobile:hidden"/>
-        <HomePreviewCollection
           title={homeContent.blogTitle}
           label={homeContent.blogLabel}
           link="/blog"
           content={posts.map((post) => <PostHomePreview key={post.id} post={post}/>)}
+        />
+        <hr className="-mb-4 -mt-10 mobile:hidden"/>
+        <HomePreviewCollection
+          title={homeContent.portfolioTitle}
+          label={homeContent.portfolioLabel}
+          link="/portfolio"
+          content={experiences.map((experience) => <ExperienceHomePreview key={experience.id} experience={experience}/>)}
         />
       </div>
     </>
