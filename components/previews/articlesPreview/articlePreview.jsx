@@ -5,7 +5,7 @@ import * as PropTypes from "prop-types"
 import { TransitionScroll } from "react-transition-scroll";
 import { hiddenStyle, transitionBaseStyle } from "../../../lib/utils";
 import Image from "next/future/image";
-import NewTabIcon from "../../layout/newTabIcon/newTabIcon";
+import NewTabIcon from "../../layout/util/newTabIcon/newTabIcon";
 
 ArticlePreview.propTypes = { article: PropTypes.object.isRequired }
 
