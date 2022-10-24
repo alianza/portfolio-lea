@@ -26,9 +26,6 @@ export const getStaticProps = async () => {
 }
 
 const Articles = ({ articles, articlesContent }) => {
-
-  console.log(`articles`, articles.map(a => { return { title: a.title, date: a.date } }))
-
   return (
     <div className={utils.page}>
       <MdContent content={articlesContent}/>
