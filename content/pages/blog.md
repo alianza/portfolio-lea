@@ -1,4 +1,4 @@
 ---
 title: Blog
 ---
-Here are my blog articles about a variety of topics!
+P﻿hotography, written word, and anything my mind can muster.
