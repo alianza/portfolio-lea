@@ -4,7 +4,7 @@ import styles from "../../preview.module.scss"
 import utils from '../../../../styles/utils.module.scss'
 import { TransitionScroll } from "react-transition-scroll";
 import { hiddenStyle, transitionBaseStyle } from "../../../../lib/utils";
-import Image from "next/future/image";
+import Image from "next/image";
 import NewTabIcon from "../../../layout/util/newTabIcon/newTabIcon";
 
 ArticleHomePreview.propTypes = { article: PropTypes.object.isRequired }

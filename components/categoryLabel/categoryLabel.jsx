@@ -18,11 +18,9 @@ function CategoryLabel({ category, className = '', style = {} }) {
   }
 
   return (
-    <Link href={`/blog/categories/${category.name}`}>
-      <a style={{ backgroundColor: `${category.color}`, color: textColor, ...style }}
+    <Link href={`/blog/categories/${category.name}`} style={{ backgroundColor: `${category.color}`, color: textColor, ...style }}
          className={`${contentStyles.categoryLabel} ${utils.hoverEffectSlight} no-underline ${className}`}>
         {category.name}
-      </a>
     </Link>
   )
 }

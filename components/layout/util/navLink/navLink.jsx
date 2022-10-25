@@ -9,12 +9,9 @@ const NavLink = ({ label, href, onClick, exact }) => {
   const condition = exact ? router.pathname === href : router.pathname.startsWith(href)
 
   return (
-    <Link href={href}>
-      <a
-        onClick={onClick}
+    <Link href={href} onClick={onClick}
         className={`no-underline hover:font-bold ${condition ? headerStyles.activeMenuItem : ""}`}>
         {label}
-      </a>
     </Link>
   )
 }

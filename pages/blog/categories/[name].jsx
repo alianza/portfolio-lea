@@ -45,7 +45,7 @@ const Category = ({ posts, category }) => {
           <h1 className={contentStyles.mainTitle}>Category:{' '}
             <span style={{ color: category.color, textShadow: `var(--secondary) 0 0 1px` }}>{category.name}</span>
           </h1>
-          <Link href="/blog/categories"><a className="text-text-primary h-100">All Categories</a></Link>
+          <Link href="/blog/categories" className="text-text-primary h-100">All Categories</Link>
         </div>
       </div>
       <Hr/>

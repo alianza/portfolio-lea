@@ -18,7 +18,7 @@ export default function Header({ title, onThemeButtonClick, darkTheme }) {
   return (
     <header id="header" className={styles.header}>
       <div className={styles.controls}>
-        <Link href="/"><a className="no-underline"><h1 className={styles.title}>{title}</h1></a></Link>
+        <Link href="/" className="no-underline"><h1 className={styles.title}>{title}</h1></Link>
         <button aria-label={`${menuOpen ? 'close' : 'open'} Menu`}
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={`${styles.menuButton} transition-transform hover:scale-110 active:scale-95`}>

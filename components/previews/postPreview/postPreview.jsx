@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/future/image"
+import Image from "next/image"
 import styles from '../preview.module.scss'
 import utils from '../../../styles/utils.module.scss'
 import * as PropTypes from "prop-types"
@@ -21,22 +21,18 @@ function PostPreview({ post, hideCategoryLabel }) {
       hiddenStyle={hiddenStyle}
       callBack={() => setTimeout(() => setDisplayCategoryLabel(true), 500)}
     >
-      <Link href={`/blog/${post.id}`}>
-        <a className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
-          <Image
-            fill
-            sizes="100vw"
-            alt={`${post.data.title} thumbnail`}
-            className={styles.imageStyle}
-            src={post.data.thumbnail}
-            placeholder="blur"
-            blurDataURL={`/_next/image?url=${post.data.thumbnail}&w=16&q=1`}/>
-        </a>
+      <Link href={`/blog/${post.id}`} className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
+        <Image
+          fill
+          sizes="100vw"
+          alt={`${post.data.title} thumbnail`}
+          className={styles.imageStyle}
+          src={post.data.thumbnail}
+          placeholder="blur"
+          blurDataURL={`/_next/image?url=${post.data.thumbnail}&w=16&q=1`}/>
       </Link>
       <div className={styles.contentStyle}>
-        <Link href={`/blog/${post.id}`}>
-          <a className="text-2xl">{post.data.title}</a>
-        </Link>
+        <Link href={`/blog/${post.id}`} className="text-2xl">{post.data.title}</Link>
         <time className="text-lg">{post.data.date}</time>
         <p className={styles.description}>{post.data.description}</p>
       </div>
