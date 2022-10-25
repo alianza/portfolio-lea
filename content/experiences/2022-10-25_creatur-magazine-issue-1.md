@@ -1,7 +1,7 @@
 ---
 title: "Creatur Magazine (Issue #1) "
 startDate: 29-04-2022
-endDate: 25-10-2022
+endDate: ""
 thumbnail: /images/page24_skatearticle.png
 description: "My submission for Creatur Magazine's first issue: \"RAW:
   experiencing Amsterdam's street skateboarding subculture\". Published April
