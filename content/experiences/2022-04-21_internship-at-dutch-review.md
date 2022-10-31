@@ -1,7 +1,7 @@
 ---
 title: DutchReview — from Intern to Editor and Business manager
 startDate: 21-04-2022
-endDate: 06-05-2022
+endDate: ""
 thumbnail: /images/screen-shot-2022-04-21-at-4.45.40-pm.png
 description: "My first media-related internship at Dutch Review, in Leiden. I
   learnt so much about the digital media landscape, developed an eye for
