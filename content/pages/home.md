@@ -8,5 +8,6 @@ articlesLabel: Read more articles
 quotes:
   - text: Hi there, my name is Lea.
   - text: Consider me a writer, a reader and a skater.
-  - text: I like to write my thoughts down, no matter which way they form.
+  - text: I enjoy watching and analyzing films, conducting interviews, and writing
+      about things that grind my gears.
 ---
