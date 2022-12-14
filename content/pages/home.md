@@ -5,7 +5,5 @@ blogTitle: Blog
 blogLabel: Read more posts
 articlesTitle: Articles
 articlesLabel: Read more articles
-quotes:
-  - text: Hi there, my name is Lea.
-  - text: Consider me a writer, a reader and a skater.
+quotes: []
 ---
