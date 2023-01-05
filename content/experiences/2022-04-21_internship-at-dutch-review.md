@@ -1,16 +1,19 @@
 ---
-title: DutchReview — from Intern to Editor and Business manager
+title: DutchReview — Internship
 startDate: 21-04-2022
-endDate: ""
+endDate: 30-09-2022
 thumbnail: /images/screen-shot-2022-04-21-at-4.45.40-pm.png
-description: "My first media-related internship at Dutch Review, in Leiden. I
-  learnt so much about the digital media landscape, developed an eye for
-  resourceful news, and enjoyed collaborating with other companies. "
+description: "My first step into the world of digital journalism: my internship
+  at Dutch Review in the lovely city of Leiden. I became acquainted with the
+  digital media landscape, developed an eye for resourceful news, and was able
+  to collaborate with other companies while doing so. "
 ---
-Interning at DutchReview taught me so many things about digital media and the inner workings of journalism. 
-
-I became very familiar with writing daily news, selecting accurate news sources, and working with social media platform tools. I also got the opportunity to visit and review several attractions, which I otherwise would’ve never seen! 
-
-To top off my experience at DutchReview, my colleagues provided me with many laughs, support, and, of course, large amounts of coffee!
-
+Interning at DutchReview taught me so many things about digital media and the inner workings of journalism.\
+\
+I became very familiar with writing daily news, cultural pieces, and weekly newsletters. I learned how to write clearly and adhere to a certain writing style guide. Additionally, I became more familiar with SEO writing techniques, sponsored articles, and affiliate links.\
+\
+I also learned how to collect and analyse certain data based on social media engagements which allowed me to gain a clear overview on what needs to be ameliorated. All in all, I was gladly part of several social events and attractions in Tilburg, Leiden, and Amsterdam, which I otherwise would’ve never known about!\
+\
+To top off my experience at DutchReview, my colleagues provided me with many laughs, support, and, of course, large amounts of coffee!\
+\
 I am thankful that I was able to continue working at DutchReview as an editor and business development manager, which pushes me in the complex world of journalism and media marketing.
