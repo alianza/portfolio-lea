@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @import './variables';
-@import './tailwind';
 
 body {
     @apply p-0 m-0 text-text-primary min-h-screen font-text box-border bg-primary antialiased;
