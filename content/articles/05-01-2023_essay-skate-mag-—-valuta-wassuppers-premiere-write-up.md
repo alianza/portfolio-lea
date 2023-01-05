@@ -1,0 +1,8 @@
+---
+title: Essay Skate Mag — VALUTA 'WASSUPPERS' PREMIERE WRITE-UP
+date: 08-11-2022
+image: /images/valutavideo.jpeg
+description: "My first event report for Essay Skate Mag: the one and only
+  skateboarding magazine from the Netherlands. It was a lovely premiere too. "
+link: https://essayskatemag.com/newsletter/valuta-wassuppers-premiere-write-up/
+---
