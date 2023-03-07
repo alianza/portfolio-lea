@@ -1,24 +1,22 @@
-const withPWA = require('next-pwa')
-
-const nextConfig = {
-  experimental: {
-    images: {
-      allowFutureImage: true,
-    },
-  }
-}
+const prod = process.env.NODE_ENV === 'production';
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 
-const prod = process.env.NODE_ENV === 'production'
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  disable: !prod,
+  // buildExcludes: [/middleware-manifest\.json$/]
+});
 
-module.exports = withBundleAnalyzer(withPWA({
-  pwa: {
-    dest: 'public',
-    disable: !prod,
-    buildExcludes: [/middleware-manifest\.json$/]
-  },
-    ...nextConfig
-}))
+const nextConfig = {
+
+};
+
+
+module.exports = withBundleAnalyzer(
+  withPWA({
+    ...nextConfig,
+  })
+);
