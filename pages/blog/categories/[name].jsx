@@ -16,6 +16,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: categories.map(category => ({ params: { name: category.name } })),
+    fallback: false, // https://answers.netlify.com/t/nextjs-routes-404-on-successful-build/89630
   }
 }
 
