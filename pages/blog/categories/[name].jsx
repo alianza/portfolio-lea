@@ -1,6 +1,5 @@
 import utils from "../../../styles/utils.module.scss"
 import Layout from "../../../components/layout/layout/layout"
-import layoutData from "../../../content/config.json"
 import { getCategories, getPostsByCategory } from "../../../lib/services/postService"
 import { getCategory } from "../../../lib/services/configService"
 import styles from "../../../components/previews/preview.module.scss"
@@ -32,7 +31,6 @@ export const getStaticProps = async ({ params }) => {
     props: {
       posts,
       category,
-      layoutData
     },
   }
 }
@@ -57,6 +55,6 @@ const Category = ({ posts, category }) => {
   )
 }
 
-Category.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Category.withLayout = (page) => <Layout>{page}</Layout>
 
 export default Category

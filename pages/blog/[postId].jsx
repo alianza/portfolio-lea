@@ -1,6 +1,5 @@
 import utils from "../../styles/utils.module.scss"
 import Layout from "../../components/layout/layout/layout"
-import layoutData from "../../content/config.json"
 import MdContent from "../../components/mdContent/mdContent";
 import { getPost, getPostIds } from "../../lib/services/postService"
 import { getCategory } from "../../lib/services/configService"
@@ -25,7 +24,6 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       post,
-      layoutData
     },
   }
 }
@@ -41,6 +39,6 @@ const Post = ({ post }) => {
   )
 }
 
-Post.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Post.withLayout = (page) => <Layout>{page}</Layout>
 
 export default Post
