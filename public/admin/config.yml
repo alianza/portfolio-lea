@@ -120,7 +120,7 @@ collections:
     create: true
     editor:
       preview: false
-    slug: '{{day}}-{{month}}-{{year}}_{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     description: 'Medium articles are not shown here, but are displayed on the site!'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -134,7 +134,7 @@ collections:
     label_singular: 'Blog post'
     folder: 'content/posts'
     create: true
-    slug: '{{day}}-{{month}}-{{year}}_{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', format: "DD-MM-YYYY", date_format: "DD-MM-YYYY", time_format: false }
@@ -150,7 +150,7 @@ collections:
     label_singular: 'Experience'
     folder: 'content/experiences'
     create: true
-    slug: '{{day}}-{{month}}-{{year}}_{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Start Date', name: 'startDate', widget: 'datetime', format: "DD-MM-YYYY", date_format: "DD-MM-YYYY", time_format: false }
