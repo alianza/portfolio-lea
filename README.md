@@ -10,7 +10,7 @@ Check out the live site [here](https://leashamaa.nl/).
 
 - Fully statically generated
 - Dark mode
-- Fully Git based CMS (Netlify CMS)
+- Fully Fledged Git based CMS (Netlify CMS)
 - Preview mode
 - Incremental Static Regerenation (ISR) for pages with remote dynamic data (Medium articles)
 

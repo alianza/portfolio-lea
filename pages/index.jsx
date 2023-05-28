@@ -1,7 +1,7 @@
 import React from "react"
 import utils from "../styles/utils.module.scss"
 import Layout from "../components/layout/layout/layout"
-import layoutData from "../content/config.json"
+import config from "../content/config.json"
 import ExperienceHomePreview from "../components/previews/home/experiencePreview/experienceHomePreview"
 import ArticleHomePreview from "../components/previews/home/articlesPreview/articleHomePreview"
 import { useNetlifyIdentityRedirectHook } from "../lib/eventListeners"
@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
 
   const posts = (await getPosts({ preview: true })).slice(0, 3)
 
-  const articles = (await getAllArticles(layoutData.usernameMedium)).slice(0, 3)
+  const articles = (await getAllArticles(config.usernameMedium)).slice(0, 3)
 
   const homeContent = await getPage("home")
 
@@ -29,8 +29,7 @@ export const getStaticProps = async () => {
       homeContent,
       experiences,
       posts,
-      articles,
-      layoutData
+      articles
     },
     revalidate: 60,
   }
@@ -69,6 +68,6 @@ const Home = ({ homeContent, experiences, posts, articles }) => {
   )
 }
 
-Home.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Home.withLayout = (page) => <Layout>{page}</Layout>
 
 export default Home

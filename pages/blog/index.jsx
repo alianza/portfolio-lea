@@ -1,7 +1,6 @@
 import utils from "../../styles/utils.module.scss"
 import styles from "../../components/previews/preview.module.scss"
 import Layout from "../../components/layout/layout/layout"
-import layoutData from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import React from "react"
@@ -18,8 +17,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       posts,
-      portfolioContent,
-      layoutData
+      portfolioContent
     }
   }
 }
@@ -36,6 +34,6 @@ const Blog = ({ posts, portfolioContent }) => {
   )
 }
 
-Blog.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Blog.withLayout = (page) => <Layout>{page}</Layout>
 
 export default Blog

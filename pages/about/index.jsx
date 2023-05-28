@@ -1,6 +1,5 @@
 import utils from "../../styles/utils.module.scss"
 import Layout from "../../components/layout/layout/layout"
-import layoutData from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 
@@ -9,8 +8,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      aboutPage,
-      layoutData
+      aboutPage
     }
   }
 }
@@ -23,6 +21,6 @@ const About = ({ aboutPage }) => {
   )
 }
 
-About.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+About.withLayout = (page) => <Layout>{page}</Layout>
 
 export default About;

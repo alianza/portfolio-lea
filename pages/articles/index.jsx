@@ -1,7 +1,7 @@
 import utils from "../../styles/utils.module.scss"
 import styles from "../../components/previews/preview.module.scss"
 import Layout from "../../components/layout/layout/layout"
-import layoutData from "../../content/config.json"
+import config from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
 import ArticlePreview from "../../components/previews/articlesPreview/articlePreview"
@@ -11,15 +11,14 @@ import { getAllArticles } from "../../lib/services/articleService";
 
 export const getStaticProps = async () => {
 
-  const allArticles = await getAllArticles(layoutData.usernameMedium)
+  const allArticles = await getAllArticles(config.usernameMedium)
 
   const articlesContent = await getPage("articles")
 
   return {
     props: {
       articles: allArticles,
-      articlesContent,
-      layoutData
+      articlesContent
     },
     revalidate: 60,
   }
@@ -41,6 +40,6 @@ const Articles = ({ articles, articlesContent }) => {
   )
 }
 
-Articles.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Articles.withLayout = (page) => <Layout>{page}</Layout>
 
 export default Articles;

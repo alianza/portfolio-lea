@@ -1,7 +1,6 @@
 import utils from "../../../styles/utils.module.scss"
 import { getCategories } from "../../../lib/services/postService"
 import Layout from "../../../components/layout/layout/layout"
-import layoutData from "../../../content/config.json"
 import React from "react"
 import MdContent from "../../../components/mdContent/mdContent"
 import CategoryPreview from "../../../components/previews/categoryPreview/categoryPreview"
@@ -17,8 +16,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       categories,
-      categoriesContent,
-      layoutData
+      categoriesContent
     }
   }
 }
@@ -36,6 +34,6 @@ const Categories = ({ categories, categoriesContent }) => {
   )
 }
 
-Categories.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Categories.withLayout = (page) => <Layout>{page}</Layout>
 
 export default Categories

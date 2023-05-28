@@ -1,6 +1,5 @@
 import utils from "../../styles/utils.module.scss"
 import Layout from "../../components/layout/layout/layout"
-import layoutData from "../../content/config.json"
 import MdContent from "../../components/mdContent/mdContent"
 import { getExperience, getExperiencesIds } from "../../lib/services/experienceService"
 import Head from "../../components/layout/head/head";
@@ -22,7 +21,6 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       experience,
-      layoutData
     },
   }
 }
@@ -38,6 +36,6 @@ const Experience = ({ experience }) => {
   )
 }
 
-Experience.withLayout = (page, layoutData) => <Layout {...layoutData}>{page}</Layout>
+Experience.withLayout = (page) => <Layout>{page}</Layout>
 
 export default Experience
