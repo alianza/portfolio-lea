@@ -10,6 +10,6 @@
     }
 
     .contentWrapper {
-        @apply flex flex-col gap-12 desktop:gap-2 items-center items-stretch desktop:flex-row;
+        @apply grid grid-cols-1 desktop:grid-cols-3 gap-12 md:gap-2 items-stretch desktop:flex-row;
     }
 }
