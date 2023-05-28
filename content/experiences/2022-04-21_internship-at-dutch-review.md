@@ -1,7 +1,7 @@
 ---
 title: DutchReview — Internship
-startDate: 21-04-2022
-endDate: 30-09-2022
+startDate: 2022-04-21
+endDate: 2022-09-30
 thumbnail: /images/screen-shot-2022-04-21-at-4.45.40-pm.png
 description: "My first step into the world of digital journalism: my internship
   at Dutch Review in the lovely city of Leiden. I became acquainted with the

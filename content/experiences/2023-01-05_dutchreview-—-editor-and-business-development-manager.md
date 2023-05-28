@@ -1,6 +1,6 @@
 ---
 title: DutchReview — Editor and Business Development Manager
-startDate: 01-10-2022
+startDate: 2022-10-01
 endDate: ""
 thumbnail: /images/windmill-leiden.jpeg
 description: "Image: Visitleiden.nl. De Valk Windmill Museum"

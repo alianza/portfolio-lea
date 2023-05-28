@@ -1,6 +1,6 @@
 ---
 title: Capturing birds in the wild
-date: 24-10-2022
+date: 2022-10-24
 thumbnail: /images/seagull-copy.png
 category: Photography
 description: "I've grown the elderly habit of watching birds in their natural

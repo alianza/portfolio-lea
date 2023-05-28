@@ -1,6 +1,6 @@
 ---
 title: A collection of haikus
-date: 05-01-2023
+date: 2023-01-05
 thumbnail: /images/img_3863.jpeg
 category: Poetry
 description: Random haikus I wrote one day

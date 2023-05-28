@@ -1,7 +1,7 @@
 ---
 title: Bachelor of Arts in Media and Information at the University of Amsterdam
-startDate: 01-09-2019
-endDate: 01-09-2022
+startDate: 2019-09-01
+endDate: 2022-09-01
 thumbnail: /images/uva-logo.png
 description: "Three years of a wonderful study, accompanied by an eye-opening
   minor in Sociology in my final year.  "

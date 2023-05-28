@@ -1,6 +1,6 @@
 ---
 title: Mind over Matter
-date: 18-10-2022
+date: 2022-10-18
 thumbnail: /images/ayatakano.jpeg
 category: Poetry
 description: "Image: Floating in a Field of Primitive Life. Aya Takano. 2014"
