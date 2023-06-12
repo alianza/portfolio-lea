@@ -1,7 +1,7 @@
 ---
-title: Articles
+title: Work
 readMoreLink:
   label: Read more on my Medium page
   link: https://medium.com/@leacandle
 ---
-These are my personal articles that I write for my own enjoyment and to expand my writing.
+These is my work. Mostly written.
