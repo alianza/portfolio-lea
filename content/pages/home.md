@@ -7,8 +7,7 @@ articlesTitle: Articles
 articlesLabel: Read more articles
 quotes:
   - text: Hi, my name is Léa
-  - text: Im into writing, photography, and skateboarding
+  - text: Sharing noteworthy experiences through conversations and stories
   - text: Somewhere between the cultural, political, and social
-  - text: Planning on mixing photography with my writing. I still need a digital
-      camera though.
+  - text: Mixing circles of photography, writing, and storytelling
 ---
