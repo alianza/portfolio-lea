@@ -23,3 +23,7 @@ description: "I've grown the elderly habit of watching birds in their natural
 # A﻿ sparrow enjoying his lunch
 
 ![Image of a sparrow eating out of a bird feeder](/images/3987-33.jpg "Sparrow eating his lunch")
+
+# If you look close enough, the pigeon's actually looking into the lens
+
+![If you look close enough, the pigeon's actually looking into the lens](/images/000002780006.jpg "If you look close enough, the pigeon's actually looking into the lens")
