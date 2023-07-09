@@ -11,7 +11,7 @@ import { getExperiences } from "../lib/services/experienceService"
 import PostHomePreview from "../components/previews/home/postPreview/postHomePreview"
 import { getPosts } from "../lib/services/postService"
 import dynamic from "next/dynamic"
-import { getAllArticles } from "../lib/services/articleService";
+import { getAllArticles } from "../lib/services/portfolioService";
 const TypeWriter = dynamic(() => import('../components/typeWriter/typeWriter'), { loading: () => <div /> })
 
 export const getStaticProps = async () => {
@@ -44,9 +44,9 @@ const Home = ({ homeContent, experiences, posts, articles }) => {
 
       <div className={`${utils.page} flex flex-col gap-12`}>
         <HomePreviewCollection
-          title={homeContent.articlesTitle}
-          label={homeContent.articlesLabel}
-          link="/articles"
+          title={homeContent.portfolioTitle}
+          label={homeContent.portfolioLabel}
+          link="/portfolio"
           content={articles.map((article) => <ArticleHomePreview key={article.title} article={article}/>)}
         />
         <hr className="-mb-4 -mt-10 mobile:hidden"/>
@@ -58,9 +58,9 @@ const Home = ({ homeContent, experiences, posts, articles }) => {
         />
         <hr className="-mb-4 -mt-10 mobile:hidden"/>
         <HomePreviewCollection
-          title={homeContent.portfolioTitle}
-          label={homeContent.portfolioLabel}
-          link="/portfolio"
+          title={homeContent.experiencesTitle}
+          label={homeContent.experiencesLabel}
+          link="/experiences"
           content={experiences.map((experience) => <ExperienceHomePreview key={experience.id} experience={experience}/>)}
         />
       </div>

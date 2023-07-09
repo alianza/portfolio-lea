@@ -1,10 +1,10 @@
 ---
 portfolioTitle: Portfolio
-portfolioLabel: Read more experiences
+portfolioLabel: Read more articles
 blogTitle: Blog
 blogLabel: Read more posts
-articlesTitle: Articles
-articlesLabel: Read more articles
+experiencesTitle: Experiences
+experiencesLabel: Read more experiences
 quotes:
   - text: Hi, my name is Léa
   - text: Sharing noteworthy experiences through conversations and stories

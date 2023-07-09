@@ -1,6 +1,7 @@
 ---
-title: Portfolio
+title: Work
+readMoreLink:
+  label: Read more on my Medium page
+  link: https://medium.com/@leacandle
 ---
-**Experiences**, **projects** and **more.** 
-
-[Read my CV](https://drive.google.com/file/d/1RAfj0rS1UdFNx1Lao1kIdUEFPRtvCJMo/view?usp=sharing) (Curriculum Vitae)
+This is my journalism work. It features articles for Essay Skate Magazine and Sprout Magazine. With gratitude, some are published online and on print.

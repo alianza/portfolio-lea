@@ -14,7 +14,7 @@ ExperienceHomePreview.propTypes = { experience: PropTypes.object.isRequired }
 function ExperienceHomePreview({ experience }) {
   return (
     <TransitionScroll className={styles.previewHomeContainer} baseStyle={transitionBaseStyle} hiddenStyle={hiddenStyle}>
-      <Link href={`/portfolio/${experience.id}`} className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
+      <Link href={`/experiences/${experience.id}`} className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
         <Image
           fill
           sizes="100vw"
@@ -25,7 +25,7 @@ function ExperienceHomePreview({ experience }) {
           blurDataURL={`/_next/image?url=${experience.data.thumbnail}&w=16&q=1`}/>
       </Link>
       <div className={styles.contentStyle}>
-        <Link href={`/portfolio/${experience.id}`} className={styles.title}>{experience.data.title}</Link>
+        <Link href={`/experiences/${experience.id}`} className={styles.title}>{experience.data.title}</Link>
         <StartEndDateLabel startDate={experience.data.startDate} endDate={experience.data.endDate} centered/>
       </div>
     </TransitionScroll>

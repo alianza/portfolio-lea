@@ -59,8 +59,8 @@ collections:
           - { label: 'Portfolio link label', name: 'portfolioLabel', widget: 'string', hint: 'Used for the link to the portfolio' }
           - { label: 'Blog title', name: 'blogTitle', widget: 'string', hint: 'The title of the blog section' }
           - { label: 'Blog link label', name: 'blogLabel', widget: 'string', hint: 'Used for the link to the blog' }
-          - { label: 'Articles title', name: 'articlesTitle', widget: 'string', hint: 'Used for the title of the articles section' }
-          - { label: 'Articles link label', name: 'articlesLabel', widget: 'string', hint: 'Used for the link to the articles' }
+          - { label: 'Experiences title', name: 'experiencesTitle', widget: 'string', hint: 'Used for the title of the articles section' }
+          - { label: 'Experiences link label', name: 'experiencesLabel', widget: 'string', hint: 'Used for the link to the articles' }
           - label: "Quotes"
             name: "quotes"
             label_singular: "Quote"
@@ -83,13 +83,13 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Portfolio'
         name: 'portfolio'
-        file: 'content/pages/portfolio.md'
+        file: 'content/pages/experiences.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Articles'
         name: 'articles'
-        file: 'content/pages/articles.md'
+        file: 'content/pages/portfolio.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
@@ -116,7 +116,7 @@ collections:
   - label: 'Articles'
     name: 'article'
     label_singular: 'Article'
-    folder: 'content/articles'
+    folder: 'content/portfolio'
     create: true
     editor:
       preview: false

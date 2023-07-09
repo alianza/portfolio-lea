@@ -1,39 +1,45 @@
 import utils from "../../styles/utils.module.scss"
 import styles from "../../components/previews/preview.module.scss"
-import { getExperiences } from "../../lib/services/experienceService"
 import Layout from "../../components/layout/layout/layout"
+import config from "../../content/config.json"
 import { getPage } from "../../lib/services/pageService"
 import MdContent from "../../components/mdContent/mdContent"
-import ExperiencePreview from "../../components/previews/experiencePreview/experiencePreview"
+import ArticlePreview from "../../components/previews/articlesPreview/articlePreview"
 import React from "react"
 import Hr from "../../components/layout/util/hr/hr";
+import { getAllArticles } from "../../lib/services/portfolioService";
 
 export const getStaticProps = async () => {
 
-  const experiences = await getExperiences({ preview: true })
+  const allArticles = await getAllArticles(config.usernameMedium)
 
-  const portfolioContent = await getPage("portfolio")
+  const articlesContent = await getPage("portfolio")
 
   return {
     props: {
-      experiences,
-      portfolioContent
-    }
+      articles: allArticles,
+      articlesContent
+    },
+    revalidate: 60,
   }
 }
 
-const Portfolio = ({ experiences, portfolioContent }) => {
+const Articles = ({ articles, articlesContent }) => {
   return (
     <div className={utils.page}>
-      <MdContent content={portfolioContent}/>
+      <MdContent content={articlesContent}/>
       <Hr/>
       <div className={styles.previewList}>
-        {experiences.map((experience) => <ExperiencePreview key={experience.id} experience={experience}/>)}
+        {articles.map((article) => <ArticlePreview key={article.title} article={article}/> )}
+          <a href={articlesContent.readMoreLink.link} className={`${utils.arrowLink} mt-4 mobile:mt-8 self-end group inline-flex`} target="_blank" rel="noreferrer">
+            <span className={utils.label}>{articlesContent.readMoreLink.label}</span>
+            <span className={`${utils.arrow} group-hover:translate-x-2`}>→</span>
+          </a>
       </div>
     </div>
   )
 }
 
-Portfolio.withLayout = (page) => <Layout>{page}</Layout>
+Articles.withLayout = (page) => <Layout>{page}</Layout>
 
-export default Portfolio
+export default Articles;
