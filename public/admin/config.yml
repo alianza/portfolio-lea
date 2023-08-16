@@ -83,13 +83,13 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Portfolio'
         name: 'portfolio'
-        file: 'content/pages/experiences.md'
+        file: 'content/pages/portfolio.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - label: 'Articles'
-        name: 'articles'
-        file: 'content/pages/portfolio.md'
+      - label: 'Experiences'
+        name: 'experiences'
+        file: 'content/pages/experiences.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
