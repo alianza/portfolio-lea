@@ -113,9 +113,9 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - label: 'Articles'
-    name: 'article'
-    label_singular: 'Article'
+  - label: 'Portfolio'
+    name: 'portfolio'
+    label_singular: 'Portfolio item'
     folder: 'content/portfolio'
     create: true
     editor:
