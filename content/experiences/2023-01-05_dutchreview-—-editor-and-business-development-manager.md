@@ -1,5 +1,5 @@
 ---
-title: DutchReview — Editor and Business Development Manager
+title: News editor and Business Development Manager at Dutch Review
 startDate: 2022-10-01
 endDate: ""
 thumbnail: /images/windmill-leiden.jpeg
