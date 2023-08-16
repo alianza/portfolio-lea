@@ -1,5 +1,5 @@
 ---
-title: Essay Skate Mag — writer and news reporter
+title: Essay Skateboard Magazine — Column writer and News Reporter
 startDate: 2022-11-08
 endDate: ""
 thumbnail: /images/855f884b4e10d23500.jpeg
