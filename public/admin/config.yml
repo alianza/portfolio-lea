@@ -87,12 +87,6 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - label: 'Experiences'
-        name: 'experiences'
-        file: 'content/pages/experiences.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
           - label: "Read more link"
             name: "readMoreLink"
             widget: "object"
@@ -100,6 +94,12 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
+      - label: 'Experiences'
+        name: 'experiences'
+        file: 'content/pages/experiences.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Blog'
         name: 'blog'
         file: 'content/pages/blog.md'
