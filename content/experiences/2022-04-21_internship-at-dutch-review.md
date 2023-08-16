@@ -1,5 +1,5 @@
 ---
-title: DutchReview — Internship
+title: Internship at DutchReview — editorial writing and media content
 startDate: 2022-04-21
 endDate: 2022-09-30
 thumbnail: /images/screen-shot-2022-04-21-at-4.45.40-pm.png
