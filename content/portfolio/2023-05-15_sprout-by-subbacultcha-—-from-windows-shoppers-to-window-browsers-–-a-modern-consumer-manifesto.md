@@ -1,6 +1,6 @@
 ---
-title: SPROUT by Subbacultcha — From windows shoppers to window browsers – a
-  modern consumer manifesto
+title: "From windows shoppers to window browsers: a modern consumer manifesto —
+  SPROUT by Subbacultcha"
 date: 2023-05-15
 image: /images/sprout13-online-igfeed-.png
 description: Opinion article for Sprout for Issue 13 - Browsing. Published by
