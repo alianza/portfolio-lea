@@ -1,6 +1,6 @@
 ---
-title: "RAW: Experiencing Amsterdam's street skateboarding subculture for
-  Creature Magazine"
+title: "RAW: Experiencing Amsterdam's street skateboarding subculture — Creature
+  Magazine"
 date: 2022-04-29
 image: /images/page24_skatearticle.png
 description: >-
