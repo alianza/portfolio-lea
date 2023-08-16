@@ -1,13 +1,15 @@
 ---
-title: Bachelor of Arts in Media and Information at the University of Amsterdam
+title: Bachelor of Arts in Media and Information — University of Amsterdam
 startDate: 2019-09-01
 endDate: 2022-09-01
 thumbnail: /images/uva-logo.png
-description: "Three years of a wonderful study, accompanied by an eye-opening
-  minor in Sociology in my final year.  "
+description: "My three-year study in Media and Information at the faculty of
+  Humanities. I also completed a minor in Sociology (Social Sciences department)
+  in my final year. My graduating thesis focused on web shops as
+  consumer-exploiting platforms by using interface and tracking strategies. "
 ---
-During my studies, I was able to improve my critical thinking and research skills much more than I could've imagined. Choosing my path in Media and Information studies really kickstarted my career in journalism; it was only at the end of my third academic year that I realized I wanted to write for a living. 
+My three-year study in Media and Information at the faculty of Humanities. I also completed a minor in Sociology (Social Sciences department) in my final year. My graduating thesis focused on web shops as consumer-exploiting platforms by using interface and tracking strategies. Read my thesis [here.](https://docs.google.com/document/d/1fHAL7Kafbgrad81v-iCxRFSCZBxVMPSSHErHbS25HSY/edit?usp=sharing)
 
-With this major, I delved into topics of data and platform capitalism, the digitized world, questions about privacy and user agency. Additionally, I got the opportunity to choose extracurricular classes that focused on issues of identity, nationality, and other cultural phenomena. 
+With this major, I delved into topics of data and platform capitalism, the digitised world, questions about privacy and user agency. Additionally, I got the opportunity to choose extracurricular classes that focused on issues of identity, nationality, and other cultural phenomena. 
 
-I ended my final semester with a Minor in Sociology, which really opened my eyes to concepts of intersectionality, migration, urbanization, postcolonial thought, and general sociological theories along with their arguable philosophers — namely Frantz Fanon, Stuart Hall, and Kimberlé Crenshaw.
+I ended my final semester with a Minor in Sociology, where i studied themes of intersectionality, migration, urbanisation, postcolonial thought, and basic sociological theories.
