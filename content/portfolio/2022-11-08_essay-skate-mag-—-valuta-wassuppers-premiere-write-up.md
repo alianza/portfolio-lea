@@ -1,5 +1,5 @@
 ---
-title: Essay Skate Mag — VALUTA 'WASSUPPERS' PREMIERE WRITE-UP
+title: "VALUTA 'WASSUPPERS' PREMIERE WRITE-UP — Essay Skate Mag "
 date: 2022-11-08
 image: /images/valutavideo.jpeg
 description: "My first event report for Essay Skate Mag: the one and only
