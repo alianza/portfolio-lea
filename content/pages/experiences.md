@@ -1,6 +1,4 @@
 ---
 title: Portfolio
 ---
-**Experiences**, **projects** and **more.** 
-
-[Read my CV](https://drive.google.com/file/d/1RAfj0rS1UdFNx1Lao1kIdUEFPRtvCJMo/view?usp=sharing) (Curriculum Vitae)
+This page features my published written work with Subbacultcha, Essay Skateboard Magazine, and more. With gratitude, some articles are published in print.
