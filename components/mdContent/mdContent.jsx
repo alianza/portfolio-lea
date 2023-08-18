@@ -1,15 +1,19 @@
 import React from "react"
 import contentStyles from "./mdContent.module.scss"
 import CategoryLabel from "../categoryLabel/categoryLabel"
-import { useDetailTagsAnimation, useInstagramEmbedScript } from "../../lib/markdownEnrichment"
+import { useDetailTagsAnimation, useExternalLinks, useInstagramEmbedScript } from "../../lib/markdownEnrichment"
 import Link from "next/link"
 import StartEndDateLabel from "../layout/util/startEndDateLabel/startEndDateLabel";
+
+const contentId = "article-content";
 
 const MdContent = ({ content: { title, date, startDate, endDate, thumbnail, category, content }, noDate, categoriesLink }) => {
 
   useDetailTagsAnimation()
 
   useInstagramEmbedScript(content)
+
+  useExternalLinks(contentId)
 
   return (
     <article className={contentStyles.content}>
@@ -23,7 +27,7 @@ const MdContent = ({ content: { title, date, startDate, endDate, thumbnail, cate
         {category && <CategoryLabel category={category}/>}
       </div>
       {thumbnail && <img className="w-full" alt="thumbnail" src={thumbnail}/>}
-      <div className="relative z-[1]" dangerouslySetInnerHTML={{ __html: content }}/>
+      <div id={contentId} className="relative z-[1]" dangerouslySetInnerHTML={{ __html: content }}/>
     </article>
   )
 }
