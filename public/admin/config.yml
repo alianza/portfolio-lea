@@ -83,12 +83,6 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Portfolio'
         name: 'portfolio'
-        file: 'content/pages/experiences.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - label: 'Articles'
-        name: 'articles'
         file: 'content/pages/portfolio.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
@@ -100,6 +94,12 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
+      - label: 'Experiences'
+        name: 'experiences'
+        file: 'content/pages/experiences.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Blog'
         name: 'blog'
         file: 'content/pages/blog.md'
@@ -113,9 +113,9 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - label: 'Articles'
-    name: 'article'
-    label_singular: 'Article'
+  - label: 'Portfolio'
+    name: 'portfolio'
+    label_singular: 'Portfolio item'
     folder: 'content/portfolio'
     create: true
     editor:

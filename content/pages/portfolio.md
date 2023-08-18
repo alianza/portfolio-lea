@@ -1,7 +1,7 @@
 ---
-title: Work
+title: Portfolio
 readMoreLink:
   label: Read more on my Medium page
   link: https://medium.com/@leacandle
 ---
-This is my journalism work. It features articles for Essay Skate Magazine and Sprout Magazine. With gratitude, some are published online and on print.
+This page features my personal and published written work with Subbacultcha, Essay Skateboard Magazine, and other printed work.

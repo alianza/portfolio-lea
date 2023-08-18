@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
 
   const experiences = await getExperiences({ preview: true })
 
-  const portfolioContent = await getPage("portfolio")
+  const portfolioContent = await getPage("experiences")
 
   return {
     props: {
