@@ -18,8 +18,6 @@ export const getStaticProps = async ({ params }) => {
 
   const post = await getPost(params.postId)
 
-  console.log(`post`, post)
-
   return {
     props: {
       post,
