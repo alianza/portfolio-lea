@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: alianza/portfolio-lea
 
-local_backend: false
+local_backend: true
 site_url: https://leashamaa.nl
 display_url: https://leashamaa.nl
 media_folder: public/images
