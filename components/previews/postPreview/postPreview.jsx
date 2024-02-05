@@ -24,7 +24,7 @@ function PostPreview({ post, hideCategoryLabel }) {
       <Link href={`/blog/${post.id}`} className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
         <Image
           fill
-          sizes="(max-width: 900px) 100vw, 33vw"
+          sizes="(max-width: 900px) 90vw, 30vw"
           alt={`${post.data.title} thumbnail`}
           className={styles.imageStyle}
           src={post.data.thumbnail}

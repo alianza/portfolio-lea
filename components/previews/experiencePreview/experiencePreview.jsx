@@ -15,7 +15,7 @@ function ExperiencePreview({ experience }) {
       <Link href={`/experiences/${experience.id}`} className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
         <Image
           fill
-          sizes="(max-width: 900px) 100vw, 33vw"
+          sizes="(max-width: 900px) 90vw, 30vw"
           alt={`${experience.data.title} thumbnail`}
           className={styles.imageStyle}
           src={experience.data.thumbnail}

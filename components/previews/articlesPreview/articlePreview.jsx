@@ -23,7 +23,7 @@ function ArticlePreview({ article }) {
         ) : (
           <Image
             fill
-            sizes="(max-width: 900px) 100vw, 33vw"
+            sizes="(max-width: 900px) 90vw, 30vw"
             alt={`${article.title} thumbnail`}
             className={styles.imageStyle}
             src={article.image}
