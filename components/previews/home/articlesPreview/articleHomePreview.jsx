@@ -29,6 +29,7 @@ function ArticleHomePreview({ article }) {
             src={article.image}
             placeholder="blur"
             blurDataURL={`/_next/image?url=${article.image}&w=16&q=1`}
+            priority
           />
         )}
         <NewTabIcon
