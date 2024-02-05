@@ -1,10 +1,19 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import Image from 'next/image';
 
 export default function NewTabIcon({ className, style }) {
-  return (<img className={className} alt="Opens in a new tab" style={style}
-               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg=="/>)
+  return (
+    <Image
+      className={className}
+      alt="Opens in a new tab"
+      style={style}
+      src="/openInNewTabIcon.png"
+      width={16}
+      height={16}
+    />
+  );
 }
 
 NewTabIcon.propTypes = {
-  className: PropTypes.string
-}
+  className: PropTypes.string,
+};
