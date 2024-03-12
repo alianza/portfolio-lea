@@ -5,8 +5,8 @@ import utils from '../../../styles/utils.module.scss';
 import * as PropTypes from 'prop-types';
 import CategoryLabel from '../../categoryLabel/categoryLabel';
 import React, { useState } from 'react';
-import { TransitionScroll } from 'react-transition-scroll';
-import { hiddenStyle, transitionBaseStyle } from '../../../lib/utils';
+import TransitionScroll from 'react-transition-scroll';
+import { hiddenStyle, baseStyle } from '../../../lib/utils';
 
 PostPreview.propTypes = { post: PropTypes.object.isRequired };
 
@@ -17,9 +17,9 @@ function PostPreview({ post, hideCategoryLabel }) {
   return (
     <TransitionScroll
       className={styles.previewContainer}
-      baseStyle={transitionBaseStyle}
+      baseStyle={baseStyle}
       hiddenStyle={hiddenStyle}
-      callBack={() => setTimeout(() => setDisplayCategoryLabel(true), 500)}
+      callBackAfter={() => setDisplayCategoryLabel(true)}
     >
       <Link href={`/blog/${post.id}`} className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
         <Image

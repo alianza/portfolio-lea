@@ -4,14 +4,14 @@ import styles from '../preview.module.scss';
 import utils from '../../../styles/utils.module.scss';
 import * as PropTypes from 'prop-types';
 import StartEndDateLabel from '../../layout/util/startEndDateLabel/startEndDateLabel';
-import { TransitionScroll } from 'react-transition-scroll';
-import { hiddenStyle, transitionBaseStyle } from '../../../lib/utils';
+import TransitionScroll from 'react-transition-scroll';
+import { hiddenStyle, baseStyle } from '../../../lib/utils';
 
 ExperiencePreview.propTypes = { experience: PropTypes.object.isRequired };
 
 function ExperiencePreview({ experience }) {
   return (
-    <TransitionScroll className={styles.previewContainer} baseStyle={transitionBaseStyle} hiddenStyle={hiddenStyle}>
+    <TransitionScroll className={styles.previewContainer} baseStyle={baseStyle} hiddenStyle={hiddenStyle}>
       <Link href={`/experiences/${experience.id}`} className={`${styles.linkStyle} ${utils.hoverEffectSlight}`}>
         <Image
           fill

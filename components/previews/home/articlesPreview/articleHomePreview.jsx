@@ -2,8 +2,8 @@ import * as PropTypes from 'prop-types';
 import React from 'react';
 import styles from '../../preview.module.scss';
 import utils from '../../../../styles/utils.module.scss';
-import { TransitionScroll } from 'react-transition-scroll';
-import { hiddenStyle, transitionBaseStyle } from '../../../../lib/utils';
+import TransitionScroll from 'react-transition-scroll';
+import { hiddenStyle, baseStyle } from '../../../../lib/utils';
 import Image from 'next/image';
 import NewTabIcon from '../../../layout/util/newTabIcon/newTabIcon';
 
@@ -11,7 +11,7 @@ ArticleHomePreview.propTypes = { article: PropTypes.object.isRequired };
 
 function ArticleHomePreview({ article }) {
   return (
-    <TransitionScroll className={styles.previewHomeContainer} baseStyle={transitionBaseStyle} hiddenStyle={hiddenStyle}>
+    <TransitionScroll className={styles.previewHomeContainer} baseStyle={baseStyle} hiddenStyle={hiddenStyle}>
       <a
         href={article.link}
         target="_blank"

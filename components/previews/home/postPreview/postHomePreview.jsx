@@ -5,8 +5,8 @@ import styles from '../../preview.module.scss';
 import utils from '../../../../styles/utils.module.scss';
 import Image from 'next/image';
 import CategoryLabel from '../../../categoryLabel/categoryLabel';
-import { TransitionScroll } from 'react-transition-scroll';
-import { hiddenStyle, transitionBaseStyle } from '../../../../lib/utils';
+import TransitionScroll from 'react-transition-scroll';
+import { hiddenStyle, baseStyle } from '../../../../lib/utils';
 
 PostHomePreview.propTypes = { post: PropTypes.object.isRequired };
 
@@ -17,9 +17,9 @@ function PostHomePreview({ post }) {
   return (
     <TransitionScroll
       className={styles.previewHomeContainer}
-      baseStyle={transitionBaseStyle}
+      baseStyle={baseStyle}
       hiddenStyle={hiddenStyle}
-      callBack={() => setTimeout(() => setDisplayCategoryLabel(true), 500)}
+      callBackAfter={() => setDisplayCategoryLabel(true)}
     >
       <Link href={`/blog/${post.id}`} className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
         <Image

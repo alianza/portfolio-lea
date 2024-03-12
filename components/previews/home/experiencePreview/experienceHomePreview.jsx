@@ -5,14 +5,14 @@ import styles from '../../preview.module.scss';
 import utils from '../../../../styles/utils.module.scss';
 import Image from 'next/image';
 import StartEndDateLabel from '../../../layout/util/startEndDateLabel/startEndDateLabel';
-import { TransitionScroll } from 'react-transition-scroll';
-import { hiddenStyle, transitionBaseStyle } from '../../../../lib/utils';
+import TransitionScroll from 'react-transition-scroll';
+import { hiddenStyle, baseStyle } from '../../../../lib/utils';
 
 ExperienceHomePreview.propTypes = { experience: PropTypes.object.isRequired };
 
 function ExperienceHomePreview({ experience }) {
   return (
-    <TransitionScroll className={styles.previewHomeContainer} baseStyle={transitionBaseStyle} hiddenStyle={hiddenStyle}>
+    <TransitionScroll className={styles.previewHomeContainer} baseStyle={baseStyle} hiddenStyle={hiddenStyle}>
       <Link href={`/experiences/${experience.id}`} className={`${styles.imageLinkStyle} ${utils.hoverEffectSlight}`}>
         <Image
           fill

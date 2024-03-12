@@ -1,28 +1,34 @@
-import React, { useEffect } from "react"
-import styles from "./header.module.scss"
-import Link from "next/link"
-import Close from "../util/svg/close";
-import Hamburger from "../util/svg/hamburger";
-import NavLink from "../util/navLink/navLink";
-import DarkModeButton from "../util/darkModeButton/darkModeButton";
+import React, { useEffect } from 'react';
+import styles from './header.module.scss';
+import Link from 'next/link';
+import Close from '../util/svg/close';
+import Hamburger from '../util/svg/hamburger';
+import NavLink from '../util/navLink/navLink';
+import DarkModeButton from '../util/darkModeButton/darkModeButton';
 
 export default function Header({ title, onThemeButtonClick, darkTheme }) {
-  const [menuOpen, setMenuOpen] = React.useState(false)
+  const [menuOpen, setMenuOpen] = React.useState(false);
 
   useEffect(() => {
-    menuOpen ? document.body.classList.add('no-scroll') : document.body.classList.remove('no-scroll')
-  }, [menuOpen])
+    menuOpen ? document.body.classList.add('no-scroll') : document.body.classList.remove('no-scroll');
+  }, [menuOpen]);
 
-  const closeMenu = () => { setMenuOpen(false) }
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <header id="header" className={styles.header}>
       <div className={styles.controls}>
-        <Link href="/" className="no-underline"><h1 className={styles.title}>{title}</h1></Link>
-        <button aria-label={`${menuOpen ? 'close' : 'open'} Menu`}
-                onClick={() => setMenuOpen(!menuOpen)}
-                className={`${styles.menuButton} transition-transform hover:scale-110 active:scale-95`}>
-          {menuOpen ? <Close/> : <Hamburger/>}
+        <Link href="/" className="decoration-4 underline-offset-8">
+          <h1 className={styles.title}>{title}</h1>
+        </Link>
+        <button
+          aria-label={`${menuOpen ? 'close' : 'open'} Menu`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          className={`${styles.menuButton} transition-transform hover:scale-110 active:scale-95`}
+        >
+          {menuOpen ? <Close /> : <Hamburger />}
         </button>
       </div>
       <nav className={`${styles.navigation} ${menuOpen ? styles.navActive : ''}`}>
@@ -32,8 +38,8 @@ export default function Header({ title, onThemeButtonClick, darkTheme }) {
         <NavLink label="Blog" href="/blog" onClick={closeMenu} />
         <NavLink label="About" href="/about" onClick={closeMenu} />
         <NavLink label="Contact" href="/contact" onClick={closeMenu} />
-        <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton}/>
+        <DarkModeButton onButtonClick={onThemeButtonClick} darkTheme={darkTheme} className={styles.darkModeButton} />
       </nav>
     </header>
-    )
+  );
 }

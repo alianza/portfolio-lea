@@ -4,8 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const TypeWriter = ({ quotes }) => {
   const typewriterRef = useRef(null);
-  const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
-  const [height, setHeight] = useState(windowWidth < 480 ? 80 : windowWidth < 600 ? 84 : 88);
+  const [height, setHeight] = useState(Infinity);
 
   const getTypeWriterOptions = (typewriter, quotes) => {
     const authorElem = document.getElementById('author');
@@ -33,12 +32,13 @@ const TypeWriter = ({ quotes }) => {
   const updateHeight = () => setHeight(typewriterRef?.current?.clientHeight + 24);
 
   useEffect(() => {
+    setHeight(window && window.innerWidth < 480 ? 80 : window.innerWidth < 600 ? 84 : 88);
     const interval = setInterval(() => updateHeight(), 500);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className={styles.TypeWriter} style={{ height }}>
+    <div className={styles.TypeWriter} style={{ height: `${height}px` }}>
       <div ref={typewriterRef}>
         <Typewriter
           onInit={(typewriter) => getTypeWriterOptions(typewriter, quotes)}
