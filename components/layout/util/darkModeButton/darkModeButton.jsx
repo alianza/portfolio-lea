@@ -7,6 +7,7 @@ const DarkModeButton = ({ onButtonClick, darkTheme, className }) => {
     <button
       className={`drop-shadow-xl transition-transform hover:scale-110 active:scale-95 ${className ? className : ''}`}
       onClick={() => onButtonClick()}
+      title="Toggle dark mode"
     >
       {darkTheme ? <Sun /> : <Moon />}
     </button>
