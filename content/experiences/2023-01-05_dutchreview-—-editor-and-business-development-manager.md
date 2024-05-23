@@ -1,5 +1,5 @@
 ---
-title: Editor, proofreader, and business development manager — Dutch Review
+title: Writer & Editor – Dutch Review
 startDate: 2022-10-01
 endDate: ""
 thumbnail: /images/windmill-leiden.jpeg
