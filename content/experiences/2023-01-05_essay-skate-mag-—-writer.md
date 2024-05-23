@@ -1,5 +1,5 @@
 ---
-title: "Column writer and News Reporter — Essay Skateboard Magazine "
+title: "Writer and Reporter — Essay Skateboard Magazine "
 startDate: 2022-11-08
 endDate: ""
 thumbnail: /images/855f884b4e10d23500.jpeg
