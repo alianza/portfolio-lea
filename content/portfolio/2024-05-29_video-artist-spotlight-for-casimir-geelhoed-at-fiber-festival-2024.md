@@ -1,5 +1,5 @@
 ---
-title: "Video: Artist Spotlight for Casimir Geelhoed at FIBER Festival 2024"
+title: "[video] Artist Spotlight for Casimir Geelhoed at FIBER Festival 2024"
 date: 2024-05-29
 image: /images/img_7771.jpg
 description: "Video shot and edited for Casimir in promotion for the opening
