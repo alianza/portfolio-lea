@@ -1,7 +1,7 @@
 ---
 title: "Marketing and Communications - FIBER Festival "
-startDate: 2024-02-14
-endDate: ""
+startDate: 2024-02-01
+endDate: 2024-06-20
 thumbnail: /images/53468002648_5757cc4b4f_h.jpeg
 description: Working with FIBER on the promotional and communication side of the
   2024 festival edition, such as community management, photo/videography, and
