@@ -1,7 +1,7 @@
 ---
 title: Writer & Editor – Dutch Review
 startDate: 2022-10-01
-endDate: ""
+endDate: 2023-03-01
 thumbnail: /images/windmill-leiden.jpeg
 description: >-
   Initially starting with an internship and working full-time afterwards, Dutch
