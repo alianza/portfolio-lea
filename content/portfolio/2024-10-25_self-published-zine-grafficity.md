@@ -3,7 +3,7 @@ title: "[self-published zine] Grafficity"
 date: 2024-10-25
 image: /images/screen-shot-2025-03-04-at-11.30.19-am.png
 description: >-
-  Photography, formatting, foreword, printing, & Cutting by me. 
+  Photography, formatting, foreword, printing, & cutting by me. 
 
   Title page art by Karim El Atrache. 
 
