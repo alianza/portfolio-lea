@@ -21,7 +21,8 @@ const Contact = ({ contactContent }) => {
     <div className={utils.page}>
       <MdContent content={contactContent} />
       <Hr />
-      {/*<ContactFormNetlify/>*/} // todo: fix contact form https://docs.netlify.com/manage/forms/setup/
+      {/*<ContactFormNetlify/>*/}
+      {/*todo: fix contact form https://docs.netlify.com/manage/forms/setup/*/}
       <div>
         <h3 className="mb-4 text-xl font-semibold">Contact Form is currently not working unfortunately.</h3>
         <p>
