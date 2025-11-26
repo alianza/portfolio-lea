@@ -10,6 +10,8 @@ import NewTabIcon from '../../../layout/util/newTabIcon/newTabIcon';
 ArticleHomePreview.propTypes = { article: PropTypes.object.isRequired };
 
 function ArticleHomePreview({ article }) {
+
+  console.log(`article`, article);
   return (
     <TransitionScroll className={styles.previewHomeContainer} baseStyle={baseStyle} hiddenStyle={hiddenStyle}>
       <a
@@ -27,8 +29,8 @@ function ArticleHomePreview({ article }) {
             alt={`${article.title} thumbnail`}
             className={styles.imageStyle}
             src={article.image}
-            placeholder="blur"
-            blurDataURL={`/_next/image?url=${article.image}&w=16&q=1`}
+            // placeholder="blur"
+            // blurDataURL={`/_next/image?url=${article.image}&w=16&q=1`}
             priority
           />
         )}

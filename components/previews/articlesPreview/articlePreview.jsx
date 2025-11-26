@@ -27,8 +27,8 @@ function ArticlePreview({ article }) {
             alt={`${article.title} thumbnail`}
             className={styles.imageStyle}
             src={article.image}
-            placeholder="blur"
-            blurDataURL={`/_next/image?url=${article.image}&w=16&q=1`}
+            // placeholder="blur"
+            // blurDataURL={`/_next/image?url=${article.image}&w=16&q=1`}
           />
         )}
         <NewTabIcon

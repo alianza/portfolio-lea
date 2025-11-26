@@ -20,8 +20,8 @@ function ExperienceHomePreview({ experience }) {
           alt={`${experience.data.title} thumbnail`}
           className={styles.imageStyle}
           src={experience.data.thumbnail}
-          placeholder="blur"
-          blurDataURL={`/_next/image?url=${experience.data.thumbnail}&w=16&q=1`}
+          // placeholder="blur"
+          // blurDataURL={`/_next/image?url=${experience.data.thumbnail}&w=16&q=1`}
         />
       </Link>
       <div className={styles.contentStyle}>

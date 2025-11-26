@@ -28,8 +28,8 @@ function PostPreview({ post, hideCategoryLabel }) {
           alt={`${post.data.title} thumbnail`}
           className={styles.imageStyle}
           src={post.data.thumbnail}
-          placeholder="blur"
-          blurDataURL={`/_next/image?url=${post.data.thumbnail}&w=16&q=1`}
+          // placeholder="blur"
+          // blurDataURL={`/_next/image?url=${post.data.thumbnail}&w=16&q=1`}
         />
       </Link>
       <div className={styles.contentStyle}>
